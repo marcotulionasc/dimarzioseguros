@@ -86,7 +86,7 @@ export const products: Product[] = [
     description: 'Assistência médica e cobertura de imprevistos em viagens.',
     who: 'Viajantes a lazer ou trabalho, no Brasil e exterior.',
     benefits: [
-      'Atendimento 24h em português',
+      'Atendimento 24h',
       'Cobertura para extravio de bagagem',
       'Despesas médicas e odontológicas'
     ],

@@ -76,7 +76,7 @@ export function WhyChoose() {
             variants={fadeInUp}
             className="lg:pl-8"
           >
-            <span className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-sm">
+            <span className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-lg">
               Por que nos escolher
             </span>
             <h2 className="text-4xl font-bold mt-4 mb-8">
@@ -93,7 +93,7 @@ export function WhyChoose() {
                   className="flex gap-4 group"
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <benefit.icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>

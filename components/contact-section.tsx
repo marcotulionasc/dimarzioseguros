@@ -181,10 +181,10 @@ export function ContactSection() {
             </div>
 
             <div className="card-primary">
-              <h3 className="text-2xl font-semibold mb-4">Horário de Atendimento</h3>
+              <h3 className="text-2xl font-semibold text-white mb-4">Horário de Atendimento</h3>
               <div className="space-y-2">
                 <p className="text-white/90">Segunda a Sexta</p>
-                <p className="text-xl font-semibold">09:00 - 18:00</p>
+                <p className="text-xl font-semibold text-white">09:00 - 18:00</p>
                 <p className="text-sm text-white/80 mt-4">
                   Atendimento 24h para emergências através do nosso telefone.
                 </p>

@@ -34,7 +34,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <div className="relative w-12 h-12 bg-white rounded-xl p-2">
                 <Image 
-                  src="/logo.svg" 
+                  src="/images/logo-dimarzio.png" 
                   alt="Dimarzio Seguros" 
                   fill
                   className="object-contain p-1"
@@ -86,8 +86,8 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-4">Contato</h3>
             <address className="not-italic space-y-4">
               <div className="flex items-start gap-3 text-white/70">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
-                <p>Rua Cumaru, 219 - sala 16<br />Campinas - SP</p>
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-1 " />
+                <p className="text-white/70">Rua Cumaru, 219 - sala 16<br />Campinas - SP</p>
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <Phone className="w-5 h-5" />

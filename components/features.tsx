@@ -150,10 +150,10 @@ export function Differentials() {
                 initial: { opacity: 0, y: 20 },
                 animate: { opacity: 1, y: 0, transition: { delay: i * 0.1 } }
               }}
-              className="group bg-white rounded-sm p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100"
+              className="group bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 text-primary rounded-sm p-3 group-hover:scale-110 transition-transform">
+                <div className="bg-primary/10 text-primary rounded-lg p-3 group-hover:scale-110 transition-transform">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <div>
