@@ -62,14 +62,14 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl shadow-lg p-8"
+            className="card-light"
           >
             <form className="space-y-6" action="https://formsubmit.co/contato@dimarzioseguros.com.br" method="POST">
               <input type="hidden" name="_captcha" value="false" />
               
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label htmlFor="name" className="form-label">
                     Nome
                   </label>
                   <input
@@ -77,13 +77,13 @@ export function ContactSection() {
                     id="name"
                     name="nome"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                    className="form-input"
                     placeholder="Seu nome completo"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label htmlFor="email" className="form-label">
                     E-mail
                   </label>
                   <input
@@ -91,32 +91,32 @@ export function ContactSection() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                    className="form-input"
                     placeholder="seu@email.com"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label htmlFor="phone" className="form-label">
                     Telefone
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="telefone"
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                    className="form-input"
                     placeholder="(00) 00000-0000"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="insurance" className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label htmlFor="insurance" className="form-label">
                     Tipo de Seguro
                   </label>
                   <select
                     id="insurance"
                     name="tipo"
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                    className="form-select"
                   >
                     <option value="">Selecione um tipo</option>
                     <option value="auto">Seguro Auto</option>
@@ -128,14 +128,14 @@ export function ContactSection() {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label htmlFor="message" className="form-label">
                     Mensagem
                   </label>
                   <textarea
                     id="message"
                     name="mensagem"
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none"
+                    className="form-input resize-none"
                     placeholder="Como podemos ajudar?"
                   />
                 </div>
@@ -153,9 +153,9 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:sticky lg:top-8"
+            className="lg:sticky lg:top-8 space-y-6"
           >
-            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <div className="card-light">
               <h3 className="text-2xl font-semibold mb-6">Informações de Contato</h3>
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
@@ -166,12 +166,12 @@ export function ContactSection() {
                     rel={item.icon === Instagram ? "noopener noreferrer" : undefined}
                     className="flex items-start gap-4 group"
                   >
-                    <div className="p-3 rounded-lg bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="p-3 rounded-sm bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                       <item.icon className="w-6 h-6" />
                     </div>
                     <div>
                       <p className="font-medium text-neutral-900">{item.label}</p>
-                      <p className="text-neutral-600 group-hover:text-primary transition-colors">
+                      <p className="text-neutral-700 group-hover:text-primary transition-colors">
                         {item.value}
                       </p>
                     </div>
@@ -180,10 +180,10 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-primary rounded-2xl shadow-lg p-8 text-white">
+            <div className="card-primary">
               <h3 className="text-2xl font-semibold mb-4">Horário de Atendimento</h3>
               <div className="space-y-2">
-                <p>Segunda a Sexta</p>
+                <p className="text-white/90">Segunda a Sexta</p>
                 <p className="text-xl font-semibold">09:00 - 18:00</p>
                 <p className="text-sm text-white/80 mt-4">
                   Atendimento 24h para emergências através do nosso telefone.

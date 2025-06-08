@@ -26,14 +26,14 @@ export function Navbar() {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/80 backdrop-blur-lg shadow-lg'
-            : 'bg-transparent'
+            ? 'bg-white/90 backdrop-blur-lg shadow-lg'
+            : 'bg-black/20 backdrop-blur-sm'
         }`}
       >
         <div className="container mx-auto">
           <div className="flex h-20 items-center justify-between">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-10 h-10">
+              <div className="relative w-10 h-10 bg-white rounded-sm p-1">
                 <Image 
                   src="/logo.svg" 
                   alt="Dimarzio Seguros" 
@@ -60,7 +60,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={`relative py-2 ${
-                      isScrolled ? 'text-neutral-600' : 'text-white'
+                      isScrolled ? 'text-neutral-700' : 'text-white'
                     } hover:text-primary transition-colors`}
                   >
                     {link.label}
@@ -70,7 +70,7 @@ export function Navbar() {
               </div>
               
               <Button 
-                className="hidden lg:flex items-center gap-2 primary-button"
+                className="hidden lg:flex items-center gap-2 primary-button rounded-sm"
                 size="sm"
               >
                 <Phone className="w-4 h-4" />

@@ -124,7 +124,7 @@ export function Differentials() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.span 
             variants={fadeInUp}
-            className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-full"
+            className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-sm"
           >
             Nossos diferenciais
           </motion.span>
@@ -150,10 +150,10 @@ export function Differentials() {
                 initial: { opacity: 0, y: 20 },
                 animate: { opacity: 1, y: 0, transition: { delay: i * 0.1 } }
               }}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100"
+              className="group bg-white rounded-sm p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 text-primary rounded-xl p-3 group-hover:scale-110 transition-transform">
+                <div className="bg-primary/10 text-primary rounded-sm p-3 group-hover:scale-110 transition-transform">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <div>

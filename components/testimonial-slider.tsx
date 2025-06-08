@@ -110,7 +110,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
           size="icon"
           onClick={scrollPrev}
           disabled={!prevBtnEnabled}
-          className="rounded-full hover:bg-primary hover:text-white transition-colors"
+          className="rounded-sm hover:bg-primary hover:text-white transition-colors"
         >
           <ChevronLeft className="w-5 h-5" />
         </Button>
@@ -120,7 +120,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
           {testimonials.map((_, index) => (
             <button
               key={index}
-              className={`w-2 h-2 rounded-full transition-all ${
+              className={`w-2 h-2 rounded-sm transition-all ${
                 index === selectedIndex
                   ? 'bg-primary w-6'
                   : 'bg-primary/20'
@@ -135,7 +135,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
           size="icon"
           onClick={scrollNext}
           disabled={!nextBtnEnabled}
-          className="rounded-full hover:bg-primary hover:text-white transition-colors"
+          className="rounded-sm hover:bg-primary hover:text-white transition-colors"
         >
           <ChevronRight className="w-5 h-5" />
         </Button>

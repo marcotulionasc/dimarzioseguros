@@ -16,10 +16,10 @@ const FaqCard = ({ faq }: FaqCardProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="overflow-hidden border border-neutral-200 rounded-xl mb-4 transition-all duration-300 hover:shadow-sm bg-white">
+    <div className="overflow-hidden border border-neutral-200 rounded-sm mb-4 transition-all duration-300 hover:shadow-sm bg-white">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center p-5 text-left cursor-pointer rounded-xl focus:outline-none"
+        className="w-full flex justify-between items-center p-5 text-left cursor-pointer focus:outline-none"
       >
         <span className="text-lg font-semibold text-neutral-800">{faq.q}</span>
         <svg
@@ -36,7 +36,7 @@ const FaqCard = ({ faq }: FaqCardProps) => {
           isOpen ? "max-h-40 py-4" : "max-h-0 py-0"
         }`}
       >
-        <p className="text-neutral-600 text-base">{faq.a}</p>
+        <p className="text-neutral-700 text-base">{faq.a}</p>
       </div>
     </div>
   )
