@@ -24,17 +24,9 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#3A2D87",
-          50: "#f3f0fa",
-          100: "#e5def5",
-          200: "#c8bcea",
-          300: "#ab9ae0",
-          400: "#8e78d5",
-          500: "#3A2D87",
-          600: "#34287a",
-          700: "#2e236c",
-          800: "#271d5f",
-          900: "#201851",
+          DEFAULT: "#0F52BA",
+          light: "#2563EB",
+          dark: "#1E3A8A",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -49,7 +41,7 @@ const config: Config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "#FF6B6B",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -59,6 +51,18 @@ const config: Config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        neutral: {
+          50: "#F8FAFC",
+          100: "#F1F5F9",
+          200: "#E2E8F0",
+          300: "#CBD5E1",
+          400: "#94A3B8",
+          500: "#64748B",
+          600: "#475569",
+          700: "#334155",
+          800: "#1E293B",
+          900: "#0F172A",
         },
         blue: {
           50: "#EFF6FF",
@@ -80,7 +84,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       screens: {
         xs: "480px",
