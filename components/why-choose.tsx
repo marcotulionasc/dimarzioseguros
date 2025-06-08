@@ -44,7 +44,7 @@ export function WhyChoose() {
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image 
-                src="/placeholder.jpg" 
+                src="/images/seguro-02.png" 
                 alt="Equipe Dimarzio" 
                 fill
                 className="object-cover transform hover:scale-105 transition-transform duration-700"

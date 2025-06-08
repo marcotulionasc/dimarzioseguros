@@ -45,7 +45,7 @@ export function Hero() {
           <div className="hidden lg:block relative">
             <div className="relative aspect-square w-full max-w-lg mx-auto">
               <Image 
-                src="/images/hero-dimarzio-sem.png" 
+                src="/images/hero-dimarzio-white.png" 
                 alt="Família protegida" 
                 fill
                 className="object-cover rounded-lg shadow-lg"
