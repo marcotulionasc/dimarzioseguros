@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { BadgeCheck } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -10,14 +11,21 @@ export function Hero() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="relative w-full text-center py-24 px-4 bg-gradient-to-br from-primary to-secondary text-white"
+      className="relative w-full py-24 bg-gradient-to-br from-purple-50 to-blue-50"
     >
-      <h1 className="text-4xl md:text-6xl font-bold mb-4">Dimarzio Seguros</h1>
-      <p className="text-lg md:text-2xl mb-8">20 anos protegendo com clareza</p>
-      <Button className="primary-button text-base md:text-lg px-8 py-4 rounded-full">Quero minha análise gratuita</Button>
-      <div className="flex justify-center gap-6 mt-8 text-sm">
-        <span className="flex items-center gap-2"><BadgeCheck className="text-secondary" />Atendimento 24h</span>
-        <span className="flex items-center gap-2"><BadgeCheck className="text-secondary" />+10k clientes</span>
+      <div className="mx-auto max-w-screen-xl px-4 md:px-8 grid md:grid-cols-2 gap-8 items-center">
+        <div className="text-center md:text-left space-y-6">
+          <h1 className="text-4xl md:text-6xl font-bold">Dimarzio Seguros — 20 anos protegendo com clareza</h1>
+          <p className="text-lg">Seguros pensados para você e sua família.</p>
+          <Button className="primary-button text-base md:text-lg px-8 py-4 rounded-full">Quero minha análise gratuita</Button>
+          <div className="flex justify-center md:justify-start gap-6 text-sm mt-4">
+            <span className="flex items-center gap-2"><BadgeCheck className="text-secondary" />Atendimento 24h</span>
+            <span className="flex items-center gap-2"><BadgeCheck className="text-secondary" />+10k clientes</span>
+          </div>
+        </div>
+        <div className="hidden md:block">
+          <Image src="/placeholder.jpg" alt="Família protegida" width={500} height={400} className="rounded-xl shadow" />
+        </div>
       </div>
     </motion.section>
   )

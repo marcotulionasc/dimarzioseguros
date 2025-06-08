@@ -20,7 +20,7 @@ export function Faq() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="container py-16 space-y-8"
+      className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 space-y-8"
     >
       <h2 className="text-3xl font-bold text-center">Perguntas Frequentes</h2>
       <Accordion type="single" collapsible className="mx-auto max-w-2xl">
