@@ -17,19 +17,19 @@ export function MobileMenu() {
         <nav className="flex flex-col gap-4">
           <Link
             href="/"
-            className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
+            className="text-lg font-medium text-gray-700 hover:text-secondary transition-colors"
           >
             Home
           </Link>
           <Link
             href="/#seguros"
-            className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
+            className="text-lg font-medium text-gray-700 hover:text-secondary transition-colors"
           >
             Produtos
           </Link>
           <Link
             href="/contato"
-            className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
+            className="text-lg font-medium text-gray-700 hover:text-secondary transition-colors"
           >
             Contato
           </Link>

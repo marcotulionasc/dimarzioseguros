@@ -2,8 +2,9 @@ import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Header } from "@/components/header"
+import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { WhatsappButton } from "@/components/whatsapp-button"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,9 +23,10 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Header />
+          <Navbar />
           <div className="pt-16">{children}</div>
           <Footer />
+          <WhatsappButton />
         </ThemeProvider>
       </body>
     </html>

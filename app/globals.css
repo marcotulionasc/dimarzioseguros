@@ -29,7 +29,7 @@ body {
   }
   
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3A2D87] to-[#E50964];
   }
   
   .gradient-bg {
@@ -49,19 +49,19 @@ body {
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 217 91% 60%;  /* Azul principal da marca */
+    --primary: 248 50% 35%; /* Roxo Dimarzio */
     --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 335 92% 47%; /* Rosa Dimarzio */
+    --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: 217 91% 96%;  /* Azul claro para acentos */
-    --accent-foreground: 217 91% 60%;
+    --accent: 335 92% 95%;
+    --accent-foreground: 335 92% 47%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 217 91% 60%;
+    --ring: 335 92% 47%;
     --radius: 0.625rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -79,19 +79,19 @@ body {
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 217 91% 60%;
+    --primary: 248 50% 35%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 14.9%;
+    --secondary: 335 92% 47%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 217 91% 40%;
+    --accent: 335 92% 40%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
-    --ring: 217 91% 60%;
+    --ring: 335 92% 47%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -141,7 +141,7 @@ body {
 
 /* Personalização de elementos */
 .primary-button {
-  @apply bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white transition-all duration-300 ease-in-out transform hover:shadow-lg;
+  @apply bg-gradient-to-r from-[#3A2D87] to-[#E50964] hover:from-[#2e236c] hover:to-[#c10756] text-white transition-all duration-300 ease-in-out transform hover:shadow-lg;
 }
 
 .card-hover {
@@ -149,9 +149,9 @@ body {
 }
 
 :root {
-  --primary: #1E3A8A;
-  --primary-light: #2563EB;
-  --primary-dark: #1E40AF;
+  --primary: #3A2D87;
+  --primary-light: #5b45b8;
+  --primary-dark: #2e236c;
 }
 
 @layer base {
@@ -170,15 +170,15 @@ body {
   }
 
   .primary-button {
-    @apply bg-blue-700 text-white hover:bg-blue-800 transition-colors;
+    @apply bg-[#3A2D87] text-white hover:bg-[#2e236c] transition-colors;
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3A2D87] to-[#E50964];
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-br from-gray-50 to-blue-50;
+    @apply bg-gradient-to-br from-purple-50 to-pink-50;
   }
 
   .transition-all-300 {
@@ -273,7 +273,7 @@ html {
 
 /* Focus Styles */
 :focus-visible {
-  @apply outline-none ring-2 ring-blue-700 ring-offset-2;
+  @apply outline-none ring-2 ring-[#E50964] ring-offset-2;
 }
 
 /* Touch Device Optimizations */
