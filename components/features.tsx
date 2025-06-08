@@ -28,12 +28,21 @@ export function HowItWorks() {
       className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 text-center space-y-8"
     >
       <h2 className="text-3xl font-bold">Como funciona na prática</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="flex flex-col md:flex-row gap-6">
         {steps.map((step, i) => (
-          <div key={i} className="p-4 bg-white rounded-2xl shadow card-hover flex flex-col items-center text-center space-y-2">
-            <step.icon className="w-8 h-8 text-secondary" />
-            <p>{step.text}</p>
-          </div>
+          <motion.div
+            key={i}
+            className="flex-1 bg-white rounded-xl shadow p-4 flex items-center gap-4"
+            whileHover={{ scale: 1.02 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-blue-100 text-blue-700 rounded-full p-2">
+              <step.icon className="w-6 h-6" />
+            </div>
+            <p className="text-left">{step.text}</p>
+          </motion.div>
         ))}
       </div>
     </motion.section>
@@ -50,15 +59,17 @@ export function Differentials() {
       className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 text-center space-y-8 bg-gray-50 rounded-2xl"
     >
       <h2 className="text-3xl font-bold">O que faz a Dimarzio diferente</h2>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {differentials.map((d, i) => (
-          <li key={i} className="flex items-start gap-2">
-            <Star className="w-5 h-5 text-secondary mt-1" />
+          <div key={i} className="p-4 bg-white rounded-xl shadow hover:shadow-lg transition-all flex flex-col items-center text-center gap-2">
+            <div className="bg-white rounded-xl p-3 shadow mb-2">
+              <Star className="w-6 h-6 text-blue-600" />
+            </div>
             <span>{d}</span>
-          </li>
+          </div>
         ))}
-      </ul>
-      <div className="border p-4 italic rounded-md max-w-2xl mx-auto">“Você fala com quem resolve…”</div>
+      </div>
+      <div className="p-4 italic rounded-md border max-w-2xl mx-auto">“Você fala com quem resolve…”</div>
     </motion.section>
   )
 }

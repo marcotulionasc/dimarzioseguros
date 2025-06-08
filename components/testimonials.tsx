@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card, CardContent } from '@/components/ui/card'
+import { TestimonialSlider } from './testimonial-slider'
 
 const testimonials = [
   {
@@ -25,16 +25,7 @@ export function Testimonials() {
       className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 space-y-8 text-center"
     >
       <h2 className="text-3xl font-bold">O que nossos clientes dizem</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {testimonials.map((t, i) => (
-          <Card key={i} className="bg-gray-50 shadow-sm">
-            <CardContent className="p-6 space-y-4">
-              <p className="text-lg italic">“{t.text}”</p>
-              <p className="text-sm font-medium">{t.author}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <TestimonialSlider testimonials={testimonials} />
     </motion.section>
   )
 }
