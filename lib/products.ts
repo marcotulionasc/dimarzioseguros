@@ -4,10 +4,11 @@ export type Product = {
   description: string
   who: string
   benefits: string[]
+  category: 'Empresariais' | 'Pessoais'
 }
 
 export const products: Product[] = [
-  {
+  { 
     slug: 'consorcio',
     title: 'Consórcio',
     description: 'Compra planejada de bens sem pagamento de juros.',
@@ -16,7 +17,8 @@ export const products: Product[] = [
       'Sem juros, apenas taxa de administração',
       'Planejamento financeiro de longo prazo',
       'Diversas opções de carta de crédito'
-    ]
+    ],
+    category: 'Pessoais'
   },
   {
     slug: 'saude',
@@ -27,7 +29,8 @@ export const products: Product[] = [
       'Cobertura nacional',
       'Rede credenciada ampla',
       'Planos personalizados'
-    ]
+    ],
+    category: 'Pessoais'
   },
   {
     slug: 'vida',
@@ -38,7 +41,8 @@ export const products: Product[] = [
       'Tranquilidade para a família',
       'Coberturas adicionais de invalidez e doenças graves',
       'Indenização sem burocracia'
-    ]
+    ],
+    category: 'Pessoais'
   },
   {
     slug: 'empresarial',
@@ -49,7 +53,8 @@ export const products: Product[] = [
       'Coberturas flexíveis conforme o ramo',
       'Proteção contra incêndio, roubo e responsabilidade civil',
       'Assistência 24 horas'
-    ]
+    ],
+    category: 'Empresariais'
   },
   {
     slug: 'automovel',
@@ -60,7 +65,8 @@ export const products: Product[] = [
       'Cobertura para colisão, roubo e furto',
       'Carro reserva e assistência 24h',
       'Opções com franquia reduzida'
-    ]
+    ],
+    category: 'Pessoais'
   },
   {
     slug: 'residencial',
@@ -71,7 +77,8 @@ export const products: Product[] = [
       'Cobertura para incêndio, roubo e danos elétricos',
       'Assistência para pequenos reparos',
       'Planos sob medida'
-    ]
+    ],
+    category: 'Pessoais'
   },
   {
     slug: 'viagem',
@@ -82,7 +89,8 @@ export const products: Product[] = [
       'Atendimento 24h em português',
       'Cobertura para extravio de bagagem',
       'Despesas médicas e odontológicas'
-    ]
+    ],
+    category: 'Pessoais'
   },
   {
     slug: 'rc-profissional',
@@ -93,7 +101,8 @@ export const products: Product[] = [
       'Ampara processos por erro ou omissão',
       'Resguarda o patrimônio pessoal',
       'Planos específicos por profissão'
-    ]
+    ],
+    category: 'Empresariais'
   },
   {
     slug: 'rural',
@@ -104,7 +113,8 @@ export const products: Product[] = [
       'Ampara perdas por eventos climáticos',
       'Cobertura para máquinas e equipamentos',
       'Auxílio na continuidade da produção'
-    ]
+    ],
+    category: 'Empresariais'
   },
   {
     slug: 'fianca-locaticia',
@@ -115,7 +125,8 @@ export const products: Product[] = [
       'Facilidade na aprovação do aluguel',
       'Garante pagamento ao proprietário',
       'Parcelamento do prêmio'
-    ]
+    ],
+    category: 'Pessoais'
   },
   {
     slug: 'portateis',
@@ -126,7 +137,8 @@ export const products: Product[] = [
       'Cobertura contra roubo e danos acidentais',
       'Assistência para reparos',
       'Vigência nacional e internacional'
-    ]
+    ],
+    category: 'Pessoais'
   },
   {
     slug: 'fiduciario',
@@ -137,7 +149,8 @@ export const products: Product[] = [
       'Segurança em contratos de grande valor',
       'Reduz custos de garantias bancárias',
       'Agilidade na emissão da apólice'
-    ]
+    ],
+    category: 'Empresariais'
   }
 ]
 

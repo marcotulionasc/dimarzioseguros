@@ -11,7 +11,7 @@ export function AlreadyInsured() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 grid md:grid-cols-2 gap-8 items-center"
+      className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 grid md:grid-cols-2 gap-8 items-center bg-blue-50 rounded-2xl"
     >
       <div className="space-y-4">
         <h2 className="text-3xl font-bold">Você já tem um seguro?</h2>
@@ -19,7 +19,7 @@ export function AlreadyInsured() {
         <Button className="primary-button">Quero minha análise gratuita</Button>
       </div>
       <div className="flex justify-center">
-        <Image src="/placeholder.jpg" alt="Pessoa analisando documentos" width={500} height={400} className="rounded-xl shadow" />
+        <Image src="/placeholder.jpg" alt="Pessoa analisando documentos" width={500} height={400} className="rounded-xl shadow-lg" />
       </div>
     </motion.section>
   )

@@ -1,6 +1,7 @@
 'use client'
 
 import { Check } from 'lucide-react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const benefits = [
@@ -16,17 +17,22 @@ export function WhyChoose() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="py-16 bg-gray-50 mx-auto max-w-screen-xl px-4 md:px-8 space-y-8"
+      className="py-16 bg-gray-50 mx-auto max-w-screen-xl px-4 md:px-8"
     >
-      <h2 className="text-3xl font-bold text-center">Por que escolher a Dimarzio?</h2>
-      <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {benefits.map((b, i) => (
-          <li key={i} className="flex items-start gap-2">
-            <Check className="text-secondary mt-1" />
-            <span>{b}</span>
-          </li>
-        ))}
-      </ul>
+      <h2 className="text-3xl font-bold text-center mb-8">Por que escolher a Dimarzio?</h2>
+      <div className="grid md:grid-cols-2 gap-8 items-center">
+        <ul className="space-y-4">
+          {benefits.map((b, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <Check className="text-blue-600 mt-1" />
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="flex justify-center">
+          <Image src="/placeholder.jpg" alt="Equipe Dimarzio" width={400} height={300} className="rounded-xl shadow" />
+        </div>
+      </div>
     </motion.section>
   )
 }

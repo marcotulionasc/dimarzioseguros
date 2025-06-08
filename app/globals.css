@@ -49,9 +49,9 @@ body {
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 248 50% 35%; /* Roxo Dimarzio */
+    --primary: 221 62% 33%; /* Azul escuro */
     --primary-foreground: 0 0% 98%;
-    --secondary: 335 92% 47%; /* Rosa Dimarzio */
+    --secondary: 220 82% 56%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
@@ -79,9 +79,9 @@ body {
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 248 50% 35%;
+    --primary: 221 62% 33%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 335 92% 47%;
+    --secondary: 220 82% 56%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
@@ -141,7 +141,7 @@ body {
 
 /* Personalização de elementos */
 .primary-button {
-  @apply bg-gradient-to-r from-[#3A2D87] to-[#E50964] hover:from-[#2e236c] hover:to-[#c10756] text-white transition-all duration-300 ease-in-out transform hover:shadow-lg;
+  @apply bg-gradient-to-r from-[#2563EB] to-[#1E3A8A] text-white transition-all duration-300 ease-in-out hover:brightness-110 hover:shadow-lg;
 }
 
 .card-hover {
@@ -149,9 +149,9 @@ body {
 }
 
 :root {
-  --primary: #3A2D87;
-  --primary-light: #5b45b8;
-  --primary-dark: #2e236c;
+  --primary: #1E3A8A;
+  --primary-light: #2563EB;
+  --primary-dark: #1E3A8A;
 }
 
 @layer base {
@@ -170,7 +170,7 @@ body {
   }
 
   .primary-button {
-    @apply bg-[#3A2D87] text-white hover:bg-[#2e236c] transition-colors;
+    @apply bg-[#1E3A8A] text-white hover:bg-[#2563EB] transition-colors;
   }
 
   .gradient-text {

@@ -23,7 +23,7 @@ export function Faq() {
       className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 space-y-8"
     >
       <h2 className="text-3xl font-bold text-center">Perguntas Frequentes</h2>
-      <Accordion type="single" collapsible className="mx-auto max-w-2xl">
+      <Accordion type="single" collapsible className="mx-auto max-w-2xl space-y-4">
         {faqs.map((item, idx) => (
           <AccordionItem key={idx} value={`item-${idx}`}>
             <AccordionTrigger>{item.q}</AccordionTrigger>

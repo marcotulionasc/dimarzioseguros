@@ -1,11 +1,43 @@
 'use client'
 
-import Link from 'next/link'
-import { products } from '@/lib/products'
-import { Card, CardContent } from '@/components/ui/card'
+import { products, type Product } from '@/lib/products'
+import { ProductFilterTabs } from './product-filter-tabs'
+import { ProductCard } from './product-card'
+import {
+  Car,
+  Home,
+  Plane,
+  Briefcase,
+  Handshake,
+  HeartPulse,
+  PiggyBank,
+  ShieldCheck,
+  Laptop,
+  HandCoins,
+  Tractor,
+} from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
+
+const icons: Record<string, any> = {
+  consorcio: PiggyBank,
+  saude: HeartPulse,
+  vida: Handshake,
+  empresarial: Briefcase,
+  automovel: Car,
+  residencial: Home,
+  viagem: Plane,
+  'rc-profissional': ShieldCheck,
+  rural: Tractor,
+  'fianca-locaticia': HandCoins,
+  portateis: Laptop,
+  fiduciario: Briefcase,
+}
 
 export function ProductGrid() {
+  const [filter, setFilter] = useState('Todos')
+  const filters = ['Todos', 'Empresariais', 'Pessoais']
+  const filtered = products.filter((p) => filter === 'Todos' || p.category === filter)
   return (
     <motion.section
       id="seguros"
@@ -16,16 +48,12 @@ export function ProductGrid() {
       className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 space-y-8 text-center"
     >
       <h2 className="text-3xl font-bold">Qual seguro você quer entender melhor?</h2>
+      <ProductFilterTabs filters={filters} active={filter} onChange={setFilter} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {products.map((p) => (
-          <Link key={p.slug} href={`/produtos/${p.slug}`} className="block">
-            <Card className="shadow card-hover h-full">
-              <CardContent className="p-6 flex flex-col items-center gap-2">
-                <span className="font-semibold text-lg">{p.title}</span>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
+        {filtered.map((p) => {
+          const Icon = icons[p.slug]
+          return <ProductCard key={p.slug} slug={p.slug} title={p.title} icon={Icon} />
+        })}
       </div>
     </motion.section>
   )
