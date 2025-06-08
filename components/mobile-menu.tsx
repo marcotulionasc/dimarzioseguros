@@ -16,32 +16,20 @@ export function MobileMenu() {
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
         <nav className="flex flex-col gap-4">
           <Link
-            href="#produtos"
-            className="text-lg font-medium text-gray-700 hover:text-blue-700 transition-all-300"
+            href="/"
+            className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            href="/#seguros"
+            className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
           >
             Produtos
           </Link>
           <Link
-            href="#beneficios"
-            className="text-lg font-medium text-gray-700 hover:text-blue-700 transition-all-300"
-          >
-            Benefícios
-          </Link>
-          <Link
-            href="#depoimentos"
-            className="text-lg font-medium text-gray-700 hover:text-blue-700 transition-all-300"
-          >
-            Depoimentos
-          </Link>
-          <Link
-            href="#precos"
-            className="text-lg font-medium text-gray-700 hover:text-blue-700 transition-all-300"
-          >
-            Planos
-          </Link>
-          <Link
-            href="#contato"
-            className="text-lg font-medium text-gray-700 hover:text-blue-700 transition-all-300"
+            href="/contato"
+            className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
           >
             Contato
           </Link>
