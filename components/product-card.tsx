@@ -15,6 +15,11 @@ interface ProductCardProps {
 export function ProductCard({ icon: Icon, title, slug, description, className }: ProductCardProps) {
   // Map specific slugs to their correct paths
   const getProductPath = (slug: string) => {
+    // Special cases that don't follow the /seguro- pattern
+    if (slug === 'consorcio') {
+      return '/consorcios'
+    }
+
     const pathMap: Record<string, string> = {
       'automovel': '/seguro-automovel',
       'fianca-locaticia': '/seguro-fianca-locaticia',
