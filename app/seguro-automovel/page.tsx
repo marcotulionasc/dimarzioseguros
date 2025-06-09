@@ -3,6 +3,8 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { AlertTriangle, CheckCircle2, ArrowRight, Car, Shield } from 'lucide-react'
+import { useState } from 'react'
+import { submitForm, mapFormFieldsToApi } from '@/lib/api'
 
 const coverages = [
   'Danos materiais e corporais a terceiros',
@@ -247,20 +249,47 @@ export default function SeguroAutomovelPage() {
               Peça sua <strong>cotação com análise técnica gratuita</strong>.<br />
               É simples, direto e pode evitar dor de cabeça.
             </p>
-            <form className="mt-8 space-y-4">
+            <form 
+              className="mt-8 space-y-4"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                  const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'auto');
+                  await submitForm(mappedData);
+                  alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
+                  (e.target as HTMLFormElement).reset();
+                } catch (error) {
+                  console.error('Error:', error);
+                  alert('Erro ao enviar formulário. Por favor, tente novamente.');
+                }
+              }}
+            >
               <input
                 type="text"
+                name="nome"
                 placeholder="Nome completo"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
               <input
                 type="tel"
+                name="telefone"
                 placeholder="WhatsApp"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                className="w-full p-3 border border-neutral-200 rounded-lg"
+                required
+              />
               <select
+                name="tipo"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               >
@@ -270,12 +299,14 @@ export default function SeguroAutomovelPage() {
               </select>
               <input
                 type="number"
+                name="ano"
                 placeholder="Ano do veículo"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
               <input
                 type="text"
+                name="cidade"
                 placeholder="Cidade e Estado"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
