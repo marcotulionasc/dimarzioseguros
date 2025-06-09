@@ -4,26 +4,17 @@ import { motion } from 'framer-motion'
 import { TestimonialSlider } from './testimonial-slider'
 import { Quote } from 'lucide-react'
 
-const testimonials = [
-  {
-    text: 'Antes da Dimarzio, eu achava que estava protegido. Eles revisaram meu seguro e corrigiram várias brechas que poderiam me deixar na mão.',
-    author: 'Luciana M.',
-    role: 'Empresária',
-    image: '/testimonial1.jpg'
-  },
-  {
-    text: 'Recebi um atendimento técnico, claro e sem empurroterapia. E paguei menos do que antes.',
-    author: 'Carlos T.',
-    role: 'Engenheiro',
-    image: '/testimonial2.jpg'
-  },
-  {
-    text: 'Profissionais extremamente competentes e atenciosos. Resolveram meu sinistro com agilidade impressionante.',
-    author: 'Roberto S.',
-    role: 'Médico',
-    image: '/testimonial3.jpg'
-  }
-]
+interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+  image: string;
+}
+
+interface TestimonialsProps {
+  title: string;
+  testimonials: Testimonial[];
+}
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -31,7 +22,7 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 }
 
-export function Testimonials() {
+export function Testimonials({ title, testimonials }: TestimonialsProps) {
   return (
     <section className="py-24 bg-gradient-to-br from-primary/5 to-primary/10 overflow-hidden">
       <motion.div
@@ -51,7 +42,7 @@ export function Testimonials() {
             variants={fadeInUp}
             className="text-4xl font-bold mb-4"
           >
-            O que nossos clientes dizem
+            {title}
           </motion.h2>
           <motion.p 
             variants={fadeInUp}

@@ -10,14 +10,14 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 interface Testimonial {
-  text: string
-  author: string
-  role: string
-  image: string
+  name: string;
+  role: string;
+  content: string;
+  image: string;
 }
 
 interface TestimonialSliderProps {
-  testimonials: Testimonial[]
+  testimonials: Testimonial[];
 }
 
 export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
@@ -75,7 +75,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
                     <div className="relative w-32 h-32 md:w-full md:h-64">
                       <Image
                         src={testimonial.image}
-                        alt={testimonial.author}
+                        alt={testimonial.name}
                         fill
                         className="object-cover rounded-2xl"
                         sizes="(max-width: 768px) 128px, 384px"
@@ -87,11 +87,11 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
                   <div className="md:col-span-3 flex flex-col justify-center">
                     <Quote className="w-12 h-12 text-primary/20 mb-4" />
                     <p className="text-lg md:text-xl text-neutral-700 italic mb-6">
-                      "{testimonial.text}"
+                      "{testimonial.content}"
                     </p>
                     <div>
                       <p className="font-semibold text-lg text-neutral-900">
-                        {testimonial.author}
+                        {testimonial.name}
                       </p>
                       <p className="text-neutral-500">{testimonial.role}</p>
                     </div>

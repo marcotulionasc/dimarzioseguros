@@ -60,6 +60,61 @@ const differentials = [
   }
 ]
 
+interface Feature {
+  title: string;
+  description: string;
+}
+
+interface FeaturesProps {
+  title: string;
+  features: Feature[];
+}
+
+export function Features({ title, features }: FeaturesProps) {
+  return (
+    <section className="py-24 bg-white">
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="container mx-auto px-4"
+      >
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <motion.h2 
+            variants={fadeInUp} 
+            className="text-4xl font-bold mb-4"
+          >
+            {title}
+          </motion.h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, i) => (
+            <motion.div
+              key={i}
+              variants={{
+                initial: { opacity: 0, y: 20 },
+                animate: { opacity: 1, y: 0, transition: { delay: i * 0.1 } }
+              }}
+              className="group bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100"
+            >
+              <div className="flex items-start gap-4">
+                <div className="bg-primary/10 text-primary rounded-lg p-3 group-hover:scale-110 transition-transform">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-neutral-600">{feature.description}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </section>
+  );
+}
+
 export function HowItWorks() {
   return (
     <section className="py-24 bg-gradient-to-br from-neutral-50 to-neutral-100">

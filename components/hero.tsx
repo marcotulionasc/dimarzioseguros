@@ -4,7 +4,15 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { BadgeCheck, ArrowRight } from 'lucide-react'
 
-export function Hero() {
+interface HeroProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+export function Hero({ title, subtitle, description, buttonText, buttonLink }: HeroProps) {
   return (
     <section className="relative w-full py-24 text-white rounded-lg" style={{ background: 'linear-gradient(135deg, #0E71B8 0%, #2B2E83 100%)' }}>
       <div className="container mx-auto">
@@ -16,17 +24,28 @@ export function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-              Dimarzio Seguros — 20 anos protegendo com clareza
+              {title}
             </h1>
 
+            <p className="text-2xl font-semibold text-white/90">
+              {subtitle}
+            </p>
+
             <p className="text-xl text-white/90">
-              Seguros pensados para você e sua família.
+              {description}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="outline" size="lg" className="group bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 rounded-lg">
-                Quero minha análise gratuita
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="group bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 rounded-lg"
+                asChild
+              >
+                <a href={buttonLink}>
+                  {buttonText}
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </div>
 
