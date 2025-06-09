@@ -13,8 +13,25 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ icon: Icon, title, slug, description, className }: ProductCardProps) {
+  // Map specific slugs to their correct paths
+  const getProductPath = (slug: string) => {
+    const pathMap: Record<string, string> = {
+      'automovel': '/seguro-automovel',
+      'fianca-locaticia': '/seguro-fianca-locaticia',
+      'garantia-fiduciaria': '/seguro-garantia-fiduciaria',
+      'portateis': '/seguro-portateis',
+      'rc-profissional': '/seguro-rc-profissional',
+      'residencial': '/seguro-residencial',
+      'rural': '/seguro-rural',
+      'saude': '/seguro-saude',
+      'viagem': '/seguro-viagem',
+      'vida': '/seguro-vida'
+    }
+    return pathMap[slug] || `/produtos/${slug}`
+  }
+
   return (
-    <Link href={`/produtos/${slug}`} className={cn('block group', className)} prefetch>
+    <Link href={getProductPath(slug)} className={cn('block group', className)} prefetch>
       <Card className="h-full transition-all hover:-translate-y-2 hover:ring-2 hover:ring-blue-600">
         <CardContent className="p-6 flex flex-col items-center gap-3 text-center">
           <Icon className="w-8 h-8 text-blue-600" aria-hidden="true" />
