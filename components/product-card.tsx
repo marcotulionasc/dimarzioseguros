@@ -30,7 +30,9 @@ export function ProductCard({ icon: Icon, title, slug, description, className }:
       'rural': '/seguro-rural',
       'saude': '/seguro-saude',
       'viagem': '/seguro-viagem',
-      'vida': '/seguro-vida'
+      'vida': '/seguro-vida',
+      'fiduciario': '/seguro-fiduciario',
+      'empresarial': '/seguro-empresarial'
     }
     return pathMap[slug] || `/produtos/${slug}`
   }
