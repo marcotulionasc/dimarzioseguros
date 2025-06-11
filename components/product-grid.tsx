@@ -17,7 +17,8 @@ import {
   Tractor,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 const icons: Record<string, any> = {
   consorcio: PiggyBank,
@@ -38,6 +39,8 @@ export function ProductGrid() {
   const [filter, setFilter] = useState('Todos')
   const filters = ['Todos', 'Empresariais', 'Pessoais']
   const filtered = products.filter((p) => filter === 'Todos' || p.category === filter)
+  const [parent] = useAutoAnimate()
+  
   return (
     <motion.section
       id="seguros"
@@ -49,7 +52,7 @@ export function ProductGrid() {
     >
       <h2 className="text-3xl font-bold">Qual seguro você quer entender melhor?</h2>
       <ProductFilterTabs filters={filters} active={filter} onChange={setFilter} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div ref={parent} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filtered.map((p) => {
           const Icon = icons[p.slug]
           return <ProductCard key={p.slug} slug={p.slug} title={p.title} icon={Icon} />

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { BadgeCheck, ArrowRight } from 'lucide-react'
 
@@ -17,7 +18,13 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
     <section className="relative w-full py-24 text-white rounded-lg" style={{ background: 'linear-gradient(135deg, #0E71B8 0%, #2B2E83 100%)' }}>
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left space-y-8">
+          <motion.div 
+            className="text-center lg:text-left space-y-8"
+            initial={{opacity: 0, y: 40}} 
+            whileInView={{opacity: 1, y: 0}} 
+            transition={{duration: 0.6}} 
+            viewport={{once: true}}
+          >
             <div className="inline-flex items-center px-4 py-2 bg-white/10 text-sm font-medium rounded-lg backdrop-blur-sm">
               <span className="mr-2">🎉</span>
               <span>20 anos de excelência</span>
@@ -59,7 +66,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
                 +10k clientes
               </span>
             </div>
-          </div>
+          </motion.div>
 
           <div className="hidden lg:block relative">
             <div className="relative aspect-square w-full max-w-lg mx-auto">

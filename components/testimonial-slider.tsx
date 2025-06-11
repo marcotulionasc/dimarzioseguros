@@ -30,7 +30,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
   )
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: false, skipSnaps: false },
+    { loop: true, skipSnaps: false, speed: 6 },
     [autoplay.current]
   )
 
@@ -56,8 +56,21 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
     emblaApi.on('reInit', onSelect)
   }, [emblaApi, onSelect])
 
+  const progress = testimonials.length > 0 ? ((selectedIndex + 1) / testimonials.length) * 100 : 0
+
   return (
     <div className="relative">
+      {/* Progress Bar */}
+      <div className="w-full h-1 bg-neutral-200 rounded-full mb-4 overflow-hidden">
+        <motion.div 
+          className="h-full bg-premium-blue rounded-full"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: progress / 100 }}
+          transition={{ duration: 0.3 }}
+          style={{ transformOrigin: 'left' }}
+        />
+      </div>
+      
       <div className="overflow-hidden rounded-2xl bg-white shadow-xl" ref={emblaRef}>
         <div className="flex">
           {testimonials.map((testimonial, index) => (

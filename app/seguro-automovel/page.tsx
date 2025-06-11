@@ -49,45 +49,64 @@ const advantages = [
 export default function SeguroAutomovelPage() {
   return (
     <main>
-      {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
-        <div className="container mx-auto px-4 relative py-20">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
-              Seguro de carro e moto não é tudo igual — e só na hora do sinistro você descobre isso.
-            </h1>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl leading-relaxed">
-                Muita gente contrata o seguro mais barato sem saber o que está incluído.<br />
-                Na hora do aperto, descobre que não tem carro reserva, a assistência é limitada ou a franquia é mais alta do que esperava.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
-                Na <strong className="text-white">Dimarzio Seguros</strong>, a gente mostra as opções com clareza, explica cada detalhe e ajuda você a evitar essas surpresas.
-              </p>
-            </div>
-            
-            <div className="pt-4">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
-              >
-                Quero minha cotação agora
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </div>
+      {/* Breadcrumb */}
+      <section className="bg-neutral-50 py-4 border-t-4 border-premium-blue">
+        <div className="container mx-auto px-4 lg:px-8 max-w-screen-xl">
+          <div className="text-sm text-neutral-600">
+            <span>Home</span> / <span>Produtos</span> / <span className="text-primary font-medium">Seguro Automóvel</span>
           </div>
         </div>
       </section>
 
+      {/* Hero Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 lg:px-8 max-w-screen-xl">
+          <motion.div 
+            className="min-h-[90vh] flex items-center bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white relative overflow-hidden rounded-2xl"
+            initial={{opacity: 0, y: 40}} 
+            whileInView={{opacity: 1, y: 0}} 
+            transition={{duration: 0.6}} 
+            viewport={{once: true}}
+          >
+            <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
+            <div className="relative py-20 px-8 w-full">
+              <div className="max-w-4xl mx-auto text-center space-y-8">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+                  Seguro de carro e moto não é tudo igual — e só na hora do sinistro você descobre isso.
+                </h1>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+                  <p className="text-xl leading-relaxed">
+                    Muita gente contrata o seguro mais barato sem saber o que está incluído.<br />
+                    Na hora do aperto, descobre que não tem carro reserva, a assistência é limitada ou a franquia é mais alta do que esperava.
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+                  <p className="text-xl">
+                    Na <strong className="text-white">Dimarzio Seguros</strong>, a gente mostra as opções com clareza, explica cada detalhe e ajuda você a evitar essas surpresas.
+                  </p>
+                </div>
+                
+                <div className="pt-4">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                  >
+                    Quero minha cotação agora
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Differential Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-screen-xl">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Diferencial da Dimarzio Seguros</h2>
             <div className="bg-[#0E71B8]/5 rounded-xl p-8 space-y-6">
@@ -109,8 +128,8 @@ export default function SeguroAutomovelPage() {
       </section>
 
       {/* Coverages Section */}
-      <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
+        <div className="container mx-auto px-4 lg:px-8 max-w-screen-xl">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Coberturas que você pode contratar</h2>
             <div className="grid gap-4">
@@ -120,7 +139,7 @@ export default function SeguroAutomovelPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-start gap-3 p-6 bg-white rounded-lg shadow-lg"
+                  className="flex items-start gap-3 p-6 bg-white rounded-lg shadow-elevate"
                 >
                   <Shield className="text-[#0E71B8] flex-shrink-0 mt-1" />
                   <p className="text-lg">{item}</p>
@@ -135,8 +154,8 @@ export default function SeguroAutomovelPage() {
       </section>
 
       {/* Disappointments Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-screen-xl">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Por que tanta gente se decepciona com o seguro depois que precisa usar</h2>
             <div className="space-y-4">
@@ -164,18 +183,18 @@ export default function SeguroAutomovelPage() {
       </section>
 
       {/* How Dimarzio Does Different Section */}
-      <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
+        <div className="container mx-auto px-4 lg:px-8 max-w-screen-xl">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
               {differentials.map((item, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 bg-white rounded-lg shadow-lg"
+                  className="p-6 bg-white rounded-lg shadow-elevate"
                 >
                   <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>

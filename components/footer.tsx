@@ -1,5 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
 
 const socialLinks = [
@@ -24,22 +28,34 @@ const quickLinks = [
 ]
 
 export function Footer() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: false, amount: 0.8 })
+  
   return (
-    <footer className="bg-gradient-to-br from-primary-dark to-primary text-white">
+    <footer className="bg-gradient-to-br from-primary-dark to-primary text-white" ref={ref}>
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-12 gap-12">
           {/* Brand Column */}
           <div className="md:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 bg-white rounded-xl p-2">
+              <motion.div 
+                className="relative w-12 h-12 bg-white rounded-xl p-2"
+                whileHover={{ rotate: 6 }} 
+                whileTap={{ scale: 0.95 }}
+                animate={isInView ? { 
+                  rotate: [0, 3, -3, 0],
+                  filter: ["brightness(1)", "brightness(1.2)", "brightness(1.2)", "brightness(1)"]
+                } : {}}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 8 }}
+              >
                 <Image 
                   src="/images/logo-dimarzio.png" 
                   alt="Dimarzio Seguros" 
                   fill
                   className="object-contain p-1"
                 />
-              </div>
+              </motion.div>
               <div>
                 <h3 className="font-bold text-xl">Dimarzio Seguros</h3>
                 <p className="text-white/80 text-sm">20 anos protegendo com clareza</p>

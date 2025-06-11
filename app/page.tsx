@@ -1,16 +1,26 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { Hero } from '@/components/hero'
 import { AlreadyInsured } from '@/components/already-insured'
 import { HowItWorks, Differentials } from '@/components/features'
-import { Testimonials } from '@/components/testimonials'
 import { WhyWrong } from '@/components/why-wrong'
 import { Consultoria } from '@/components/consultoria'
 import { ProductGrid } from '@/components/product-grid'
 import { WhyChoose } from '@/components/why-choose'
 import { PaperQuestion } from '@/components/paper-question'
-import { Faq } from '@/components/faq'
 import { ContactSection } from '@/components/contact-section'
+
+// Dynamic imports for performance
+const Testimonials = dynamic(() => import('@/components/testimonials').then(mod => ({ default: mod.Testimonials })), { 
+  ssr: false,
+  loading: () => <div className="py-16 animate-pulse bg-neutral-100 rounded-lg" />
+})
+
+const Faq = dynamic(() => import('@/components/faq').then(mod => ({ default: mod.Faq })), { 
+  ssr: false,
+  loading: () => <div className="py-16 animate-pulse bg-neutral-100 rounded-lg" />
+})
 
 export default function Home() {
   const heroContent = {

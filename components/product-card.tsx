@@ -39,12 +39,18 @@ export function ProductCard({ icon: Icon, title, slug, description, className }:
 
   return (
     <Link href={getProductPath(slug)} className={cn('block group', className)} prefetch>
-      <Card className="h-full transition-all hover:-translate-y-2 hover:ring-2 hover:ring-blue-600">
+      <Card className="h-full relative transition-transform hover:-translate-y-1 hover:rotate-y-2 hover:shadow-elevate">
         <CardContent className="p-6 flex flex-col items-center gap-3 text-center">
           <Icon className="w-8 h-8 text-blue-600" aria-hidden="true" />
           <span className="font-semibold text-lg">{title}</span>
           {description && <p className="text-sm text-gray-600">{description}</p>}
-          <Button variant="outline" size="sm" className="mt-2">Saiba mais</Button>
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="mt-2 relative overflow-hidden transition-all hover:bg-blue-50 after:absolute after:inset-0 after:bg-blue-600/10 after:scale-0 hover:after:scale-100 after:transition-transform after:rounded-full after:origin-center"
+          >
+            Saiba mais
+          </Button>
         </CardContent>
       </Card>
     </Link>

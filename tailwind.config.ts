@@ -111,6 +111,7 @@ const config: Config = {
         fadeIn: "fadeIn 0.5s ease-in-out",
         slideIn: "slideIn 0.3s ease-out forwards",
         slideOut: "slideOut 0.3s ease-out forwards",
+        pulseSlow: "pulseSlow 10s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -125,6 +126,10 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
         },
+        pulseSlow: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)" },
+        },
       },
       boxShadow: {
         xs: "0 0 0 1px rgba(0, 0, 0, 0.05)",
@@ -134,6 +139,7 @@ const config: Config = {
         lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
         "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+        elevate: "0 8px 24px rgba(15,82,186,0.15)",
         inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
         outline: "0 0 0 3px rgba(30, 58, 138, 0.5)",
         none: "none",
@@ -156,6 +162,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "premium-blue": "linear-gradient(to right, #2563EB, #0F52BA, #1E3A8A)",
       },
     },
   },

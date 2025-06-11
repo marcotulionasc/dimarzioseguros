@@ -27,22 +27,29 @@ const FaqCard = ({ question }: FaqCardProps) => {
         className="w-full flex justify-between items-center p-5 text-left cursor-pointer focus:outline-none"
       >
         <span className="text-lg font-semibold text-neutral-800">{question.question}</span>
-        <svg
-          className={`w-5 h-5 text-primary transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+        <motion.svg
+          className="w-5 h-5 text-primary"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+        </motion.svg>
       </button>
-      <div
-        className={`transition-all duration-300 ease-in-out px-5 overflow-hidden ${
-          isOpen ? "max-h-40 py-4" : "max-h-0 py-0"
-        }`}
+      <motion.div
+        className="px-5 overflow-hidden"
+        initial={false}
+        animate={{ 
+          height: isOpen ? "auto" : 0,
+          paddingTop: isOpen ? "1rem" : 0,
+          paddingBottom: isOpen ? "1rem" : 0
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         <p className="text-neutral-700 text-base">{question.answer}</p>
-      </div>
+      </motion.div>
     </div>
   )
 }
