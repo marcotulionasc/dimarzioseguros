@@ -15,11 +15,11 @@ interface HeroProps {
 
 export function Hero({ title, subtitle, description, buttonText, buttonLink }: HeroProps) {
   return (
-    <section className="relative w-full py-24 text-white rounded-lg" style={{ background: 'linear-gradient(135deg, #0E71B8 0%, #2B2E83 100%)' }}>
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative w-full py-16 md:py-24 text-white rounded-lg overflow-hidden" style={{ background: 'linear-gradient(135deg, #0E71B8 0%, #2B2E83 100%)' }}>
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[500px]">
           <motion.div 
-            className="text-center lg:text-left space-y-8"
+            className="text-center lg:text-left space-y-6 lg:space-y-8"
             initial={{opacity: 0, y: 40}} 
             whileInView={{opacity: 1, y: 0}} 
             transition={{duration: 0.6}} 
@@ -30,15 +30,15 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
               <span>20 anos de excelência</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
               {title}
             </h1>
 
-            <p className="text-2xl font-semibold text-white/90">
+            <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white/90">
               {subtitle}
             </p>
 
-            <p className="text-xl text-white/90">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
               {description}
             </p>
 
@@ -46,7 +46,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="group bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 rounded-lg"
+                className="group bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:scale-105 rounded-lg transition-all duration-300"
                 asChild
               >
                 <a href={buttonLink}>
@@ -56,31 +56,123 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
               </Button>
             </div>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm">
-              <span className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm">
-                <BadgeCheck className="text-white h-5 w-5" />
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-6 text-sm">
+              <span className="flex items-center gap-2 bg-white/10 px-3 lg:px-4 py-2 rounded-lg backdrop-blur-sm">
+                <BadgeCheck className="text-white h-4 w-4 lg:h-5 lg:w-5" />
                 Atendimento 24h
               </span>
-              <span className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm">
-                <BadgeCheck className="text-white h-5 w-5" />
+              <span className="flex items-center gap-2 bg-white/10 px-3 lg:px-4 py-2 rounded-lg backdrop-blur-sm">
+                <BadgeCheck className="text-white h-4 w-4 lg:h-5 lg:w-5" />
                 +10k clientes
               </span>
             </div>
           </motion.div>
 
-          <div className="hidden lg:block relative">
-            <div className="relative aspect-square w-full max-w-lg mx-auto">
+          <motion.div 
+            className="relative order-first lg:order-last"
+            initial={{opacity: 0, scale: 0.8}} 
+            whileInView={{opacity: 1, scale: 1}} 
+            transition={{duration: 1, delay: 0.3}} 
+            viewport={{once: true}}
+          >
+            <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] xl:h-[520px]">
               <Image 
-                src="/images/hero-dimarzio-white.png" 
+                src="/images/hero-dimarzio-2.png" 
                 alt="Família protegida" 
                 fill
-                className="object-cover rounded-lg shadow-lg"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain rounded-2xl"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 50vw"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0E71B8]/20 to-transparent rounded-lg" />
+              
+              {/* Bubbles geniais que ficaram perfeitas! */}
+              <motion.div 
+                className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-white/20 to-white/10 rounded-full backdrop-blur-sm border border-white/20"
+                animate={{
+                  y: [0, -10, 0],
+                  rotate: [0, 180, 360],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              <motion.div 
+                className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-blue-400/30 to-blue-600/20 rounded-full backdrop-blur-sm border border-blue-300/30"
+                animate={{
+                  x: [0, 8, 0],
+                  y: [0, -8, 0],
+                  rotate: [0, -180, -360]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
+                }}
+              />
+              
+              <motion.div 
+                className="absolute top-1/3 -left-4 w-8 h-8 bg-gradient-to-br from-cyan-400/40 to-cyan-600/20 rounded-full backdrop-blur-sm border border-cyan-300/40"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.6, 1, 0.6]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 2
+                }}
+              />
+              
+              <motion.div 
+                className="absolute top-1/4 -right-2 w-6 h-6 bg-gradient-to-br from-indigo-400/50 to-indigo-600/30 rounded-full backdrop-blur-sm border border-indigo-300/50"
+                animate={{
+                  rotate: [0, 360],
+                  scale: [1, 0.8, 1]
+                }}
+                transition={{
+                  duration: 10,
+                  repeat: Infinity,
+                  ease: "linear",
+                  delay: 0.5
+                }}
+              />
+              
+              {/* Mais uma bubble no meio para ficar mais divertido */}
+              <motion.div 
+                className="absolute bottom-1/4 right-1/3 w-10 h-10 bg-gradient-to-br from-purple-400/30 to-purple-600/20 rounded-full backdrop-blur-sm border border-purple-300/30"
+                animate={{
+                  y: [0, -12, 0],
+                  x: [0, 6, 0],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 3
+                }}
+              />
+              
+              {/* Premium glow effect with animation */}
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-transparent rounded-2xl pointer-events-none"
+                animate={{
+                  opacity: [0.3, 0.6, 0.3]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
