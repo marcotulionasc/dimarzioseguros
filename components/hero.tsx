@@ -80,7 +80,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
                 src="/images/hero-dimarzio.png" 
                 alt="Família protegida" 
                 fill
-                className="object-contain rounded-2xl"
+                className="object-contain rounded-lg"
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 50vw"
                 priority
               />
