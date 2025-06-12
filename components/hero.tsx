@@ -77,7 +77,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
           >
             <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] xl:h-[520px]">
               <Image 
-                src="/images/hero-dimarzio-2.png" 
+                src="/images/hero-dimarzio.png" 
                 alt="Família protegida" 
                 fill
                 className="object-contain rounded-2xl"
