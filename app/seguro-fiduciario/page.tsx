@@ -1,150 +1,380 @@
-import { Hero } from "@/components/hero";
-import { Features } from "@/components/features";
-import { WhyChoose } from "@/components/why-choose";
-import { HowItWorks } from "@/components/how-it-works";
-import { Testimonials } from "@/components/testimonials";
-import { Contact } from "@/components/contact";
-import { Faq } from "@/components/faq";
+'use client'
+
+import { Button } from '@/components/ui/button'
+import { motion } from 'framer-motion'
+import { AlertTriangle, CheckCircle2, ArrowRight, Shield, Scale, Building, Users, FileText } from 'lucide-react'
+
+const features = [
+  {
+    icon: FileText,
+    title: 'Substituição de depósitos',
+    description: 'Substitui depósitos judiciais mantendo seu capital disponível'
+  },
+  {
+    icon: Shield,
+    title: 'Proteção patrimonial',
+    description: 'Evita bloqueios de contas, bens e ativos'
+  },
+  {
+    icon: Scale,
+    title: 'Garantia contratual',
+    description: 'Garante acordos e obrigações contratuais'
+  },
+  {
+    icon: Building,
+    title: 'Fluxo de caixa',
+    description: 'Proporciona mais fôlego ao fluxo de caixa da empresa'
+  },
+  {
+    icon: Users,
+    title: 'Conformidade processual',
+    description: 'Atende exigências em processos sem comprometer o patrimônio'
+  }
+]
+
+const whoCanContract = [
+  'Empresas envolvidas em processos judiciais',
+  'Envolvidas em disputas com exigência de garantia',
+  'Advogados e contadores que intermediam causas',
+  'Com contratos públicos ou privados que exigem garantias'
+]
+
+const steps = [
+  'Você preenche o formulário com os dados do processo ou obrigação',
+  'A equipe da Dimarzio Seguros analisa seu perfil e monta a proposta',
+  'Você recebe uma cotação personalizada com todas as condições',
+  'Decide se quer seguir. Sem compromisso'
+]
+
+const advantages = [
+  'Análise técnica especializada em garantias judiciais',
+  'Processo ágil de 2 a 5 dias úteis',
+  'Custo muito menor que ter capital retido em juízo',
+  'Atendimento técnico especializado antes e depois'
+]
 
 export default function SeguroGarantiaFiduciaria() {
-  const heroContent = {
-    title: "Em disputas judiciais, tempo é dinheiro — e o seguro certo pode ser o que garante sua liberdade de ação.",
-    subtitle: "O Seguro Garantia Fiduciária da Dimarzio Seguros substitui depósitos judiciais e cauções em processos trabalhistas, tributários, cíveis ou contratuais.",
-    description: "Você protege seu caixa, evita bloqueio de bens e segue com sua operação com mais fôlego financeiro.",
-    buttonText: "Quero minha cotação gratuita",
-    buttonLink: "#contact"
-  };
-
-  const featuresContent = {
-    title: "Pra que serve o Seguro Garantia Fiduciária",
-    features: [
-      {
-        title: "Substituição de depósitos",
-        description: "Substitui depósitos judiciais mantendo seu capital disponível"
-      },
-      {
-        title: "Proteção patrimonial",
-        description: "Evita bloqueios de contas, bens e ativos"
-      },
-      {
-        title: "Garantia contratual",
-        description: "Garante acordos e obrigações contratuais"
-      },
-      {
-        title: "Fluxo de caixa",
-        description: "Proporciona mais fôlego ao fluxo de caixa da empresa"
-      },
-      {
-        title: "Conformidade processual",
-        description: "Atende exigências em processos sem comprometer o patrimônio"
-      }
-    ]
-  };
-
-  const whyChooseContent = {
-    title: "Quem pode contratar",
-    benefits: [
-      {
-        title: "Empresas em processos",
-        description: "Empresas envolvidas em processos judiciais"
-      },
-      {
-        title: "Pessoas físicas",
-        description: "Envolvidas em disputas com exigência de garantia"
-      },
-      {
-        title: "Profissionais jurídicos",
-        description: "Advogados e contadores que intermediam causas"
-      },
-      {
-        title: "Empresas contratantes",
-        description: "Com contratos públicos ou privados que exigem garantias"
-      }
-    ],
-    highlight: "Proteja seu patrimônio e mantenha sua operação em andamento."
-  };
-
-  const howItWorksContent = {
-    title: "Como funciona",
-    steps: [
-      {
-        title: "Envie os dados",
-        description: "Você preenche o formulário com os dados do processo ou obrigação"
-      },
-      {
-        title: "Análise técnica",
-        description: "A equipe da Dimarzio Seguros analisa seu perfil e monta a proposta"
-      },
-      {
-        title: "Receba a cotação",
-        description: "Você recebe uma cotação personalizada com todas as condições"
-      },
-      {
-        title: "Decisão livre",
-        description: "Decide se quer seguir. Sem compromisso"
-      }
-    ]
-  };
-
-  const testimonialsContent = {
-    title: "Depoimentos de quem usou na hora certa",
-    testimonials: [
-      {
-        name: "Ricardo Mendes",
-        role: "Empresário",
-        content: "O seguro garantia foi fundamental para não comprometer nosso capital de giro durante um processo trabalhista.",
-        image: "/testimonials/person1.jpg"
-      },
-      {
-        name: "Dra. Patricia Santos",
-        role: "Advogada",
-        content: "Recomendo para meus clientes. É uma solução que facilita muito a gestão financeira durante processos.",
-        image: "/testimonials/person2.jpg"
-      },
-      {
-        name: "Carlos Eduardo",
-        role: "Diretor Financeiro",
-        content: "Excelente alternativa ao depósito judicial. O atendimento da Dimarzio foi muito profissional.",
-        image: "/testimonials/person3.jpg"
-      }
-    ]
-  };
-
-  const faqContent = {
-    title: "Perguntas Frequentes",
-    questions: [
-      {
-        question: "Quanto tempo leva para obter o seguro garantia?",
-        answer: "O processo geralmente leva de 2 a 5 dias úteis, dependendo da complexidade do caso e da documentação necessária."
-      },
-      {
-        question: "O seguro é aceito em todos os tipos de processo?",
-        answer: "O seguro garantia é aceito na maioria dos processos judiciais e administrativos, mas é importante verificar as especificidades de cada caso."
-      },
-      {
-        question: "Qual o custo em comparação ao depósito judicial?",
-        answer: "O custo do seguro geralmente varia entre 1% a 3% do valor da garantia ao ano, muito menor que ter o capital retido em juízo."
-      },
-      {
-        question: "Quais documentos são necessários?",
-        answer: "Basicamente, documentos da empresa/pessoa física, informações do processo e últimos balanços/declarações de IR. A lista completa será enviada após o primeiro contato."
-      }
-    ]
-  };
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Hero {...heroContent} />
-      <Features {...featuresContent} />
-      <WhyChoose {...whyChooseContent} />
-      <HowItWorks {...howItWorksContent} />
-      <Testimonials {...testimonialsContent} />
-      <Faq {...faqContent} />
-      <Contact 
-        title="Antes de travar dinheiro em processo, veja se o seguro não resolve"
-        subtitle="Peça sua cotação gratuita agora"
-        description="É simples, direto e pode ser o que falta pra sua empresa respirar melhor."
-      />
+    <main>
+      {/* Hero Section */}
+      <section className="min-h-[90vh] flex items-center bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
+        <div className="container mx-auto px-4 relative py-20">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 text-sm font-medium rounded-lg backdrop-blur-sm border border-white/10">
+              <Scale className="mr-2 h-4 w-4" />
+              <span>Cotação gratuita</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+              Em disputas judiciais, tempo é dinheiro — e o seguro certo pode ser o que garante sua liberdade de ação.
+            </h1>
+            
+            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              O Seguro Garantia Fiduciária da Dimarzio Seguros substitui depósitos judiciais e cauções em processos trabalhistas, tributários, cíveis ou contratuais.
+            </p>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl">
+                Você protege seu caixa, evita bloqueio de bens e segue com sua operação com mais fôlego financeiro.
+              </p>
+            </div>
+            
+            <div className="pt-4">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+              >
+                Quero minha cotação gratuita
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">Pra que serve o Seguro Garantia Fiduciária</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {features.map((feature, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-6 bg-white rounded-lg shadow-lg"
+                >
+                  <feature.icon className="text-[#0E71B8] mb-4 h-8 w-8" />
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Can Contract Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">Quem pode contratar</h2>
+            <div className="space-y-4">
+              {whoCanContract.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex items-start gap-3 p-6 bg-[#0E71B8]/5 rounded-lg"
+                >
+                  <CheckCircle2 className="text-[#0E71B8] flex-shrink-0 mt-1 h-6 w-6" />
+                  <p className="text-lg">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+            <blockquote className="mt-8 p-6 bg-neutral-50 rounded-lg text-center">
+              <p className="text-lg font-medium">
+                Proteja seu patrimônio e mantenha sua operação em andamento.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <div className="space-y-6">
+              {steps.map((step, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-sm"
+                >
+                  <div className="w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center flex-shrink-0 font-semibold">
+                    {i + 1}
+                  </div>
+                  <p className="text-lg">{step}</p>
+                </motion.div>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-lg px-8 py-6">
+                Quero minha cotação gratuita
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advantages Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">Vantagens do Seguro Garantia Fiduciária com a Dimarzio Seguros</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {advantages.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-6 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5 rounded-lg"
+                >
+                  <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
+                  <p className="text-lg">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">Depoimentos de quem usou na hora certa</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="p-6 bg-white rounded-lg shadow-lg"
+              >
+                <p className="text-gray-600 mb-4 italic">
+                  "O seguro garantia foi fundamental para não comprometer nosso capital de giro durante um processo trabalhista."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#0E71B8] rounded-full flex items-center justify-center">
+                    <span className="text-white font-semibold">R</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Ricardo Mendes</p>
+                    <p className="text-sm text-gray-500">Empresário</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="p-6 bg-white rounded-lg shadow-lg"
+              >
+                <p className="text-gray-600 mb-4 italic">
+                  "Recomendo para meus clientes. É uma solução que facilita muito a gestão financeira durante processos."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#0E71B8] rounded-full flex items-center justify-center">
+                    <span className="text-white font-semibold">P</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Dra. Patricia Santos</p>
+                    <p className="text-sm text-gray-500">Advogada</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="p-6 bg-white rounded-lg shadow-lg"
+              >
+                <p className="text-gray-600 mb-4 italic">
+                  "Excelente alternativa ao depósito judicial. O atendimento da Dimarzio foi muito profissional."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#0E71B8] rounded-full flex items-center justify-center">
+                    <span className="text-white font-semibold">C</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Carlos Eduardo</p>
+                    <p className="text-sm text-gray-500">Diretor Financeiro</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">Perguntas Frequentes</h2>
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="border border-gray-200 rounded-lg p-6"
+              >
+                <h3 className="text-lg font-semibold mb-3">Quanto tempo leva para obter o seguro garantia?</h3>
+                <p className="text-gray-600">O processo geralmente leva de 2 a 5 dias úteis, dependendo da complexidade do caso e da documentação necessária.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="border border-gray-200 rounded-lg p-6"
+              >
+                <h3 className="text-lg font-semibold mb-3">O seguro é aceito em todos os tipos de processo?</h3>
+                <p className="text-gray-600">O seguro garantia é aceito na maioria dos processos judiciais e administrativos, mas é importante verificar as especificidades de cada caso.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="border border-gray-200 rounded-lg p-6"
+              >
+                <h3 className="text-lg font-semibold mb-3">Qual o custo em comparação ao depósito judicial?</h3>
+                <p className="text-gray-600">O custo do seguro geralmente varia entre 1% a 3% do valor da garantia ao ano, muito menor que ter o capital retido em juízo.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="border border-gray-200 rounded-lg p-6"
+              >
+                <h3 className="text-lg font-semibold mb-3">Quais documentos são necessários?</h3>
+                <p className="text-gray-600">Basicamente, documentos da empresa/pessoa física, informações do processo e últimos balanços/declarações de IR. A lista completa será enviada após o primeiro contato.</p>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-24 bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl font-bold">Antes de travar dinheiro em processo, veja se o seguro não resolve.</h2>
+            <p className="text-xl text-white/90">
+              Peça sua <strong className="text-white">cotação gratuita agora</strong>.<br />
+              É simples, direto e pode ser o que falta pra sua empresa respirar melhor.
+            </p>
+            <form className="mt-8 space-y-4">
+              <input
+                type="text"
+                placeholder="Nome completo"
+                className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Nome da empresa"
+                className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="WhatsApp"
+                className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
+                required
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
+                required
+              />
+              <textarea
+                placeholder="Descreva brevemente seu caso e o tipo de garantia necessária"
+                rows={4}
+                className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20 resize-none"
+                required
+              />
+              <Button 
+                type="submit" 
+                size="lg" 
+                variant="outline"
+                className="w-full bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg py-4"
+              >
+                Solicitar cotação gratuita
+                <Scale className="ml-2 h-5 w-5" />
+              </Button>
+            </form>
+            <p className="text-sm text-white/70 mt-4">
+              Seus dados estão protegidos. Não fazemos spam.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-  );
-} 
+  )
+}

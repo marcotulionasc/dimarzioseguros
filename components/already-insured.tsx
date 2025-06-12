@@ -19,7 +19,7 @@ export function AlreadyInsured() {
         <Button className="primary-button rounded-sm">Quero minha análise gratuita</Button>
       </div>
       <div className="flex justify-center">
-        <Image src="/images/seguro-01.png" alt="Pessoa analisando documentos" width={500} height={400} className="rounded-sm shadow-lg" />
+        <Image src="/images/sobre-02.jpg" alt="Pessoa analisando documentos" width={500} height={400} className="rounded-sm shadow-lg" />
       </div>
     </motion.section>
   )

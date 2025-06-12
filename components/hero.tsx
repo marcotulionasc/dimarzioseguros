@@ -75,12 +75,12 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
             transition={{duration: 1, delay: 0.3}} 
             viewport={{once: true}}
           >
-            <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] xl:h-[520px]">
+            <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] xl:h-[520px] rounded-lg">
               <Image 
-                src="/images/hero-dimarzio.png" 
+                src="/images/hero-dimarzioseguros.jpg" 
                 alt="Família protegida" 
                 fill
-                className="object-contain rounded-lg"
+                className="rounded-lg object-contain"
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 50vw"
                 priority
               />
