@@ -15,7 +15,7 @@ const contactInfo: ContactInfo[] = [
   {
     icon: MapPin,
     label: 'Endereço',
-    value: 'Rua Cumaru, 219 - sala 16, Campinas - SP',
+    value: 'Rua Cumaru 219 - sala 16, Edifício Laser, Alphaville, Campinas - SP 13098-324',
     href: 'https://goo.gl/maps/your-address'
   },
   {
@@ -49,8 +49,10 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">Entre em Contato</h2>
-          <p className="section-subtitle">
+          <h2 className="text-4xl font-bold font-playfair text-institutional-black mb-4">
+            Contato Dimarzio Seguros
+          </h2>
+          <p className="text-xl text-neutral-600 font-montserrat max-w-2xl mx-auto">
             Estamos aqui para ajudar você a encontrar a melhor proteção para o que importa.
           </p>
         </motion.div>
@@ -62,14 +64,14 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="card-light"
+            className="bg-white rounded-lg p-8 shadow-dimarzio border border-neutral-100"
           >
             <form className="space-y-6" action="https://formsubmit.co/contato@dimarzioseguros.com.br" method="POST">
               <input type="hidden" name="_captcha" value="false" />
               
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="form-label">
+                  <label htmlFor="name" className="block text-sm font-medium text-institutional-black font-montserrat mb-2">
                     Nome
                   </label>
                   <input
@@ -77,13 +79,13 @@ export function ContactSection() {
                     id="name"
                     name="nome"
                     required
-                    className="form-input"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent font-montserrat"
                     placeholder="Seu nome completo"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="form-label">
+                  <label htmlFor="email" className="block text-sm font-medium text-institutional-black font-montserrat mb-2">
                     E-mail
                   </label>
                   <input
@@ -91,32 +93,32 @@ export function ContactSection() {
                     id="email"
                     name="email"
                     required
-                    className="form-input"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent font-montserrat"
                     placeholder="seu@email.com"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="form-label">
+                  <label htmlFor="phone" className="block text-sm font-medium text-institutional-black font-montserrat mb-2">
                     Telefone
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="telefone"
-                    className="form-input"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent font-montserrat"
                     placeholder="(00) 00000-0000"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="insurance" className="form-label">
+                  <label htmlFor="insurance" className="block text-sm font-medium text-institutional-black font-montserrat mb-2">
                     Tipo de Seguro
                   </label>
                   <select
                     id="insurance"
                     name="tipo"
-                    className="form-select"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent font-montserrat"
                   >
                     <option value="">Selecione um tipo</option>
                     <option value="auto">Seguro Auto</option>
@@ -128,20 +130,20 @@ export function ContactSection() {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="form-label">
+                  <label htmlFor="message" className="block text-sm font-medium text-institutional-black font-montserrat mb-2">
                     Mensagem
                   </label>
                   <textarea
                     id="message"
                     name="mensagem"
                     rows={4}
-                    className="form-input resize-none"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent font-montserrat resize-none"
                     placeholder="Como podemos ajudar?"
                   />
                 </div>
               </div>
 
-              <Button type="submit" className="w-full primary-button">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-montserrat font-medium py-3 rounded-lg transition-all duration-300 hover:scale-105">
                 Enviar Mensagem
               </Button>
             </form>
@@ -155,8 +157,8 @@ export function ContactSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="lg:sticky lg:top-8 space-y-6"
           >
-            <div className="card-light">
-              <h3 className="text-2xl font-semibold mb-6">Informações de Contato</h3>
+            <div className="bg-white rounded-lg p-8 shadow-dimarzio border border-neutral-100">
+              <h3 className="text-2xl font-semibold mb-6 font-playfair text-institutional-black">Informações de Contato</h3>
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <a
@@ -166,12 +168,12 @@ export function ContactSection() {
                     rel={item.icon === Instagram ? "noopener noreferrer" : undefined}
                     className="flex items-start gap-4 group"
                   >
-                    <div className="p-3 rounded-sm bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                       <item.icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="font-medium text-neutral-900">{item.label}</p>
-                      <p className="text-neutral-700 group-hover:text-primary transition-colors">
+                      <p className="font-medium text-institutional-black font-montserrat">{item.label}</p>
+                      <p className="text-neutral-700 group-hover:text-primary transition-colors font-montserrat">
                         {item.value}
                       </p>
                     </div>
@@ -180,13 +182,22 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="card-primary">
-              <h3 className="text-2xl font-semibold text-white mb-4">Horário de Atendimento</h3>
+            <div className="bg-gradient-to-br from-primary to-primary-dark rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-semibold text-white mb-4 font-playfair">Horário de Atendimento</h3>
               <div className="space-y-2">
-                <p className="text-white/90">Segunda a Sexta</p>
-                <p className="text-xl font-semibold text-white">09:00 - 18:00</p>
-                <p className="text-sm text-white/80 mt-4">
+                <p className="text-white/90 font-montserrat">Segunda a Sexta</p>
+                <p className="text-xl font-semibold text-white font-montserrat">09:00 - 18:00</p>
+                <p className="text-sm text-white/80 mt-4 font-montserrat">
                   Atendimento 24h para emergências através do nosso telefone.
+                </p>
+              </div>
+              
+              <div className="mt-6 pt-6 border-t border-white/20">
+                <p className="text-sm text-white/90 font-montserrat">
+                  <strong>CNPJ:</strong> 10.894.914/0001-05
+                </p>
+                <p className="text-sm text-white/90 font-montserrat mt-2">
+                  Dimarzio Seguros — 20 anos protegendo com clareza.
                 </p>
               </div>
             </div>

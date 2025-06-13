@@ -1,15 +1,26 @@
 import type React from "react"
 import "@/app/globals.css"
-import { Inter } from "next/font/google"
+import { Montserrat, Playfair_Display } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button"
 
-const inter = Inter({ 
+// Fontes Oficiais Dimarzio Seguros
+const montserrat = Montserrat({ 
   subsets: ["latin"],
   display: "swap",
   preload: true,
+  variable: '--font-montserrat',
+  weight: ['300', '400', '500', '600', '700', '800', '900'], // ExtraLight, Regular, Medium, Bold, ExtraBold, Black
+})
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  preload: false,
+  variable: '--font-playfair',
+  weight: ['400', '500', '600', '700', '800', '900'], // Regular, Medium, SemiBold, Bold, ExtraBold, Black
 })
 
 export const metadata = {
@@ -25,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${inter.className} flex flex-col min-h-screen overflow-x-hidden bg-neutral-50 text-neutral-900 antialiased`}>
+      <body className={`${montserrat.variable} ${playfairDisplay.variable} font-montserrat flex flex-col min-h-screen overflow-x-hidden bg-neutral-50 text-institutional-black antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Navbar />
           <main className="flex-1 pt-16">{children}</main>

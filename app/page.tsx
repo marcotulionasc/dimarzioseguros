@@ -24,9 +24,9 @@ const Faq = dynamic(() => import('@/components/faq').then(mod => ({ default: mod
 
 export default function Home() {
   const heroContent = {
-    title: "Dimarzio Seguros — 20 anos protegendo com clareza",
-    subtitle: "Seguros pensados para você e sua família",
-    description: "Atendimento personalizado e coberturas que realmente fazem sentido para você",
+    title: "Já imaginou descobrir que seu seguro não garante que você irá receber sua indenização?",
+    subtitle: "3 em cada 5 pessoas só percebem que contrataram errado quando já é tarde.",
+    description: "A Dimarzio Seguros oferece uma consultoria gratuita para revisar ou montar o seu seguro do jeito certo. Com cobertura que realmente protege, sem pagar a mais, sem letras miúdas.",
     buttonText: "Quero minha análise gratuita",
     buttonLink: "#contact"
   };
@@ -49,53 +49,65 @@ export default function Home() {
       {
         name: "Roberto S.",
         role: "Médico",
-        content: "Profissionais extremamente competentes e atenciosos. Resolveram meu sinistro com agilidade impressionante.",
+        content: "Com mais de 20 anos de experiência e mais de 10.000 clientes atendidos, a Dimarzio entrega um plano ajustado à realidade — sem empurrar nada.",
         image: "/testimonials/person3.jpg"
       }
     ]
   };
 
   const whyChooseContent = {
-    title: "Por que escolher a Dimarzio?",
+    title: "O que faz a Dimarzio diferente",
     benefits: [
       {
-        title: "Atendimento humanizado",
-        description: "Suporte personalizado e ágil para todas as suas necessidades"
+        title: "Atendimento completo, inclusive em casos de sinistro",
+        description: "Você fala com quem resolve. Mesmo aos finais de semana."
       },
       {
-        title: "Melhores seguradoras",
-        description: "Parceria com as principais seguradoras do mercado"
+        title: "Departamento próprio que acompanha parcelas em atraso",
+        description: "Sistema de multicálculo automático com as principais seguradoras do mercado"
       },
       {
-        title: "Experiência comprovada",
-        description: "20 anos de experiência no mercado de seguros"
+        title: "Consultoria com foco principal em sinistro",
+        description: "Cobertura ideal e custo ajustado para sua realidade"
       },
       {
-        title: "Suporte completo",
-        description: "Acompanhamento em todas as etapas do processo"
+        title: "Atendimento em sinistro 24 horas",
+        description: "Suporte completo quando você mais precisa"
       }
     ],
-    highlight: "Sua tranquilidade é nossa prioridade"
+    highlight: "Com 20 anos de mercado, a Dimarzio vai além do básico. Corretora tem em toda esquina. Atendimento técnico, quase nenhuma."
   };
 
   const faqContent = {
     title: "Perguntas Frequentes",
     questions: [
       {
-        question: "Como funciona o processo de contratação?",
-        answer: "O processo é simples e rápido. Você nos envia suas informações, analisamos seu perfil e apresentamos as melhores opções para você."
+        question: "E se eu não quiser contratar?",
+        answer: "Sem problema. A consultoria é gratuita e sem pressão."
       },
       {
-        question: "Quanto tempo leva para contratar um seguro?",
-        answer: "Na maioria dos casos, conseguimos finalizar todo o processo em até 48 horas após o envio da documentação necessária."
+        question: "É mesmo gratuita?",
+        answer: "Sim. Fazemos isso pra mostrar nosso trabalho. Você só contrata se quiser."
       },
       {
-        question: "Como funciona o suporte pós-venda?",
-        answer: "Oferecemos suporte completo 24/7. Em caso de sinistro ou dúvidas, nossa equipe está sempre pronta para ajudar."
+        question: "Parece bom demais. Qual o truque?",
+        answer: "Nenhum. A gente prefere mostrar que entende — ao invés de tentar convencer."
       },
       {
-        question: "Vocês trabalham com todas as seguradoras?",
-        answer: "Trabalhamos com as principais seguradoras do mercado, o que nos permite encontrar sempre a melhor opção para cada perfil."
+        question: "O que preciso pra fazer a análise?",
+        answer: "Só clicar no botão e responder algumas perguntas rápidas."
+      },
+      {
+        question: "Preciso contratar depois?",
+        answer: "Não. Você decide com base no que achou."
+      },
+      {
+        question: "Vocês atendem fora de Campinas?",
+        answer: "Sim. Atuamos com clientes em todo o Brasil."
+      },
+      {
+        question: "Vocês fazem seguro empresarial também?",
+        answer: "Sim. Temos especialistas e damos toda consultoria gratuita pra empresas e pessoas físicas."
       }
     ]
   };

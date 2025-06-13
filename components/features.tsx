@@ -13,50 +13,50 @@ const steps = [
   { 
     icon: CheckCircle2, 
     text: 'Agende sua análise gratuita',
-    description: 'Processo simples e rápido, sem compromisso'
+    description: 'Clique no botão e conte pra gente o que precisa proteger.'
   },
   { 
     icon: Users, 
     text: 'Entenda sua real necessidade',
-    description: 'Análise personalizada do seu perfil'
+    description: 'A gente ouve, analisa e mostra o que você precisa — sem enrolação.'
   },
   { 
     icon: Wallet, 
-    text: 'Comparação nas principais seguradoras',
-    description: 'Melhores opções do mercado'
+    text: 'Comparação nas principais seguradoras do mercado',
+    description: 'A gente faz a cotação e te mostra a melhor condição real.'
   },
   { 
     icon: Phone, 
-    text: 'Você decide se quer contratar',
-    description: 'Sem pressão, decisão é sua'
+    text: 'Você decide se quer contratar ou não',
+    description: 'Sem pressão. Sem truque. Só clareza.'
   }
 ]
 
 const differentials = [
   {
-    title: 'Atendimento completo em sinistro',
+    title: 'Atendimento completo, inclusive em casos de sinistro',
     icon: ShieldCheck,
-    description: 'Suporte total quando você mais precisa'
+    description: 'Você fala com quem resolve. Mesmo aos finais de semana.'
   },
   {
-    title: 'Departamento de parcelas',
+    title: 'Departamento próprio que acompanha parcelas em atraso',
     icon: Clock,
-    description: 'Gestão dedicada para parcelas em atraso'
+    description: 'Controle dedicado para manter seu seguro sempre em dia'
   },
   {
-    title: 'Multicálculo automático',
+    title: 'Sistema de multicálculo automático',
     icon: Wallet,
-    description: 'Comparação com principais seguradoras'
+    description: 'Comparação com as principais seguradoras do mercado'
   },
   {
-    title: 'Consultoria especializada',
+    title: 'Consultoria com foco principal em sinistro',
     icon: Users,
-    description: 'Foco em cobertura ideal e custo justo'
+    description: 'Cobertura ideal e custo ajustado para sua realidade'
   },
   {
-    title: 'Atendimento 24 horas',
+    title: 'Atendimento em sinistro 24 horas',
     icon: Phone,
-    description: 'Sempre disponível quando precisar'
+    description: 'Suporte completo quando você mais precisa'
   }
 ]
 
@@ -127,15 +127,15 @@ export function HowItWorks() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2 
             variants={fadeInUp} 
-            className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent"
+            className="text-4xl font-bold mb-4 font-playfair text-institutional-black"
           >
             Como funciona na prática
           </motion.h2>
           <motion.p 
             variants={fadeInUp}
-            className="text-neutral-600 text-lg"
+            className="text-neutral-600 text-lg font-montserrat"
           >
-            Processo simples e transparente para sua segurança
+            4 passos simples para sua segurança
           </motion.p>
         </div>
 
@@ -147,14 +147,14 @@ export function HowItWorks() {
                 initial: { opacity: 0, y: 20 },
                 animate: { opacity: 1, y: 0, transition: { delay: i * 0.2 } }
               }}
-              className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group relative bg-white rounded-2xl p-6 shadow-dimarzio hover:shadow-dimarzio-lg transition-all duration-300"
             >
               <div className="absolute -top-6 left-6 bg-primary/10 text-primary rounded-xl p-3 group-hover:scale-110 transition-transform">
                 <step.icon className="w-6 h-6" />
               </div>
               <div className="mt-6">
-                <h3 className="text-xl font-semibold mb-2">{step.text}</h3>
-                <p className="text-neutral-600">{step.description}</p>
+                <h3 className="text-xl font-semibold mb-2 font-montserrat text-institutional-black">{step.text}</h3>
+                <p className="text-neutral-600 font-montserrat">{step.description}</p>
               </div>
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <ArrowRight className="w-5 h-5 text-primary" />
@@ -179,21 +179,21 @@ export function Differentials() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.span 
             variants={fadeInUp}
-            className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-sm"
+            className="text-sm font-medium text-white bg-primary px-4 py-2 rounded-lg font-montserrat"
           >
             Nossos diferenciais
           </motion.span>
           <motion.h2 
             variants={fadeInUp} 
-            className="text-4xl font-bold mt-4 mb-4"
+            className="text-4xl font-bold mt-4 mb-4 font-playfair text-institutional-black"
           >
             O que faz a Dimarzio diferente
           </motion.h2>
           <motion.p 
             variants={fadeInUp}
-            className="text-neutral-600 text-lg"
+            className="text-neutral-600 text-lg font-montserrat"
           >
-            Excelência em cada detalhe do seu atendimento
+            Com 20 anos de mercado, a Dimarzio vai além do básico. Corretora tem em toda esquina. Atendimento técnico, quase nenhuma.
           </motion.p>
         </div>
 

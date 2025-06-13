@@ -15,7 +15,7 @@ interface HeroProps {
 
 export function Hero({ title, subtitle, description, buttonText, buttonLink }: HeroProps) {
   return (
-    <section className="relative w-full py-16 md:py-24 text-white rounded-lg overflow-hidden" style={{ background: 'linear-gradient(135deg, #0E71B8 0%, #2B2E83 100%)' }}>
+    <section className="relative w-full py-16 md:py-24 text-white rounded-lg overflow-hidden bg-dimarzio-gradient">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[500px]">
           <motion.div 
@@ -25,20 +25,20 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
             transition={{duration: 0.6}} 
             viewport={{once: true}}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 text-sm font-medium rounded-lg backdrop-blur-sm">
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 text-sm font-medium rounded-lg backdrop-blur-sm border border-white/20">
               <span className="mr-2">🎉</span>
               <span>20 anos de excelência</span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white font-playfair">
               {title}
             </h1>
 
-            <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white/90">
+            <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white/90 font-montserrat">
               {subtitle}
             </p>
 
-            <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
               {description}
             </p>
 
@@ -46,7 +46,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="group bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:scale-105 rounded-lg transition-all duration-300"
+                className="group bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:scale-105 rounded-lg transition-all duration-300 font-montserrat font-medium"
                 asChild
               >
                 <a href={buttonLink}>
@@ -57,11 +57,11 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
             </div>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-6 text-sm">
-              <span className="flex items-center gap-2 bg-white/10 px-3 lg:px-4 py-2 rounded-lg backdrop-blur-sm">
+              <span className="flex items-center gap-2 bg-white/10 px-3 lg:px-4 py-2 rounded-lg backdrop-blur-sm border border-white/20 font-montserrat">
                 <BadgeCheck className="text-white h-4 w-4 lg:h-5 lg:w-5" />
                 Atendimento 24h
               </span>
-              <span className="flex items-center gap-2 bg-white/10 px-3 lg:px-4 py-2 rounded-lg backdrop-blur-sm">
+              <span className="flex items-center gap-2 bg-white/10 px-3 lg:px-4 py-2 rounded-lg backdrop-blur-sm border border-white/20 font-montserrat">
                 <BadgeCheck className="text-white h-4 w-4 lg:h-5 lg:w-5" />
                 +10k clientes
               </span>
@@ -85,7 +85,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
                 priority
               />
               
-              {/* Bubbles geniais que ficaram perfeitas! */}
+              {/* Bubbles com cores da identidade visual */}
               <motion.div 
                 className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-white/20 to-white/10 rounded-full backdrop-blur-sm border border-white/20"
                 animate={{
@@ -101,7 +101,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
               />
               
               <motion.div 
-                className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-blue-400/30 to-blue-600/20 rounded-full backdrop-blur-sm border border-blue-300/30"
+                className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/20 rounded-full backdrop-blur-sm border border-primary/30"
                 animate={{
                   x: [0, 8, 0],
                   y: [0, -8, 0],
@@ -116,7 +116,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
               />
               
               <motion.div 
-                className="absolute top-1/3 -left-4 w-8 h-8 bg-gradient-to-br from-cyan-400/40 to-cyan-600/20 rounded-full backdrop-blur-sm border border-cyan-300/40"
+                className="absolute top-1/3 -left-4 w-8 h-8 bg-gradient-to-br from-secondary/40 to-secondary/20 rounded-full backdrop-blur-sm border border-secondary/40"
                 animate={{
                   scale: [1, 1.3, 1],
                   opacity: [0.6, 1, 0.6]
@@ -130,7 +130,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
               />
               
               <motion.div 
-                className="absolute top-1/4 -right-2 w-6 h-6 bg-gradient-to-br from-indigo-400/50 to-indigo-600/30 rounded-full backdrop-blur-sm border border-indigo-300/50"
+                className="absolute top-1/4 -right-2 w-6 h-6 bg-gradient-to-br from-primary-light/50 to-primary/30 rounded-full backdrop-blur-sm border border-primary-light/50"
                 animate={{
                   rotate: [0, 360],
                   scale: [1, 0.8, 1]
@@ -143,9 +143,9 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
                 }}
               />
               
-              {/* Mais uma bubble no meio para ficar mais divertido */}
+              {/* Bubble adicional com cor secundária */}
               <motion.div 
-                className="absolute bottom-1/4 right-1/3 w-10 h-10 bg-gradient-to-br from-purple-400/30 to-purple-600/20 rounded-full backdrop-blur-sm border border-purple-300/30"
+                className="absolute bottom-1/4 right-1/3 w-10 h-10 bg-gradient-to-br from-secondary/30 to-secondary/20 rounded-full backdrop-blur-sm border border-secondary/30"
                 animate={{
                   y: [0, -12, 0],
                   x: [0, 6, 0],
@@ -161,7 +161,7 @@ export function Hero({ title, subtitle, description, buttonText, buttonLink }: H
               
               {/* Premium glow effect with animation */}
               <motion.div 
-                className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-transparent rounded-2xl pointer-events-none"
+                className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-transparent rounded-lg pointer-events-none"
                 animate={{
                   opacity: [0.3, 0.6, 0.3]
                 }}

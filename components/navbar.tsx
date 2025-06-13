@@ -26,13 +26,13 @@ export function Navbar() {
                 priority
               />
             </div>
-            <span className="font-bold text-xl text-primary">
+            <span className="font-bold text-xl text-primary font-playfair">
               Dimarzio Seguros
             </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            <div className="flex items-center gap-6 text-sm font-medium">
+            <div className="flex items-center gap-6 text-sm font-medium font-montserrat">
               {[
                 { href: '/', label: 'Home' },
                 { href: '/#seguros', label: 'Produtos' },
@@ -41,7 +41,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-neutral-700 hover:opacity-80 transition-opacity"
+                  className="relative text-institutional-black hover:text-primary transition-colors"
                 >
                   {link.label}
                   {pathname === link.href && (
@@ -56,7 +56,7 @@ export function Navbar() {
             </div>
             
             <Button 
-              className="hidden lg:flex items-center gap-2"
+              className="hidden lg:flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-montserrat font-medium"
               variant="default"
             >
               <Phone className="w-4 h-4" />
