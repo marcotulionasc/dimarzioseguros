@@ -13,7 +13,7 @@ export function WhyWrong() {
       transition={{ duration: 0.6 }}
       className="py-16 px-4 md:px-8 bg-gradient-to-br from-primary to-primary-dark text-white text-center mx-auto max-w-screen-xl space-y-8 rounded-lg"
     >
-      <h2 className="text-4xl font-bold text-white font-playfair">Por que tanta gente contrata errado?</h2>
+      <h2 className="text-4xl font-bold text-white font-montserrat">Por que tanta gente contrata errado?</h2>
       
       <div className="max-w-4xl mx-auto space-y-6">
         <p className="text-xl text-white/90 font-montserrat leading-relaxed">

@@ -14,7 +14,7 @@ export function PaperQuestion() {
       className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 mx-auto max-w-screen-xl px-4 md:px-8 text-center space-y-8 rounded-lg"
     >
       <div className="space-y-4">
-        <h2 className="text-4xl font-bold font-playfair text-institutional-black">
+        <h2 className="text-4xl font-bold font-montserrat text-institutional-black">
           Seu seguro protege ou é só papel?
         </h2>
         <p className="text-xl text-neutral-700 font-montserrat max-w-2xl mx-auto leading-relaxed">

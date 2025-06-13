@@ -128,8 +128,8 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
-            <p>© 2024 Dimarzio Seguros. Todos os direitos reservados.</p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white">
+            <p>© 2025 Dimarzio Seguros. Todos os direitos reservados.</p>
             <p>CNPJ: 10.894.914/0001-05</p>
           </div>
         </div>

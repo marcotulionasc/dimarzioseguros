@@ -25,7 +25,6 @@ const Faq = dynamic(() => import('@/components/faq').then(mod => ({ default: mod
 export default function Home() {
   const heroContent = {
     title: "Já imaginou descobrir que seu seguro não garante que você irá receber sua indenização?",
-    subtitle: "3 em cada 5 pessoas só percebem que contrataram errado quando já é tarde.",
     description: "A Dimarzio Seguros oferece uma consultoria gratuita para revisar ou montar o seu seguro do jeito certo. Com cobertura que realmente protege, sem pagar a mais, sem letras miúdas.",
     buttonText: "Quero minha análise gratuita",
     buttonLink: "#contact"

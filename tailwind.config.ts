@@ -88,9 +88,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['Montserrat', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif'],
         montserrat: ['Montserrat', 'system-ui', 'sans-serif'],
-        playfair: ['Playfair Display', 'Georgia', 'serif'],
       },
       screens: {
         xs: "480px",

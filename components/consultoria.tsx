@@ -36,7 +36,7 @@ export function Consultoria() {
       className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 space-y-12"
     >
       <div className="text-center space-y-4">
-        <h2 className="text-4xl font-bold font-playfair text-institutional-black">
+        <h2 className="text-4xl font-bold font-montserrat text-institutional-black">
           O que você leva da consultoria gratuita
         </h2>
         <p className="text-lg text-neutral-600 font-montserrat max-w-2xl mx-auto">

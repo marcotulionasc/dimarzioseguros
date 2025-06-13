@@ -14,7 +14,7 @@ export function AlreadyInsured() {
       className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 grid md:grid-cols-2 gap-8 items-center bg-blue-50 rounded-lg"
     >
       <div className="space-y-6">
-        <h2 className="text-3xl font-bold font-playfair text-institutional-black">
+        <h2 className="text-3xl font-bold font-montserrat text-institutional-black">
           Você já tem um seguro, mas será que ele protege o que importa?
         </h2>
         <p className="text-lg font-montserrat text-neutral-700 leading-relaxed">

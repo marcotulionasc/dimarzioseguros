@@ -49,7 +49,7 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold font-playfair text-institutional-black mb-4">
+          <h2 className="text-4xl font-bold font-montserrat text-institutional-black mb-4">
             Contato Dimarzio Seguros
           </h2>
           <p className="text-xl text-neutral-600 font-montserrat max-w-2xl mx-auto">
@@ -158,7 +158,7 @@ export function ContactSection() {
             className="lg:sticky lg:top-8 space-y-6"
           >
             <div className="bg-white rounded-lg p-8 shadow-dimarzio border border-neutral-100">
-              <h3 className="text-2xl font-semibold mb-6 font-playfair text-institutional-black">Informações de Contato</h3>
+              <h3 className="text-2xl font-semibold mb-6 font-montserrat text-institutional-black">Informações de Contato</h3>
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <a
@@ -183,7 +183,7 @@ export function ContactSection() {
             </div>
 
             <div className="bg-gradient-to-br from-primary to-primary-dark rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-semibold text-white mb-4 font-playfair">Horário de Atendimento</h3>
+              <h3 className="text-2xl font-semibold text-white mb-4 font-montserrat">Horário de Atendimento</h3>
               <div className="space-y-2">
                 <p className="text-white/90 font-montserrat">Segunda a Sexta</p>
                 <p className="text-xl font-semibold text-white font-montserrat">09:00 - 18:00</p>

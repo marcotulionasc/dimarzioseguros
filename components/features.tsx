@@ -127,7 +127,7 @@ export function HowItWorks() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2 
             variants={fadeInUp} 
-            className="text-4xl font-bold mb-4 font-playfair text-institutional-black"
+            className="text-4xl font-bold mb-4 font-montserrat text-institutional-black"
           >
             Como funciona na prática
           </motion.h2>
@@ -149,6 +149,10 @@ export function HowItWorks() {
               }}
               className="group relative bg-white rounded-2xl p-6 shadow-dimarzio hover:shadow-dimarzio-lg transition-all duration-300"
             >
+              <div className="absolute -top-4 -left-4 bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm font-montserrat shadow-lg">
+                {i + 1}
+              </div>
+              
               <div className="absolute -top-6 left-6 bg-primary/10 text-primary rounded-xl p-3 group-hover:scale-110 transition-transform">
                 <step.icon className="w-6 h-6" />
               </div>
@@ -185,7 +189,7 @@ export function Differentials() {
           </motion.span>
           <motion.h2 
             variants={fadeInUp} 
-            className="text-4xl font-bold mt-4 mb-4 font-playfair text-institutional-black"
+            className="text-4xl font-bold mt-4 mb-4 font-montserrat text-institutional-black"
           >
             O que faz a Dimarzio diferente
           </motion.h2>
