@@ -31,7 +31,10 @@ const highlights = [
 
 export function Hero({ title, description, buttonText, buttonLink }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary-dark to-secondary overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary-dark to-secondary overflow-hidden">
+      {/* Espaçamento para compensar o header fixo com margem extra */}
+      <div className="absolute top-0 left-0 right-0 h-24 sm:h-28 md:h-32 lg:h-36 pointer-events-none" />
+      
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {[...Array(6)].map((_, i) => (
@@ -60,106 +63,112 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
         ))}
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-8"
-        >
-          {/* Badge de 20 anos */}
+      {/* Container principal com padding responsivo e margem superior */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-12 sm:py-16 md:py-20 lg:py-24 pt-16 sm:pt-20 md:pt-24 lg:pt-28">
+        <div className="text-center space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
+          
+          {/* Badge de 20 anos com margem superior adicional */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-montserrat font-medium mb-4"
+            className="inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white font-montserrat font-medium text-sm sm:text-base mt-4 sm:mt-6 md:mt-8"
           >
-            <Award className="w-5 h-5 text-yellow-300" />
-            <span>🎉 Comemorando 20 anos de excelência</span>
+            <Award className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300 flex-shrink-0" />
+            <span className="whitespace-nowrap">🎉 Comemorando 20 anos de excelência</span>
           </motion.div>
 
-          {/* Título Principal */}
-          <motion.h1
+          {/* Título Principal com melhor responsividade */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white font-montserrat max-w-5xl mx-auto"
+            className="space-y-4 sm:space-y-6"
           >
-            {title}
-          </motion.h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight text-white font-montserrat max-w-6xl mx-auto px-2 sm:px-4">
+              {title}
+            </h1>
+          </motion.div>
 
-          {/* Descrição */}
-          <motion.p
+          {/* Descrição com melhor espaçamento */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/80 font-montserrat leading-relaxed max-w-3xl mx-auto"
+            className="max-w-4xl mx-auto px-2 sm:px-4"
           >
-            {description}
-          </motion.p>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 font-montserrat leading-relaxed sm:leading-relaxed md:leading-relaxed">
+              {description}
+            </p>
+          </motion.div>
 
-          {/* CTA Button */}
+          {/* CTA Button com melhor responsividade */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="pt-2"
+            className="pt-2 sm:pt-4 md:pt-6"
           >
             <Button 
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-montserrat font-semibold px-10 py-3 rounded-lg text-base transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-white text-primary hover:bg-white/90 font-montserrat font-semibold px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 rounded-lg text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-w-[200px] sm:min-w-[250px] md:min-w-[300px]"
             >
               {buttonText}
             </Button>
           </motion.div>
 
-          {/* Highlights Grid */}
+          {/* Highlights Grid com layout fluido */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 mb-4 max-w-4xl mx-auto"
+            className="pt-6 sm:pt-8 md:pt-10 lg:pt-12"
           >
-            {highlights.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                className={`flex flex-col items-center text-center space-y-3 rounded-xl p-6 transition-all duration-300 ${
-                  item.premium 
-                    ? 'bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 border-2 border-yellow-400/30 shadow-lg shadow-yellow-400/10 hover:shadow-xl hover:shadow-yellow-400/20 transform hover:scale-105' 
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15'
-                }`}
-              >
-                <div className={`rounded-full p-4 ${
-                  item.premium 
-                    ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-lg' 
-                    : 'bg-white/20'
-                }`}>
-                  <item.icon className={`w-8 h-8 ${
-                    item.premium ? 'text-white' : 'text-white'
-                  }`} />
-                </div>
-                <p className={`font-montserrat leading-tight ${
-                  item.premium 
-                    ? 'text-white font-semibold text-base' 
-                    : 'text-white font-medium text-sm'
-                }`}>
-                  {item.text}
-                </p>
-                {item.premium && (
-                  <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-75"></div>
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-150"></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+              {highlights.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                  className={`flex flex-col items-center text-center space-y-3 sm:space-y-4 rounded-xl p-4 sm:p-6 md:p-8 transition-all duration-300 ${
+                    item.premium 
+                      ? 'bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 border-2 border-yellow-400/30 shadow-lg shadow-yellow-400/10 hover:shadow-xl hover:shadow-yellow-400/20 transform hover:scale-105' 
+                      : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15'
+                  }`}
+                >
+                  <div className={`rounded-full p-3 sm:p-4 md:p-5 ${
+                    item.premium 
+                      ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-lg' 
+                      : 'bg-white/20'
+                  }`}>
+                    <item.icon className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${
+                      item.premium ? 'text-white' : 'text-white'
+                    }`} />
                   </div>
-                )}
-              </motion.div>
-            ))}
+                  <p className={`font-montserrat leading-tight ${
+                    item.premium 
+                      ? 'text-white font-semibold text-sm sm:text-base md:text-lg' 
+                      : 'text-white font-medium text-xs sm:text-sm md:text-base'
+                  }`}>
+                    {item.text}
+                  </p>
+                  {item.premium && (
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-75"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-150"></div>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
+
+      {/* Gradiente sutil na parte inferior para transição suave */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 md:h-32 bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
     </section>
   )
 }
