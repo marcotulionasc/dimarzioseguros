@@ -74,8 +74,8 @@ export default function SeguroGarantiaFiduciaria() {
               O Seguro Garantia Fiduciária da Dimarzio Seguros substitui depósitos judiciais e cauções em processos trabalhistas, tributários, cíveis ou contratuais.
             </p>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
                 Você protege seu caixa, evita bloqueio de bens e segue com sua operação com mais fôlego financeiro.
               </p>
             </div>
@@ -168,7 +168,7 @@ export default function SeguroGarantiaFiduciaria() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-lg px-8 py-6">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white text-lg px-8 py-6">
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

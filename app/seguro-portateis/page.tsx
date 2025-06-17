@@ -111,8 +111,8 @@ export default function SeguroPortateis() {
               O Seguro de Portáteis da Dimarzio Seguros garante proteção completa para seus dispositivos eletrônicos onde quer que você esteja.
             </p>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
                 Cobertura contra roubo, furto qualificado, quebra acidental e danos elétricos, com atendimento rápido e sem letras miúdas.
               </p>
             </div>
@@ -121,7 +121,7 @@ export default function SeguroPortateis() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-blue hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
               >
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -204,7 +204,7 @@ export default function SeguroPortateis() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -292,7 +292,7 @@ export default function SeguroPortateis() {
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
-              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Enviar
               </Button>
             </form>
