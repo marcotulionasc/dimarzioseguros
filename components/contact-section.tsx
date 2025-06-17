@@ -3,6 +3,7 @@
 import { Mail, MapPin, Phone, Instagram, LucideIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 
 interface ContactInfo {
   icon: LucideIcon
@@ -66,8 +67,24 @@ export function ContactSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white rounded-lg p-8 shadow-dimarzio border border-neutral-100"
           >
-            <form className="space-y-6" action="https://formsubmit.co/contato@dimarzioseguros.com.br" method="POST">
-              <input type="hidden" name="_captcha" value="false" />
+            <form 
+              className="space-y-6"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                  const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'contato');
+                  await submitForm(mappedData);
+                  alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+                  (e.target as HTMLFormElement).reset();
+                } catch (error) {
+                  console.error('Error:', error);
+                  alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+                }
+              }}
+            >
               
               <div className="space-y-4">
                 <div>

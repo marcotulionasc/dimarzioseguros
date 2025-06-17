@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { Sprout, CheckCircle2, ArrowRight, Shield, Tractor } from 'lucide-react'
+import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 
 const coverages = [
   'Prejuízos na lavoura causados por fenômenos da natureza',
@@ -157,20 +158,40 @@ export default function SeguroRuralPage() {
               Peça sua <strong>cotação gratuita agora</strong>.<br />
               É simples, direto e pode evitar prejuízos que não dependem só de você.
             </p>
-            <form className="mt-8 space-y-4">
+            <form 
+              className="mt-8 space-y-4"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                  const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'rural');
+                  await submitForm(mappedData);
+                  alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
+                  (e.target as HTMLFormElement).reset();
+                } catch (error) {
+                  console.error('Error:', error);
+                  alert('Erro ao enviar formulário. Por favor, tente novamente.');
+                }
+              }}
+            >
               <input
                 type="text"
+                name="nome"
                 placeholder="Nome completo"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
               <input
                 type="tel"
+                name="telefone"
                 placeholder="WhatsApp"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
               <select
+                name="atividade"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               >
@@ -180,6 +201,7 @@ export default function SeguroRuralPage() {
               </select>
               <input
                 type="text"
+                name="cidade"
                 placeholder="Cidade e Estado"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required

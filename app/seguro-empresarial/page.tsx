@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
+import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 import { AlertTriangle, CheckCircle2, ArrowRight, Shield, Building2, Users, Zap, Eye } from 'lucide-react'
 
 const problemsWithInsurance = [
@@ -240,32 +241,54 @@ export default function SeguroEmpresarialPage() {
               Peça sua <strong className="text-white">análise gratuita</strong> com quem entende do assunto.<br />
               É simples, direto e pode evitar prejuízo sério.
             </p>
-            <form className="mt-8 space-y-4">
+            <form 
+              className="mt-8 space-y-4"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                  const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'empresarial');
+                  await submitForm(mappedData);
+                  alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
+                  (e.target as HTMLFormElement).reset();
+                } catch (error) {
+                  console.error('Error:', error);
+                  alert('Erro ao enviar formulário. Por favor, tente novamente.');
+                }
+              }}
+            >
               <input
                 type="text"
+                name="nome"
                 placeholder="Nome do responsável"
                 className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
                 required
               />
               <input
                 type="text"
+                name="nomeEmpresa"
                 placeholder="Nome da empresa"
                 className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
                 required
               />
               <input
                 type="tel"
+                name="telefone"
                 placeholder="WhatsApp"
                 className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
                 required
               />
               <input
                 type="email"
+                name="email"
                 placeholder="E-mail"
                 className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
                 required
               />
               <textarea
+                name="mensagem"
                 placeholder="Conte um pouco sobre sua empresa e qual tipo de proteção precisa"
                 rows={4}
                 className="w-full p-4 border-0 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20 resize-none"

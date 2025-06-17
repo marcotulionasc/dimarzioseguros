@@ -2,12 +2,30 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 
 export default function ContatoPage() {
   return (
     <main className="container py-16 space-y-8">
       <h1 className="text-3xl font-bold">Fale Conosco</h1>
-      <form className="space-y-4" action="https://formsubmit.co/contato@dimarzioseguros.com.br" method="POST">
+      <form 
+        className="space-y-4" 
+        onSubmit={async (e) => {
+          e.preventDefault();
+          const formData = new FormData(e.currentTarget);
+          const data = Object.fromEntries(formData.entries());
+          
+          try {
+            const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'contato');
+            await submitForm(mappedData);
+            alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+            (e.target as HTMLFormElement).reset();
+          } catch (error) {
+            console.error('Error:', error);
+            alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+          }
+        }}
+      >
         <input type="hidden" name="_captcha" value="false" />
         <div>
           <input name="nome" required placeholder="Nome" className="w-full border rounded-md p-2" />

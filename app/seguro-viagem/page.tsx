@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
+import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 import { Plane, CheckCircle2, ArrowRight, Shield, Users } from 'lucide-react'
 
 const reasons = [
@@ -224,21 +225,41 @@ export default function SeguroViagemPage() {
               Peça sua <strong>cotação gratuita agora</strong>.<br />
               É simples, direto e pode evitar prejuízo longe de casa.
             </p>
-            <form className="mt-8 space-y-4">
+            <form 
+              className="mt-8 space-y-4"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                  const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'viagem');
+                  await submitForm(mappedData);
+                  alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
+                  (e.target as HTMLFormElement).reset();
+                } catch (error) {
+                  console.error('Error:', error);
+                  alert('Erro ao enviar formulário. Por favor, tente novamente.');
+                }
+              }}
+            >
               <input
                 type="text"
+                name="nome"
                 placeholder="Nome completo"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
               <input
                 type="tel"
+                name="telefone"
                 placeholder="WhatsApp"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
               <input
                 type="text"
+                name="destino"
                 placeholder="Destino da viagem"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
@@ -246,12 +267,14 @@ export default function SeguroViagemPage() {
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="date"
+                  name="dataIda"
                   placeholder="Data de ida"
                   className="w-full p-3 border border-neutral-200 rounded-lg"
                   required
                 />
                 <input
                   type="date"
+                  name="dataVolta"
                   placeholder="Data de volta"
                   className="w-full p-3 border border-neutral-200 rounded-lg"
                   required

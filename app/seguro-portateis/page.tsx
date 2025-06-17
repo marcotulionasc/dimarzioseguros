@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 
 export default function SeguroPortateis() {
   const features = [
@@ -273,21 +274,41 @@ export default function SeguroPortateis() {
               Peça sua <strong>cotação gratuita</strong> agora.<br />
               É rápido, simples e pode evitar dor de cabeça com seus dispositivos mais importantes.
             </p>
-            <form className="mt-8 space-y-4">
+            <form 
+              className="mt-8 space-y-4"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                  const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'portateis');
+                  await submitForm(mappedData);
+                  alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
+                  (e.target as HTMLFormElement).reset();
+                } catch (error) {
+                  console.error('Error:', error);
+                  alert('Erro ao enviar formulário. Por favor, tente novamente.');
+                }
+              }}
+            >
               <input
                 type="text"
+                name="nome"
                 placeholder="Nome completo"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
               <input
                 type="tel"
+                name="telefone"
                 placeholder="WhatsApp"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
               <input
                 type="text"
+                name="equipamento"
                 placeholder="Qual equipamento você quer proteger?"
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required

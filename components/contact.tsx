@@ -1,3 +1,5 @@
+import { mapFormFieldsToApi, submitForm } from '@/lib/api'
+
 interface ContactProps {
   title: string;
   subtitle: string;
@@ -14,7 +16,24 @@ export function Contact({ title, subtitle, description }: ContactProps) {
           <p className="text-gray-600 mb-8">{description}</p>
         </div>
 
-        <form className="max-w-lg mx-auto">
+        <form 
+          className="max-w-lg mx-auto"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            const data = Object.fromEntries(formData.entries());
+            
+            try {
+              const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'portateis');
+              await submitForm(mappedData);
+              alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
+              (e.target as HTMLFormElement).reset();
+            } catch (error) {
+              console.error('Error:', error);
+              alert('Erro ao enviar formulário. Por favor, tente novamente.');
+            }
+          }}
+        >
           <div className="mb-6">
             <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
               Nome completo
@@ -22,6 +41,7 @@ export function Contact({ title, subtitle, description }: ContactProps) {
             <input
               type="text"
               id="name"
+              name="nome"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
@@ -34,6 +54,7 @@ export function Contact({ title, subtitle, description }: ContactProps) {
             <input
               type="tel"
               id="whatsapp"
+              name="telefone"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
@@ -45,6 +66,7 @@ export function Contact({ title, subtitle, description }: ContactProps) {
             </label>
             <select
               id="equipment"
+              name="equipamento"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
               required
             >
@@ -64,6 +86,7 @@ export function Contact({ title, subtitle, description }: ContactProps) {
             <input
               type="text"
               id="location"
+              name="cidade"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />

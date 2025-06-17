@@ -35,17 +35,17 @@ export default function Home() {
     videos: [
       {
         id: "video1",
-        title: "Depoimento Cliente 1",
+        title: "Marta Nascimento",
         embedUrl: "https://drive.google.com/file/d/1jjZSSqXnNVlFtHs6iqYcMqX7Aeh-ltk9/preview"
       },
       {
         id: "video2", 
-        title: "Depoimento Cliente 2",
+        title: "Aaron Engel",
         embedUrl: "https://drive.google.com/file/d/1qe3AWvlJ0m4cx5JwLG9Fu5ipNGPbnMtv/preview"
       },
       {
         id: "video3",
-        title: "Depoimento Cliente 3", 
+        title: "Rafael Rosseto", 
         embedUrl: "https://drive.google.com/file/d/1jK0ym9Mx9gnvQEnNhnU_KDxfrHnzZBFn/preview"
       }
     ]
