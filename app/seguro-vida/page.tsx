@@ -45,20 +45,17 @@ export default function SeguroVidaPage() {
               Seguro de vida é pra agora, não só pro depois.
             </h1>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl leading-relaxed">
-                Tem quem pense que seguro de vida é só pra quando acontece o pior.<br />
+            <div className="rounded-xl p-6 max-w-2xl mx-auto">
+              <p className="text-xl leading-relaxed text-white">
+                Tem quem pense que seguro de vida é só pra quando acontece o pior.
                 Mas a verdade é que ele pode ajudar <strong className="text-white">ainda em vida</strong>, em caso de <strong className="text-white">doença grave, invalidez ou afastamento</strong>.
+                O problema é que muita gente só descobre isso quando já é tarde.
               </p>
             </div>
 
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              O problema é que muita gente só descobre isso quando já é tarde.
-            </p>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
-                Na <strong className="text-white">Dimarzio Seguros</strong>, você entende tudo antes de contratar, <strong className="text-white">sem cláusulas escondidas</strong>.
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
+                Na <strong className="text-blue-600">Dimarzio Seguros</strong>, você entende tudo antes de contratar, <strong className="text-blue-600">sem cláusulas escondidas</strong>.
               </p>
             </div>
             
@@ -66,7 +63,7 @@ export default function SeguroVidaPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
               >
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -156,7 +153,7 @@ export default function SeguroVidaPage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -239,7 +236,7 @@ export default function SeguroVidaPage() {
                 <option value="sim">Sim</option>
                 <option value="nao">Não</option>
               </select>
-              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Enviar
               </Button>
             </form>
