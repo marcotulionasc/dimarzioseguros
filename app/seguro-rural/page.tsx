@@ -40,15 +40,15 @@ export default function SeguroRuralPage() {
               A lavoura cresce com trabalho, mas pode se perder por um detalhe fora do seu controle.
             </h1>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl leading-relaxed">
+            <div className="rounded-xl p-6 max-w-2xl mx-auto">
+              <p className="text-xl leading-relaxed text-white">
                 Clima, pragas, acidentes… quem vive no campo sabe que o risco é real.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
-                O <strong>Seguro Rural</strong> da <strong>Dimarzio Seguros</strong> protege o que você planta, cria e constrói com tanto esforço.<br />
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
+                O <strong className="text-blue-600">Seguro Rural</strong> da <strong className="text-blue-600">Dimarzio Seguros</strong> protege o que você planta, cria e constrói com tanto esforço.<br />
                 Você garante sua produção, sua renda e a segurança da sua família, mesmo diante do inesperado.
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function SeguroRuralPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-white text-lg px-8 py-6"
               >
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -139,7 +139,7 @@ export default function SeguroRuralPage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -184,7 +184,7 @@ export default function SeguroRuralPage() {
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
-              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Enviar
               </Button>
             </form>

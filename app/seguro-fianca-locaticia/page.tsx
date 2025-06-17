@@ -45,16 +45,16 @@ export default function SeguroFiancaLocaticiaPage() {
               Alugar sem fiador, sem cheque caução e sem dor de cabeça. Sim, é possível.
             </h1>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl leading-relaxed">
-                O <strong>Seguro Fiança Locatícia</strong> da <strong>Dimarzio Seguros</strong> substitui o fiador e traz mais segurança<br />
+            <div className="rounded-xl p-6 max-w-2xl mx-auto">
+              <p className="text-xl leading-relaxed text-white">
+                O <strong className="text-white">Seguro Fiança Locatícia</strong> da <strong className="text-white">Dimarzio Seguros</strong> substitui o fiador e traz mais segurança<br />
                 para quem aluga e para quem recebe.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
-                Você garante o contrato com uma <strong>apólice simples, justa</strong> e aceita pelas principais imobiliárias.
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
+                Você garante o contrato com uma <strong className="text-blue-600">apólice simples, justa</strong> e aceita pelas principais imobiliárias.
               </p>
             </div>
             
@@ -62,7 +62,7 @@ export default function SeguroFiancaLocaticiaPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-blue text-lg px-8 py-6"
               >
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -167,7 +167,7 @@ export default function SeguroFiancaLocaticiaPage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -220,7 +220,7 @@ export default function SeguroFiancaLocaticiaPage() {
                   required
                 />
               </div>
-              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Enviar
               </Button>
             </form>
