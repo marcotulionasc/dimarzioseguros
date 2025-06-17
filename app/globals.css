@@ -83,6 +83,8 @@
     /* Garante layout fluido */
     min-height: 100vh;
     overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
   }
 
   /* Tipografia hierárquica seguindo identidade visual */

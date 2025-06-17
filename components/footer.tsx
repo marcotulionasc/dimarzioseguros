@@ -58,10 +58,10 @@ export function Footer() {
               </motion.div>
               <div>
                 <h3 className="font-bold text-xl">Dimarzio Seguros</h3>
-                <p className="text-white/80 text-sm">20 anos protegendo com clareza</p>
+                <p className="text-white text-sm">20 anos protegendo com clareza</p>
               </div>
             </div>
-            <p className="text-white/70">
+            <p className="text-white">
               Somos uma corretora de seguros comprometida em oferecer as melhores soluções
               para proteger o que é mais importante para você.
             </p>
@@ -88,7 +88,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-white hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -126,11 +126,11 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/10 text-white">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white">
-            <p>© 2025 Dimarzio Seguros. Todos os direitos reservados.</p>
-            <p>CNPJ: 10.894.914/0001-05</p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <p className="text-white">© 2025 Dimarzio Seguros. Todos os direitos reservados.</p>
+            <p className="text-white">CNPJ: 10.894.914/0001-05</p>
           </div>
         </div>
       </div>
