@@ -122,7 +122,7 @@ export default function SeguroPortateis() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-blue hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
               >
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -146,7 +146,6 @@ export default function SeguroPortateis() {
                   transition={{ delay: i * 0.1 }}
                   className="p-6 bg-white rounded-lg shadow-lg"
                 >
-                  <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                   <p>{item.description}</p>
                 </motion.div>
@@ -170,7 +169,6 @@ export default function SeguroPortateis() {
                   transition={{ delay: i * 0.1 }}
                   className="p-6 bg-white rounded-lg shadow-lg"
                 >
-                  <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                   <p>{item.description}</p>
                 </motion.div>

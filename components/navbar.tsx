@@ -12,7 +12,7 @@ export function Navbar() {
   const pathname = usePathname()
   
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md border-b border-neutral-200 shadow-sm">
       <div className="container mx-auto">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">

@@ -42,6 +42,11 @@ export default function SeguroVidaPage() {
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 text-sm font-medium rounded-lg backdrop-blur-sm border border-white/10">
+              <span className="mr-2">✨</span>
+              <span>Análise técnica e gratuita</span>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               Seguro de vida é pra agora, não só pro depois.
             </h1>
@@ -64,7 +69,7 @@ export default function SeguroVidaPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
               >
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -120,7 +125,6 @@ export default function SeguroVidaPage() {
                   <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
                     {i + 1}
                   </div>
-                  <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
               ))}
@@ -175,12 +179,8 @@ export default function SeguroVidaPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="relative p-6 bg-white rounded-lg shadow-lg"
+                  className="p-6 bg-white rounded-lg shadow-lg"
                 >
-                  {/* Número do card */}
-                  <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
-                    {i + 1}
-                  </div>
                   <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
@@ -194,16 +194,11 @@ export default function SeguroVidaPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <div className="space-y-4">
-              <p className="text-2xl">
-                Você já cuida da sua família todos os dias.<br />
-                Agora pode garantir que eles não fiquem desprotegidos se algo acontecer.
-              </p>
-              <p className="text-xl">
-                Peça sua <strong>análise gratuita</strong>.<br />
-                É simples, direto e feito com responsabilidade.
-              </p>
-            </div>
+            <h2 className="text-3xl font-bold">Você já cuida da sua família todos os dias. Agora pode garantir que eles não fiquem desprotegidos se algo acontecer.</h2>
+            <p className="text-xl">
+              Peça sua <strong>análise gratuita</strong>.<br />
+              É simples, direto e feito com responsabilidade.
+            </p>
             <form 
               className="mt-8 space-y-4"
               onSubmit={async (e) => {

@@ -87,7 +87,7 @@ export default function SeguroEmpresarialPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
               >
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

@@ -45,7 +45,7 @@ export default function SeguroSaudePage() {
             
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Muita gente só percebe que fez a escolha errada quando já está diante de uma emergência.
-              Não sabe como funciona a <strong className="text-blue-900">carência</strong>, não entende o <strong className="text-blue-900">reembolso</strong>, ou descobre que a <strong className="text-blue-900">rede credenciada</strong> não atende na cidade.
+              Não sabe como funciona a <strong className="text-white">carência</strong>, não entende o <strong className="text-white">reembolso</strong>, ou descobre que a <strong className="text-white">rede credenciada</strong> não atende na cidade.
             </p>
 
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
@@ -114,7 +114,6 @@ export default function SeguroSaudePage() {
                   <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
                     {i + 1}
                   </div>
-                  <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
               ))}

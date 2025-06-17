@@ -133,7 +133,6 @@ export default function SeguroGarantiaFiduciaria() {
                   transition={{ delay: i * 0.1 }}
                   className="flex items-start gap-3 p-6 bg-[#0E71B8]/5 rounded-lg"
                 >
-                  <CheckCircle2 className="text-[#0E71B8] flex-shrink-0 mt-1 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
               ))}
@@ -192,7 +191,6 @@ export default function SeguroGarantiaFiduciaria() {
                   transition={{ delay: i * 0.1 }}
                   className="p-6 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5 rounded-lg"
                 >
-                  <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
               ))}

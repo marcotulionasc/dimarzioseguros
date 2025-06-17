@@ -68,7 +68,7 @@ export default function SeguroResidencialPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-white text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
               >
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -142,7 +142,6 @@ export default function SeguroResidencialPage() {
                   <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
                     {i + 1}
                   </div>
-                  <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
               ))}
