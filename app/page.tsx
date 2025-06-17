@@ -12,7 +12,7 @@ import { PaperQuestion } from '@/components/paper-question'
 import { ContactSection } from '@/components/contact-section'
 
 // Dynamic imports for performance
-const Testimonials = dynamic(() => import('@/components/testimonials').then(mod => ({ default: mod.Testimonials })), { 
+const VideoTestimonials = dynamic(() => import('@/components/video-testimonials').then(mod => ({ default: mod.VideoTestimonials })), { 
   ssr: false,
   loading: () => <div className="py-16 animate-pulse bg-neutral-100 rounded-lg" />
 })
@@ -30,26 +30,23 @@ export default function Home() {
     buttonLink: "#contact"
   };
 
-  const testimonialContent = {
+  const videoTestimonialContent = {
     title: "O que nossos clientes dizem",
-    testimonials: [
+    videos: [
       {
-        name: "Luciana M.",
-        role: "Empresária",
-        content: "Antes da Dimarzio, eu achava que estava protegido. Eles revisaram meu seguro e corrigiram várias brechas que poderiam me deixar na mão.",
-        image: "/testimonials/person1.jpg"
+        id: "video1",
+        title: "Depoimento Cliente 1",
+        embedUrl: "https://drive.google.com/file/d/1jjZSSqXnNVlFtHs6iqYcMqX7Aeh-ltk9/preview"
       },
       {
-        name: "Carlos T.",
-        role: "Engenheiro",
-        content: "Recebi um atendimento técnico, claro e sem empurroterapia. E paguei menos do que antes.",
-        image: "/testimonials/person2.jpg"
+        id: "video2", 
+        title: "Depoimento Cliente 2",
+        embedUrl: "https://drive.google.com/file/d/1qe3AWvlJ0m4cx5JwLG9Fu5ipNGPbnMtv/preview"
       },
       {
-        name: "Roberto S.",
-        role: "Médico",
-        content: "Com mais de 20 anos de experiência e mais de 20.000 clientes atendidos, a Dimarzio entrega um plano ajustado à realidade, sem empurrar nada.",
-        image: "/testimonials/person3.jpg"
+        id: "video3",
+        title: "Depoimento Cliente 3", 
+        embedUrl: "https://drive.google.com/file/d/1jK0ym9Mx9gnvQEnNhnU_KDxfrHnzZBFn/preview"
       }
     ]
   };
@@ -119,7 +116,7 @@ export default function Home() {
       <AlreadyInsured />
       <HowItWorks />
       <Differentials />
-      <Testimonials {...testimonialContent} />
+      <VideoTestimonials {...videoTestimonialContent} />
       <WhyWrong />
       <Consultoria />
       <ProductGrid />
