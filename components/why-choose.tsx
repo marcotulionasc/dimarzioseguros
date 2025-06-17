@@ -103,7 +103,7 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, margin: "-100px" }}
-        className="relative container mx-auto px-4 z-10"
+        className="relative container mx-auto px-3 sm:px-4 md:px-6 z-10 max-w-full overflow-hidden"
       >
         {/* Header section - Simples */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
@@ -124,7 +124,7 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
         </div>
 
         {/* Benefits grid - Design limpo */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-full mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 md:gap-6 w-full max-w-none">
           {benefits.map((benefit, i) => {
             const IconComponent = getIcon(benefit.icon || '', i)
             
@@ -142,34 +142,34 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
                     }
                   }
                 }}
-                className="group relative h-80 sm:h-88 md:h-96"
+                className="group relative h-64 sm:h-72 md:h-80 lg:h-88 xl:h-96"
               >
                 {/* Card background - Sólido azul */}
-                <div className="absolute inset-0 bg-blue-800 rounded-2xl border border-blue-700 hover:bg-blue-700 hover:border-blue-600 transition-all duration-300 shadow-lg" />
+                <div className="absolute inset-0 bg-blue-800 rounded-xl sm:rounded-2xl border border-blue-700 hover:bg-blue-700 hover:border-blue-600 transition-all duration-300 shadow-lg" />
                 
                 {/* Card content */}
-                <div className="relative h-full p-4 sm:p-6 md:p-8 flex flex-col z-10">
+                <div className="relative h-full p-3 sm:p-4 md:p-6 flex flex-col z-10">
                   {/* Icon container - Azul sólido */}
-                  <div className="h-16 sm:h-20 flex items-center justify-center mb-4 sm:mb-6">
-                    <div className="bg-blue-600 text-white rounded-xl p-3 sm:p-4 group-hover:bg-blue-500 transition-all duration-300 shadow-md">
-                      <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+                  <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center mb-3 sm:mb-4 md:mb-6">
+                    <div className="bg-blue-600 text-white rounded-lg p-2 sm:p-3 md:p-4 group-hover:bg-blue-500 transition-all duration-300 shadow-md">
+                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                     </div>
                   </div>
                   
                   {/* Content */}
-                  <div className="flex-1 flex flex-col justify-center text-center min-h-0">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4 text-white group-hover:text-blue-100 transition-colors duration-300 leading-tight">
+                  <div className="flex-1 flex flex-col justify-center text-center min-h-0 px-1 sm:px-2">
+                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-1 sm:mb-2 md:mb-4 text-white group-hover:text-blue-100 transition-colors duration-300 leading-tight">
                       {benefit.title}
                     </h3>
                     {benefit.description && (
-                      <p className="text-sm sm:text-base text-blue-200 group-hover:text-blue-100 transition-colors duration-300 leading-relaxed">
+                      <p className="text-xs sm:text-sm md:text-base text-blue-200 group-hover:text-blue-100 transition-colors duration-300 leading-relaxed">
                         {benefit.description}
                       </p>
                     )}
                   </div>
                   
                   {/* Bottom accent - Azul sólido */}
-                  <div className="h-4 flex items-end">
+                  <div className="h-3 sm:h-4 flex items-end">
                     <div className="w-full h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                   </div>
                 </div>
