@@ -47,17 +47,17 @@ export default function SeguroRCProfissionalPage() {
               Erro profissional pode acontecer, o que não pode é deixar isso virar prejuízo.
             </h1>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl leading-relaxed">
+            <div className="rounded-xl p-6 max-w-2xl mx-auto">
+              <p className="text-xl leading-relaxed text-white">
                 Quem trabalha com responsabilidade técnica sabe que uma falha, mesmo sem intenção,<br />
                 pode gerar processo, dano à imagem e dor de cabeça financeira.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
-                Por isso, o <strong>Seguro de Responsabilidade Civil Profissional</strong> existe: pra proteger você e o seu patrimônio contra esse tipo de risco.<br /><br />
-                Na <strong>Dimarzio Seguros</strong>, a gente monta a proposta certa pra sua profissão, com clareza, cobertura técnica e orientação real.
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
+                Por isso, o <strong className="text-blue-600">Seguro de Responsabilidade Civil Profissional</strong> existe: pra proteger você e o seu patrimônio contra esse tipo de risco.<br /><br />
+                Na <strong className="text-blue-600">Dimarzio Seguros</strong>, a gente monta a proposta certa pra sua profissão, com clareza, cobertura técnica e orientação real.
               </p>
             </div>
             
@@ -65,7 +65,7 @@ export default function SeguroRCProfissionalPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-white text-lg px-8 py-6"
               >
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -193,7 +193,7 @@ export default function SeguroRCProfissionalPage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -235,7 +235,7 @@ export default function SeguroRCProfissionalPage() {
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
-              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Enviar
               </Button>
             </form>
