@@ -73,7 +73,7 @@ export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
                 >
                   <Card className="overflow-hidden bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
                     <div className="p-4">
-                      <div className="aspect-video w-full h-96 rounded-lg overflow-hidden bg-neutral-100">
+                      <div className="aspect-video w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden bg-neutral-100">
                         <iframe
                           src={video.embedUrl}
                           title={video.title}
