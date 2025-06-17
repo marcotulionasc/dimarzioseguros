@@ -49,17 +49,17 @@ export default function SeguroResidencialPage() {
               Você trabalha a vida inteira pra ter sua casa, por que deixá-la desprotegida?
             </h1>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl leading-relaxed">
+            <div className="p-6 max-w-2xl mx-auto text-white">
+              <p className="text-xl leading-relaxed text-white">
                 Ninguém espera ter um incêndio, vazamento, roubo ou uma descarga elétrica.<br />
                 Mas quando acontece, o prejuízo pode ser alto, e muitas vezes, irreparável.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
-                O <strong>seguro residencial</strong> é o jeito mais simples de proteger seu patrimônio.<br />
-                Na <strong>Dimarzio Seguros</strong>, a gente monta a proposta certa pra sua casa com base na sua realidade.
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
+                O <strong className="text-blue-600">seguro residencial</strong> é o jeito mais simples de proteger seu patrimônio.<br />
+                Na <strong className="text-blue-600">Dimarzio Seguros</strong>, a gente monta a proposta certa pra sua casa com base na sua realidade.
               </p>
             </div>
             
@@ -67,7 +67,7 @@ export default function SeguroResidencialPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-white text-lg px-8 py-6"
               >
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -135,8 +135,12 @@ export default function SeguroResidencialPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 bg-[#0E71B8]/5 rounded-lg"
+                  className="relative p-6 bg-[#0E71B8]/5 rounded-lg"
                 >
+                  {/* Número do card */}
+                  <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
+                    {i + 1}
+                  </div>
                   <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
@@ -168,7 +172,7 @@ export default function SeguroResidencialPage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -213,7 +217,7 @@ export default function SeguroResidencialPage() {
                 className="w-full p-3 border border-neutral-200 rounded-lg"
                 required
               />
-              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Enviar
               </Button>
             </form>

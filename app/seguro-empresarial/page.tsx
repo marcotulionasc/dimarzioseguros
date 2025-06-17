@@ -76,9 +76,9 @@ export default function SeguroEmpresarialPage() {
               Muita gente contrata seguro empresarial sem entender direito as coberturas, depois descobre que falta proteção importante na hora que mais precisa.
             </p>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
-                Na <strong className="text-white">Dimarzio Seguros</strong>, a análise é <strong className="text-white">técnica e gratuita</strong>, você entende exatamente o que está contratando, com foco na cobertura que protege sua empresa de verdade.
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
+                Na <strong className="text-blue-600">Dimarzio Seguros</strong>, a análise é <strong className="text-blue-600">técnica e gratuita</strong>, você entende exatamente o que está contratando, com foco na cobertura que protege sua empresa de verdade.
               </p>
             </div>
             
@@ -86,7 +86,7 @@ export default function SeguroEmpresarialPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
               >
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -199,7 +199,7 @@ export default function SeguroEmpresarialPage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-lg px-8 py-6">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white text-lg px-8 py-6">
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

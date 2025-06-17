@@ -102,8 +102,12 @@ export default function SeguroRuralPage() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-start gap-3 p-6 bg-white rounded-lg shadow-lg"
+                  className="relative flex items-start gap-3 p-6 bg-white rounded-lg shadow-lg"
                 >
+                  {/* Número do card */}
+                  <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
+                    {i + 1}
+                  </div>
                   <Tractor className="text-[#0E71B8] flex-shrink-0 mt-1" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
