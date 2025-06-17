@@ -89,9 +89,9 @@ const getIcon = (iconName: string, index: number) => {
 
 export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
   return (
-    <section className="relative py-32 overflow-hidden bg-blue-600">
+    <section className="relative py-16 sm:py-24 md:py-32 overflow-hidden bg-blue-600">
       {/* Background simples e sólido */}
-      <div className="absolute inset-0 bg-blue-900" />
+      <div className="absolute inset-0 bg-blue-700" />
       
       {/* Elementos decorativos minimalistas */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -106,25 +106,25 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
         className="relative container mx-auto px-4 z-10"
       >
         {/* Header section - Simples */}
-        <div className="max-w-4xl mx-auto text-center mb-20">
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <motion.div
             variants={fadeInUp}
-            className="inline-flex items-center gap-2 bg-blue-800 rounded-full px-6 py-2 mb-8 border border-blue-700"
+            className="inline-flex items-center gap-2 bg-blue-800 rounded-full px-4 sm:px-6 py-2 mb-6 sm:mb-8 border border-blue-700"
           >
             <Star className="w-4 h-4 text-yellow-400" />
-            <span className="text-sm font-medium text-white">Por que nos escolher</span>
+            <span className="text-xs sm:text-sm font-medium text-white">Por que nos escolher</span>
           </motion.div>
           
           <motion.h2 
             variants={fadeInUp} 
-            className="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white leading-tight px-4"
           >
             {title}
           </motion.h2>
         </div>
 
         {/* Benefits grid - Design limpo */}
-        <div className="grid grid-cols-5 gap-6 max-w-full mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-full mx-auto">
           {benefits.map((benefit, i) => {
             const IconComponent = getIcon(benefit.icon || '', i)
             
@@ -142,27 +142,27 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
                     }
                   }
                 }}
-                className="group relative h-96"
+                className="group relative h-80 sm:h-88 md:h-96"
               >
                 {/* Card background - Sólido azul */}
                 <div className="absolute inset-0 bg-blue-800 rounded-2xl border border-blue-700 hover:bg-blue-700 hover:border-blue-600 transition-all duration-300 shadow-lg" />
                 
                 {/* Card content */}
-                <div className="relative h-96 p-8 flex flex-col z-10">
+                <div className="relative h-full p-4 sm:p-6 md:p-8 flex flex-col z-10">
                   {/* Icon container - Azul sólido */}
-                  <div className="h-20 flex items-center justify-center mb-6">
-                    <div className="bg-blue-600 text-white rounded-xl p-4 group-hover:bg-blue-500 transition-all duration-300 shadow-md">
-                      <IconComponent className="w-8 h-8 md:w-10 md:h-10" />
+                  <div className="h-16 sm:h-20 flex items-center justify-center mb-4 sm:mb-6">
+                    <div className="bg-blue-600 text-white rounded-xl p-3 sm:p-4 group-hover:bg-blue-500 transition-all duration-300 shadow-md">
+                      <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                     </div>
                   </div>
                   
                   {/* Content */}
                   <div className="flex-1 flex flex-col justify-center text-center min-h-0">
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-white group-hover:text-blue-100 transition-colors duration-300 leading-tight">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4 text-white group-hover:text-blue-100 transition-colors duration-300 leading-tight">
                       {benefit.title}
                     </h3>
                     {benefit.description && (
-                      <p className="text-blue-200 group-hover:text-blue-100 transition-colors duration-300 leading-relaxed">
+                      <p className="text-sm sm:text-base text-blue-200 group-hover:text-blue-100 transition-colors duration-300 leading-relaxed">
                         {benefit.description}
                       </p>
                     )}
@@ -184,15 +184,15 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
             initial: { opacity: 0 },
             animate: { opacity: 1, transition: { delay: 0.8, duration: 0.6 } }
           }}
-          className="flex justify-center mt-16"
+          className="flex justify-center mt-12 sm:mt-16"
         >
-          <div className="flex items-center gap-2 bg-blue-800 rounded-full px-8 py-3 border border-blue-700">
+          <div className="flex items-center gap-2 bg-blue-800 rounded-full px-6 sm:px-8 py-3 border border-blue-700">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-white font-medium ml-2">Excelência comprovada</span>
+            <span className="text-white font-medium ml-2 text-sm sm:text-base">Excelência comprovada</span>
           </div>
         </motion.div>
       </motion.div>
