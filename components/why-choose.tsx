@@ -109,7 +109,7 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
               variants={fadeInUp}
               className="inline-flex items-center gap-2 bg-blue-800 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6 border border-blue-700"
             >
-              <Star className="w-4 h-4 text-yellow-400" />
+              <Star className="w-4 h-4 text-white" />
               <span className="text-xs sm:text-sm font-medium text-white">Por que nos escolher</span>
             </motion.div>
             
@@ -188,7 +188,7 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
             <div className="flex items-center gap-2 bg-blue-800 rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 border border-blue-700">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-white fill-current" />
                 ))}
               </div>
               <span className="text-white font-medium ml-2 text-sm sm:text-base">Excelência comprovada</span>

@@ -74,7 +74,7 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white font-montserrat font-medium text-sm sm:text-base mt-4 sm:mt-6 md:mt-8"
           >
-            <Award className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300 flex-shrink-0" />
+            <Award className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
             <span className="whitespace-nowrap">🎉 Comemorando 20 anos de excelência</span>
           </motion.div>
 
@@ -133,17 +133,17 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                   className={`flex flex-col items-center text-center space-y-3 sm:space-y-4 rounded-xl p-4 sm:p-6 md:p-8 transition-all duration-300 ${
                     item.premium 
-                      ? 'bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 border-2 border-yellow-400/30 shadow-lg shadow-yellow-400/10 hover:shadow-xl hover:shadow-yellow-400/20 transform hover:scale-105' 
+                      ? 'bg-gradient-to-br from-white/20 to-white/30 border-2 border-white/30 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 transform hover:scale-105' 
                       : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15'
                   }`}
                 >
                   <div className={`rounded-full p-3 sm:p-4 md:p-5 ${
                     item.premium 
-                      ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-lg' 
+                      ? 'bg-gradient-to-br from-white to-white/80 shadow-lg' 
                       : 'bg-white/20'
                   }`}>
                     <item.icon className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${
-                      item.premium ? 'text-white' : 'text-white'
+                      item.premium ? 'text-primary' : 'text-white'
                     }`} />
                   </div>
                   <p className={`font-montserrat leading-tight ${
@@ -155,9 +155,9 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                   </p>
                   {item.premium && (
                     <div className="flex items-center gap-1">
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-75"></div>
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-150"></div>
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse delay-75"></div>
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse delay-150"></div>
                     </div>
                   )}
                 </motion.div>
