@@ -29,7 +29,7 @@ const advantages = [
   'Simulação clara e feita com base no seu perfil',
   'Opções ideais para sua compra ou investimento',
   'Grupo ideal para o que você precisa',
-  'Acompanhamento técnico até a contemplação — e depois também!'
+  'Acompanhamento técnico até a contemplação, e depois também'
 ]
 
 export default function ConsorciosPage() {
@@ -55,7 +55,7 @@ export default function ConsorciosPage() {
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
               <p className="text-xl">
-                Na <strong className="text-white">Dimarzio Seguros</strong>, a análise é <strong className="text-white">técnica e gratuita</strong> — você recebe uma simulação clara e uma explicação simples antes de tomar qualquer decisão.
+                Na <strong className="text-white">Dimarzio Seguros</strong>, a análise é <strong className="text-white">técnica e gratuita</strong>,você recebe uma simulação clara e uma explicação simples antes de tomar qualquer decisão.
               </p>
             </div>
             
@@ -93,7 +93,7 @@ export default function ConsorciosPage() {
               ))}
             </div>
             <blockquote className="mt-8 p-6 bg-neutral-50 rounded-lg text-center">
-              <p className="text-lg">Isso não é culpa do consórcio — é falta de orientação.</p>
+              <p className="text-lg">Isso não é culpa do consórcio, é falta de orientação.</p>
               <p className="text-lg mt-2">A <strong>Dimarzio Seguros</strong> explica tudo antes, com clareza e sem pressão.</p>
             </blockquote>
           </div>

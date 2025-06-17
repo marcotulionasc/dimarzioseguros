@@ -78,7 +78,7 @@ export default function SeguroEmpresarialPage() {
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
               <p className="text-xl">
-                Na <strong className="text-white">Dimarzio Seguros</strong>, a análise é <strong className="text-white">técnica e gratuita</strong> — você entende exatamente o que está contratando, com foco na cobertura que protege sua empresa de verdade.
+                Na <strong className="text-white">Dimarzio Seguros</strong>, a análise é <strong className="text-white">técnica e gratuita</strong>, você entende exatamente o que está contratando, com foco na cobertura que protege sua empresa de verdade.
               </p>
             </div>
             
@@ -116,8 +116,8 @@ export default function SeguroEmpresarialPage() {
               ))}
             </div>
             <blockquote className="mt-8 p-6 bg-neutral-50 rounded-lg text-center">
-              <p className="text-lg">Isso não é problema do seguro — é falta de orientação técnica.</p>
-              <p className="text-lg mt-2">A <strong>Dimarzio Seguros</strong> analisa tudo com cuidado técnico, pra garantir que você esteja protegido — e não só com um papel na gaveta.</p>
+              <p className="text-lg">Isso não é problema do seguro, é falta de orientação técnica.</p>
+              <p className="text-lg mt-2">A <strong>Dimarzio Seguros</strong> analisa tudo com cuidado técnico, pra garantir que você esteja protegido, e não só com um papel na gaveta.</p>
             </blockquote>
           </div>
         </div>

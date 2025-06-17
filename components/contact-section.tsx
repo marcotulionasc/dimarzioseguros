@@ -197,7 +197,7 @@ export function ContactSection() {
                   <strong>CNPJ:</strong> 10.894.914/0001-05
                 </p>
                 <p className="text-sm text-white/90 font-montserrat mt-2">
-                  Dimarzio Seguros — 20 anos protegendo com clareza.
+                  Dimarzio Seguros, 20 anos protegendo com clareza.
                 </p>
               </div>
             </div>

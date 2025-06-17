@@ -37,7 +37,7 @@ export default function SeguroRuralPage() {
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
-              A lavoura cresce com trabalho — mas pode se perder por um detalhe fora do seu controle.
+              A lavoura cresce com trabalho, mas pode se perder por um detalhe fora do seu controle.
             </h1>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
@@ -49,7 +49,7 @@ export default function SeguroRuralPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
               <p className="text-xl">
                 O <strong>Seguro Rural</strong> da <strong>Dimarzio Seguros</strong> protege o que você planta, cria e constrói com tanto esforço.<br />
-                Você garante sua produção, sua renda e a segurança da sua família — mesmo diante do inesperado.
+                Você garante sua produção, sua renda e a segurança da sua família, mesmo diante do inesperado.
               </p>
             </div>
             

@@ -52,12 +52,12 @@ export default function SeguroViagemPage() {
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
-              Viajar é bom — mas só aproveita mesmo quem está tranquilo com o que pode dar errado.
+              Viajar é bom, mas só aproveita mesmo quem está tranquilo com o que pode dar errado.
             </h1>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
               <p className="text-xl leading-relaxed">
-                Ninguém planeja uma viagem esperando ter dor de dente, intoxicação alimentar ou perder a mala — mas acontece.<br />
+                Ninguém planeja uma viagem esperando ter dor de dente, intoxicação alimentar ou perder a mala, mas acontece.<br />
                 E quando acontece fora da sua cidade ou fora do país, tudo fica mais caro e complicado.
               </p>
             </div>
@@ -127,7 +127,7 @@ export default function SeguroViagemPage() {
             </div>
             <blockquote className="mt-8 p-6 bg-white rounded-lg text-center shadow-lg">
               <p className="text-lg">
-                Para cada perfil, existe uma cobertura certa — e a <strong>Dimarzio Seguros</strong> ajuda você a encontrar.
+                Para cada perfil, existe uma cobertura certa, e a <strong>Dimarzio Seguros</strong> ajuda você a encontrar.
               </p>
             </blockquote>
           </div>

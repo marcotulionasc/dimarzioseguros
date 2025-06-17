@@ -48,7 +48,7 @@ export default function Home() {
       {
         name: "Roberto S.",
         role: "Médico",
-        content: "Com mais de 20 anos de experiência e mais de 10.000 clientes atendidos, a Dimarzio entrega um plano ajustado à realidade — sem empurrar nada.",
+        content: "Com mais de 20 anos de experiência e mais de 10.000 clientes atendidos, a Dimarzio entrega um plano ajustado à realidade, sem empurrar nada.",
         image: "/testimonials/person3.jpg"
       }
     ]
@@ -90,7 +90,7 @@ export default function Home() {
       },
       {
         question: "Parece bom demais. Qual o truque?",
-        answer: "Nenhum. A gente prefere mostrar que entende — ao invés de tentar convencer."
+        answer: "Nenhum. A gente prefere mostrar que entende,ao invés de tentar convencer."
       },
       {
         question: "O que preciso pra fazer a análise?",

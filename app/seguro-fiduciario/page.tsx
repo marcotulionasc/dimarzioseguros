@@ -67,7 +67,7 @@ export default function SeguroGarantiaFiduciaria() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
-              Em disputas judiciais, tempo é dinheiro — e o seguro certo pode ser o que garante sua liberdade de ação.
+              Em disputas judiciais, tempo é dinheiro, e o seguro certo pode ser o que garante sua liberdade de ação.
             </h1>
             
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">

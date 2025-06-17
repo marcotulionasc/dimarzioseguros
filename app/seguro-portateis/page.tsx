@@ -113,7 +113,7 @@ export default function SeguroPortateis() {
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
               <p className="text-xl">
-                Cobertura contra roubo, furto qualificado, quebra acidental e danos elétricos — com atendimento rápido e sem letras miúdas.
+                Cobertura contra roubo, furto qualificado, quebra acidental e danos elétricos, com atendimento rápido e sem letras miúdas.
               </p>
             </div>
             

@@ -95,7 +95,7 @@ export default function SeguroSaudePage() {
               ))}
             </div>
             <blockquote className="mt-8 p-6 bg-neutral-50 rounded-lg text-center">
-              <p className="text-lg">Isso não é culpa do plano — é <strong>falta de orientação</strong>.</p>
+              <p className="text-lg">Isso não é culpa do plano, é <strong>falta de orientação</strong>.</p>
               <p className="text-lg mt-2">A <strong>Dimarzio Seguros</strong> te ajuda a entender tudo antes de contratar.</p>
             </blockquote>
           </div>

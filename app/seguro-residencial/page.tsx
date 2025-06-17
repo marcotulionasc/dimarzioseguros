@@ -46,13 +46,13 @@ export default function SeguroResidencialPage() {
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
-              Você trabalha a vida inteira pra ter sua casa — por que deixá-la desprotegida?
+              Você trabalha a vida inteira pra ter sua casa, por que deixá-la desprotegida?
             </h1>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
               <p className="text-xl leading-relaxed">
                 Ninguém espera ter um incêndio, vazamento, roubo ou uma descarga elétrica.<br />
-                Mas quando acontece, o prejuízo pode ser alto — e muitas vezes, irreparável.
+                Mas quando acontece, o prejuízo pode ser alto, e muitas vezes, irreparável.
               </p>
             </div>
 

@@ -60,7 +60,7 @@ export default function SeguroAutomovelPage() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
-              Seguro de carro e moto não é tudo igual — e só na hora do sinistro você descobre isso.
+              Seguro de carro e moto não é tudo igual, e só na hora do sinistro você descobre isso.
             </h1>
             
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -249,7 +249,7 @@ export default function SeguroAutomovelPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Antes de contratar, veja o que está — e o que não está — no seu seguro.</h2>
+            <h2 className="text-3xl font-bold">Antes de contratar, veja o que está, e o que não está, no seu seguro.</h2>
             <p className="text-xl text-white/90">
               Peça sua <strong className="text-white">cotação com análise técnica gratuita</strong>.<br />
               É simples, direto e pode evitar dor de cabeça.

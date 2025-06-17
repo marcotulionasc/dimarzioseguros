@@ -23,7 +23,7 @@ const differentials = [
   'Análise rápida com base no seu perfil',
   'Simulação clara, com explicação simples',
   'Compara opções de administradoras autorizadas pelo Banco Central',
-  'Atendimento direto com especialista — sem empurro e sem enrolação'
+  'Atendimento direto com especialista, sem empurro e sem enrolação'
 ]
 
 const steps = [

@@ -44,7 +44,7 @@ export default function SeguroRCProfissionalPage() {
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
-              Erro profissional pode acontecer — o que não pode é deixar isso virar prejuízo.
+              Erro profissional pode acontecer, o que não pode é deixar isso virar prejuízo.
             </h1>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
@@ -137,7 +137,7 @@ export default function SeguroRCProfissionalPage() {
             </div>
             <blockquote className="mt-8 p-6 bg-[#0E71B8]/5 rounded-lg text-center">
               <p className="text-lg">
-                Cada profissão tem riscos diferentes — a <strong>Dimarzio Seguros</strong> ajusta a cobertura para sua realidade.
+                Cada profissão tem riscos diferentes, a <strong>Dimarzio Seguros</strong> ajusta a cobertura para sua realidade.
               </p>
             </blockquote>
           </div>
