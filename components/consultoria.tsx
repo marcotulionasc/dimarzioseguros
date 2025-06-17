@@ -71,7 +71,7 @@ export function Consultoria() {
       
       <div className="text-center">
         <p className="text-lg font-montserrat text-primary font-medium bg-primary/10 px-6 py-3 rounded-lg inline-block">
-          "Já ajudamos mais de 10.000 pessoas a corrigirem erros no seguro sem gastar R$1 a mais."
+          "Já ajudamos mais de 20.000 pessoas a corrigirem erros no seguro sem gastar R$1 a mais."
         </p>
       </div>
     </motion.section>

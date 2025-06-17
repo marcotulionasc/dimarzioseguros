@@ -12,14 +12,14 @@ import { motion } from 'framer-motion'
 
 interface Benefit {
   title: string;
-  description: string;
+  description?: string;
   icon?: string;
 }
 
 interface WhyChooseProps {
   title: string;
   benefits: Benefit[];
-  highlight: string;
+  highlight?: string;
 }
 
 const fadeInUp = {
@@ -89,16 +89,14 @@ const getIcon = (iconName: string, index: number) => {
 
 export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
   return (
-    <section className="relative py-32 overflow-hidden">
-      {/* Background with enhanced gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-purple-600/20" />
+    <section className="relative py-32 overflow-hidden bg-blue-600">
+      {/* Background simples e sólido */}
+      <div className="absolute inset-0 bg-blue-900" />
       
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl" />
+      {/* Elementos decorativos minimalistas */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-800/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-700/20 rounded-full blur-3xl" />
       </div>
 
       <motion.div
@@ -107,35 +105,26 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
         viewport={{ once: true, margin: "-100px" }}
         className="relative container mx-auto px-4 z-10"
       >
-        {/* Header section */}
+        {/* Header section - Simples */}
         <div className="max-w-4xl mx-auto text-center mb-20">
           <motion.div
             variants={fadeInUp}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-2 mb-8 border border-white/20"
+            className="inline-flex items-center gap-2 bg-blue-800 rounded-full px-6 py-2 mb-8 border border-blue-700"
           >
             <Star className="w-4 h-4 text-yellow-400" />
-            <span className="text-sm font-medium text-white/90">Por que nos escolher</span>
+            <span className="text-sm font-medium text-white">Por que nos escolher</span>
           </motion.div>
           
           <motion.h2 
             variants={fadeInUp} 
-            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight"
+            className="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight"
           >
             {title}
           </motion.h2>
-          
-          {highlight && (
-            <motion.p 
-              variants={fadeInUp}
-              className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed"
-            >
-              {highlight}
-            </motion.p>
-          )}
         </div>
 
-        {/* Benefits grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {/* Benefits grid - Design limpo */}
+        <div className="grid grid-cols-5 gap-6 max-w-full mx-auto">
           {benefits.map((benefit, i) => {
             const IconComponent = getIcon(benefit.icon || '', i)
             
@@ -143,69 +132,67 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
               <motion.div
                 key={i}
                 variants={{
-                  initial: { opacity: 0, y: 30, scale: 0.9 },
+                  initial: { opacity: 0, y: 30 },
                   animate: { 
                     opacity: 1, 
-                    y: 0, 
-                    scale: 1,
+                    y: 0,
                     transition: { 
                       delay: i * 0.15,
-                      duration: 0.7,
-                      ease: "easeOut"
+                      duration: 0.6
                     }
                   }
                 }}
                 className="group relative h-96"
               >
-                {/* Card background with enhanced glassmorphism */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl border border-white/20 group-hover:border-white/30 transition-all duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                {/* Card background - Sólido azul */}
+                <div className="absolute inset-0 bg-blue-800 rounded-2xl border border-blue-700 hover:bg-blue-700 hover:border-blue-600 transition-all duration-300 shadow-lg" />
                 
                 {/* Card content */}
-                <div className="relative h-full flex flex-col justify-between p-6 md:p-8">
-                  {/* Icon container */}
-                  <div className="flex items-center justify-center">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-all duration-500" />
-                      <div className="relative bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-2xl p-3 md:p-4 group-hover:scale-110 transition-all duration-500 shadow-lg">
-                        <IconComponent className="w-6 h-6 md:w-8 md:h-8" />
-                      </div>
+                <div className="relative h-96 p-8 flex flex-col z-10">
+                  {/* Icon container - Azul sólido */}
+                  <div className="h-20 flex items-center justify-center mb-6">
+                    <div className="bg-blue-600 text-white rounded-xl p-4 group-hover:bg-blue-500 transition-all duration-300 shadow-md">
+                      <IconComponent className="w-8 h-8 md:w-10 md:h-10" />
                     </div>
                   </div>
                   
                   {/* Content */}
-                  <div className="flex-1 flex flex-col justify-center text-center px-2">
-                    <h3 className="text-lg md:text-xl font-bold mb-4 text-white group-hover:text-blue-100 transition-colors duration-300 leading-tight">
+                  <div className="flex-1 flex flex-col justify-center text-center min-h-0">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-white group-hover:text-blue-100 transition-colors duration-300 leading-tight">
                       {benefit.title}
                     </h3>
-                    <p className="text-sm md:text-base text-white/70 group-hover:text-white/90 transition-colors duration-300 leading-relaxed">
-                      {benefit.description}
-                    </p>
+                    {benefit.description && (
+                      <p className="text-blue-200 group-hover:text-blue-100 transition-colors duration-300 leading-relaxed">
+                        {benefit.description}
+                      </p>
+                    )}
                   </div>
                   
-                  {/* Decorative bottom accent */}
-                  <div className="w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                  {/* Bottom accent - Azul sólido */}
+                  <div className="h-4 flex items-end">
+                    <div className="w-full h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                  </div>
                 </div>
               </motion.div>
             )
           })}
         </div>
         
-        {/* Bottom decorative element */}
+        {/* Bottom section - Simples */}
         <motion.div
           variants={{
-            initial: { opacity: 0, scale: 0.8 },
-            animate: { opacity: 1, scale: 1, transition: { delay: 0.8, duration: 0.8 } }
+            initial: { opacity: 0 },
+            animate: { opacity: 1, transition: { delay: 0.8, duration: 0.6 } }
           }}
           className="flex justify-center mt-16"
         >
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-8 py-3 border border-white/20">
+          <div className="flex items-center gap-2 bg-blue-800 rounded-full px-8 py-3 border border-blue-700">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-white/90 font-medium ml-2">Excelência comprovada</span>
+            <span className="text-white font-medium ml-2">Excelência comprovada</span>
           </div>
         </motion.div>
       </motion.div>

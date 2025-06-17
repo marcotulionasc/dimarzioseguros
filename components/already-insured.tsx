@@ -18,7 +18,7 @@ export function AlreadyInsured() {
           Você já tem um seguro, mas será que ele protege o que importa?
         </h2>
         <p className="text-lg font-montserrat text-neutral-700 leading-relaxed">
-          Com mais de 20 anos de experiência e mais de 10.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade, sem empurrar nada, sem cobrar pela consultoria.
+          Com mais de 20 anos de experiência e mais de 20.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade, sem empurrar nada, sem cobrar pela consultoria.
         </p>
         <Button className="bg-primary hover:bg-primary-dark text-white font-montserrat font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
           Quero minha análise gratuita

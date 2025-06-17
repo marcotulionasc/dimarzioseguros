@@ -48,37 +48,39 @@ export default function Home() {
       {
         name: "Roberto S.",
         role: "Médico",
-        content: "Com mais de 20 anos de experiência e mais de 10.000 clientes atendidos, a Dimarzio entrega um plano ajustado à realidade, sem empurrar nada.",
+        content: "Com mais de 20 anos de experiência e mais de 20.000 clientes atendidos, a Dimarzio entrega um plano ajustado à realidade, sem empurrar nada.",
         image: "/testimonials/person3.jpg"
       }
     ]
   };
 
   const whyChooseContent = {
-    title: "O que faz a Dimarzio diferente",
+    title: "Por que escolher a Dimarzio?",
     benefits: [
       {
-        title: "Atendimento completo, inclusive em casos de sinistro",
-        description: "Você fala com quem resolve. Mesmo aos finais de semana."
+        title: "Te explicamos o que a seguradora não te conta",
+
       },
       {
-        title: "Departamento próprio que acompanha parcelas em atraso",
-        description: "Sistema de multicálculo automático com as principais seguradoras do mercado"
+        title: "Você economiza onde dá sem abrir mão do essencial",
       },
       {
-        title: "Consultoria com foco principal em sinistro",
-        description: "Cobertura ideal e custo ajustado para sua realidade"
+        title: "Comparação em 17 seguradoras",
+
       },
       {
-        title: "Atendimento em sinistro 24 horas",
-        description: "Suporte completo quando você mais precisa"
+        title: "Atendimento técnico de verdade",
+
+      },
+      {
+        title: "Suporte completo, inclusive em sinistro",
+
       }
     ],
-    highlight: "Com 20 anos de mercado, a Dimarzio vai além do básico. Corretora tem em toda esquina. Atendimento técnico, quase nenhuma."
   };
 
   const faqContent = {
-    title: "Perguntas Frequentes",
+    title: "Perguntas que a gente responde todo dia",
     questions: [
       {
         question: "E se eu não quiser contratar?",
@@ -90,7 +92,7 @@ export default function Home() {
       },
       {
         question: "Parece bom demais. Qual o truque?",
-        answer: "Nenhum. A gente prefere mostrar que entende,ao invés de tentar convencer."
+        answer: "Nenhum. A gente prefere mostrar que entende, ao invés de tentar convencer."
       },
       {
         question: "O que preciso pra fazer a análise?",

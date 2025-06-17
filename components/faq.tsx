@@ -66,9 +66,6 @@ export function Faq({ title, questions }: FaqProps) {
           className="text-center mb-14"
         >
           <h2 className="text-4xl font-bold mb-4">{title}</h2>
-          <p className="text-lg text-neutral-600">
-            Direto ao ponto, sem enrolação.
-          </p>
         </motion.div>
 
         <motion.div 

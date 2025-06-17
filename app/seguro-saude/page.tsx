@@ -44,20 +44,13 @@ export default function SeguroSaudePage() {
             
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Muita gente só percebe que fez a escolha errada quando já está diante de uma emergência.
+              Não sabe como funciona a <strong className="text-blue-900">carência</strong>, não entende o <strong className="text-blue-900">reembolso</strong>, ou descobre que a <strong className="text-blue-900">rede credenciada</strong> não atende na cidade.
             </p>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl leading-relaxed">
-                Não sabe como funciona a <strong className="text-white">carência</strong>, não entende o <strong className="text-white">reembolso</strong>, ou descobre que a <strong className="text-white">rede credenciada</strong> não atende na cidade.
-              </p>
-            </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
               <p className="text-xl mb-4">
-                Na <strong className="text-white">Dimarzio Seguros</strong>, você recebe uma <strong className="text-white">análise técnica gratuita</strong>.
-              </p>
-              <p className="text-xl">
-                A gente te mostra as opções que fazem sentido para sua realidade, <strong className="text-white">sem empurrar nada</strong>.
+                Na <strong className="text-blue-600">Dimarzio Seguros</strong>, você recebe uma <strong className="text-blue-600">análise técnica gratuita</strong>.
+                A gente te mostra as opções que fazem sentido para sua realidade, <strong className="text-blue-600">sem empurrar nada</strong>.
               </p>
             </div>
             
@@ -114,8 +107,12 @@ export default function SeguroSaudePage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 bg-white rounded-lg shadow-lg"
+                  className="relative p-6 bg-white rounded-lg shadow-lg"
                 >
+                  {/* Número do card */}
+                  <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
+                    {i + 1}
+                  </div>
                   <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
@@ -150,7 +147,7 @@ export default function SeguroSaudePage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

@@ -53,9 +53,9 @@ export default function ConsorciosPage() {
               Muita gente assina sem entender como o consórcio realmente funciona, depois descobre que o grupo não era o ideal ou que o crédito não serve para o que queria comprar.
             </p>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-xl">
-                Na <strong className="text-white">Dimarzio Seguros</strong>, a análise é <strong className="text-white">técnica e gratuita</strong>,você recebe uma simulação clara e uma explicação simples antes de tomar qualquer decisão.
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-2xl mx-auto">
+              <p className="text-xl text-blue-600">
+                Na <strong className="text-blue-600">Dimarzio Seguros</strong>, a análise é <strong className="text-blue-600">técnica e gratuita</strong>,você recebe uma simulação clara e uma explicação simples antes de tomar qualquer decisão.
               </p>
             </div>
             
@@ -63,7 +63,7 @@ export default function ConsorciosPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                className="group bg-white hover:bg-white/90 text-white hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
               >
                 Quero minha simulação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -112,8 +112,12 @@ export default function ConsorciosPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 bg-white rounded-lg shadow-lg"
+                  className="relative p-6 bg-white rounded-lg shadow-lg"
                 >
+                  {/* Número do card */}
+                  <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0E71B8] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
+                    {i + 1}
+                  </div>
                   <CheckCircle2 className="text-[#0E71B8] mb-4 h-6 w-6" />
                   <p className="text-lg">{item}</p>
                 </motion.div>
@@ -148,7 +152,7 @@ export default function ConsorciosPage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Quero minha simulação gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -212,7 +216,7 @@ export default function ConsorciosPage() {
                 <option value="automovel">Automóvel</option>
                 <option value="moto">Moto</option>
               </select>
-              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83]">
+              <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Enviar
               </Button>
             </form>

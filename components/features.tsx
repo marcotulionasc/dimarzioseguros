@@ -222,11 +222,6 @@ export function Differentials() {
               {/* Card Background */}
               <div className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral-100 hover:border-primary/20 min-h-[280px] sm:min-h-[320px] flex flex-col group-hover:-translate-y-2">
                 
-                {/* Número do diferencial */}
-                <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-primary to-primary-dark text-white rounded-full flex items-center justify-center font-bold text-sm font-montserrat shadow-lg z-10">
-                  {i + 1}
-                </div>
-                
                 {/* Ícone principal */}
                 <div className="flex justify-center mb-6">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300 shadow-md">
@@ -264,7 +259,7 @@ export function Differentials() {
         >
           <div className="bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur-sm border border-primary/10 rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg">
             <blockquote className="text-xl sm:text-2xl md:text-3xl font-bold text-institutional-black font-montserrat leading-tight mb-4">
-              "Você fala com quem resolve…"
+              Você fala com quem resolve!
             </blockquote>
             <div className="flex justify-center items-center gap-3">
               <div className="h-1 w-12 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
