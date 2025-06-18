@@ -488,6 +488,199 @@
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
   }
+
+  /* ========================================
+     DESKTOP-SPECIFIC IMPROVEMENTS  
+     Padronização da responsividade desktop sem afetar mobile
+     ======================================== */
+  
+  /* Tablet e Desktop pequeno (641px - 1023px) */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .video-testimonials-tablet {
+      @apply py-16;
+    }
+    
+    .video-header-tablet {
+      @apply mb-12;
+    }
+    
+    .video-header-tablet .video-icon {
+      @apply w-14 h-14 mb-5;
+    }
+    
+    .video-header-tablet h2 {
+      @apply text-3xl leading-tight mb-5;
+    }
+    
+    .video-header-tablet p {
+      @apply text-lg;
+    }
+    
+    .video-grid-tablet {
+      @apply grid-cols-2 gap-6 px-4;
+    }
+    
+    .video-card-tablet {
+      @apply max-w-md mx-auto;
+    }
+    
+    .video-desktop-container-tablet {
+      @apply max-h-[450px];
+    }
+    
+    .video-content-tablet {
+      @apply p-5;
+    }
+    
+    .video-content-tablet h3 {
+      @apply text-lg;
+    }
+  }
+  
+  /* Desktop médio (1024px - 1279px) */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .video-testimonials-desktop-md {
+      @apply py-20;
+    }
+    
+    .video-header-desktop-md {
+      @apply mb-16;
+    }
+    
+    .video-header-desktop-md .video-icon {
+      @apply w-16 h-16 mb-6;
+    }
+    
+    .video-header-desktop-md h2 {
+      @apply text-4xl leading-tight mb-6;
+    }
+    
+    .video-header-desktop-md p {
+      @apply text-xl;
+    }
+    
+    .video-grid-desktop-md {
+      @apply grid-cols-3 gap-8 px-6;
+    }
+    
+    .video-card-desktop-md {
+      @apply max-w-sm mx-auto;
+    }
+    
+    .video-desktop-container-md {
+      @apply max-h-[520px];
+    }
+    
+    .video-content-desktop-md {
+      @apply p-6;
+    }
+    
+    .video-content-desktop-md h3 {
+      @apply text-xl;
+    }
+    
+    .video-play-button-desktop-md {
+      @apply p-5;
+    }
+    
+    .video-play-button-desktop-md svg {
+      @apply w-7 h-7;
+    }
+  }
+  
+  /* Desktop grande (1280px+) */
+  @media (min-width: 1280px) {
+    .video-testimonials-desktop-lg {
+      @apply py-24;
+    }
+    
+    .video-header-desktop-lg {
+      @apply mb-20;
+    }
+    
+    .video-header-desktop-lg .video-icon {
+      @apply w-16 h-16 mb-7;
+    }
+    
+    .video-header-desktop-lg h2 {
+      @apply text-5xl leading-tight mb-7;
+    }
+    
+    .video-header-desktop-lg p {
+      @apply text-xl;
+    }
+    
+    .video-grid-desktop-lg {
+      @apply grid-cols-3 gap-10 px-8;
+    }
+    
+    .video-card-desktop-lg {
+      @apply max-w-md mx-auto;
+    }
+    
+    .video-desktop-container-lg {
+      @apply max-h-[580px];
+    }
+    
+    .video-content-desktop-lg {
+      @apply p-7;
+    }
+    
+    .video-content-desktop-lg h3 {
+      @apply text-xl;
+    }
+    
+    .video-play-button-desktop-lg {
+      @apply p-6;
+    }
+    
+    .video-play-button-desktop-lg svg {
+      @apply w-8 h-8;
+    }
+    
+    .video-bg-desktop-lg {
+      @apply -top-12 -left-12 w-36 h-36;
+    }
+    
+    .video-bg-desktop-lg:last-child {
+      @apply -bottom-12 -right-12 w-44 h-44;
+    }
+  }
+  
+  /* Ultra Wide Desktop (1440px+) */
+  @media (min-width: 1440px) {
+    .video-testimonials-ultra {
+      @apply py-28;
+    }
+    
+    .video-header-ultra {
+      @apply mb-24;
+    }
+    
+    .video-header-ultra h2 {
+      @apply text-6xl mb-8;
+    }
+    
+    .video-grid-ultra {
+      @apply gap-12 px-10;
+    }
+    
+    .video-card-ultra {
+      @apply max-w-lg;
+    }
+    
+    .video-desktop-container-ultra {
+      @apply max-h-[620px];
+    }
+    
+    .video-content-ultra {
+      @apply p-8;
+    }
+    
+    .video-content-ultra h3 {
+      @apply text-2xl;
+    }
+  }
 }
 
 /* Scrollbar personalizada */

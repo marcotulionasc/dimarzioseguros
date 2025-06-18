@@ -58,8 +58,8 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
       transition={{ delay: index * 0.2, duration: 0.6 }}
       className="group relative"
     >
-      {/* Desktop: classe padrão | Mobile: classe específica */}
-      <div className="video-card sm:video-card video-card-mobile">
+      {/* Responsividade completa: Mobile | Tablet | Desktop MD | Desktop LG | Ultra */}
+      <div className="video-card video-card-mobile md:video-card-tablet lg:video-card-desktop-md xl:video-card-desktop-lg 2xl:video-card-ultra">
         {/* Video Container - Otimizado para vídeos mobile */}
         <div 
           className="video-container"
@@ -68,10 +68,10 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
           onTouchStart={() => setShowControls(true)}
           onClick={togglePlay}
         >
-          {/* Aspect ratio - Desktop mantém padrão | Mobile otimizado */}
-          <div className="video-aspect-mobile sm:video-aspect-mobile video-aspect-mobile-optimized">
-            {/* Desktop mantém altura limitada | Mobile sem limitação específica */}
-            <div className="video-desktop-container sm:video-desktop-container">
+          {/* Aspect ratio responsivo completo */}
+          <div className="video-aspect-mobile-optimized md:video-aspect-mobile lg:video-aspect-mobile xl:video-aspect-mobile">
+            {/* Container de altura responsivo para todos os breakpoints */}
+            <div className="video-desktop-container sm:video-desktop-container md:video-desktop-container-tablet lg:video-desktop-container-md xl:video-desktop-container-lg 2xl:video-desktop-container-ultra">
               <video
                 ref={videoRef}
                 src={video.embedUrl}
@@ -89,11 +89,11 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
           {/* Overlay gradiente para melhor legibilidade */}
           <div className="video-gradient-overlay" />
 
-          {/* Controles customizados - Desktop padrão | Mobile otimizado */}
+          {/* Controles customizados - Responsivos para todos os breakpoints */}
           <div className={`video-controls-overlay video-controls-mobile ${
             showControls || !isPlaying ? 'bg-black/20' : 'bg-transparent'
           }`}>
-            {/* Play/Pause Button */}
+            {/* Play/Pause Button com tamanhos responsivos */}
             <motion.button
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ 
@@ -102,7 +102,7 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
               }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="video-play-button touch-manipulation"
+              className="video-play-button touch-manipulation lg:video-play-button-desktop-md xl:video-play-button-desktop-lg"
               onClick={(e) => {
                 e.stopPropagation()
                 togglePlay()
@@ -137,13 +137,14 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
           {!isPlaying && (
             <div className="video-status-indicator video-status-mobile">
               <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" />
-              <span className="text-xs font-medium">Toque para reproduzir</span>
+              <span className="text-xs font-medium hidden sm:inline">Clique para reproduzir</span>
+              <span className="text-xs font-medium sm:hidden">Toque para reproduzir</span>
             </div>
           )}
         </div>
 
-        {/* Card Content - Desktop padrão | Mobile otimizado */}  
-        <div className="p-4 sm:p-6 bg-white video-content-mobile">
+        {/* Card Content - Responsivo para todos os breakpoints */}  
+        <div className="p-4 sm:p-6 bg-white video-content-mobile md:video-content-tablet lg:video-content-desktop-md xl:video-content-desktop-lg 2xl:video-content-ultra">
           <div className="text-center space-y-2">
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
               {video.title}
@@ -172,15 +173,15 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
 
 export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 overflow-hidden video-testimonials-mobile">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 overflow-hidden video-testimonials-mobile md:video-testimonials-tablet lg:video-testimonials-desktop-md xl:video-testimonials-desktop-lg 2xl:video-testimonials-ultra">
       <motion.div
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, margin: "-100px" }}
         className="video-testimonials-container container"
       >
-        {/* Header Section - Desktop padrão | Mobile otimizado */}
-        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 lg:mb-20 video-header-mobile">
+        {/* Header Section - Responsivo para todos os breakpoints */}
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 lg:mb-20 video-header-mobile md:video-header-tablet lg:video-header-desktop-md xl:video-header-desktop-lg 2xl:video-header-ultra">
           <motion.div 
             variants={fadeInUp}
             className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-blue-600 mb-6 shadow-lg video-icon"
@@ -208,12 +209,12 @@ export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
           variants={fadeInUp}
           className="relative"
         >
-          {/* Background decorative elements - Mobile otimizado */}
-          <div className="absolute -top-10 -left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl video-bg-mobile" />
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl video-bg-mobile" />
+          {/* Background decorative elements - Responsivos para todos os breakpoints */}
+          <div className="absolute -top-10 -left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl video-bg-mobile xl:video-bg-desktop-lg" />
+          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl video-bg-mobile xl:video-bg-desktop-lg" />
 
-          {/* Grid responsivo - Desktop mantém padrão | Mobile otimizado */}
-          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-7xl mx-auto video-grid-mobile">
+          {/* Grid responsivo - Todos os breakpoints padronizados */}
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-7xl mx-auto video-grid-mobile md:video-grid-tablet lg:video-grid-desktop-md xl:video-grid-desktop-lg 2xl:video-grid-ultra">
             {videos.map((video, index) => (
               <VideoCard key={video.id} video={video} index={index} />
             ))}
