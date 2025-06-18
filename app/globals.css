@@ -349,6 +349,145 @@
       max-height: 580px;
     }
   }
+
+  /* ========================================
+     MOBILE-SPECIFIC IMPROVEMENTS
+     Melhorias específicas para mobile sem afetar desktop
+     ======================================== */
+  
+  @media (max-width: 640px) {
+    /* Seção principal - mobile */
+    .video-testimonials-mobile {
+      @apply py-12 px-3;
+    }
+    
+    /* Header mobile otimizado */
+    .video-header-mobile {
+      @apply mb-8 px-2;
+    }
+    
+    .video-header-mobile .video-icon {
+      @apply w-12 h-12 mb-4;
+    }
+    
+    .video-header-mobile h2 {
+      @apply text-2xl leading-tight mb-4 px-1;
+    }
+    
+    .video-header-mobile p {
+      @apply text-base leading-relaxed px-1;
+    }
+    
+    /* Grid mobile - uma coluna com espaçamento otimizado */
+    .video-grid-mobile {
+      @apply grid-cols-1 gap-4 px-2;
+    }
+    
+    /* Card mobile melhorado */
+    .video-card-mobile {
+      @apply mx-auto max-w-sm w-full;
+      /* Largura máxima para evitar cards muito largos em tablets pequenos */
+    }
+    
+    /* Aspect ratio mobile otimizado */
+    .video-aspect-mobile-optimized {
+      aspect-ratio: 9/16;
+      position: relative;
+      width: 100%;
+      max-height: 65vh; /* Altura máxima para não ocupar toda a tela */
+      @apply mx-auto;
+    }
+    
+    /* Controles mobile */
+    .video-controls-mobile .video-play-button {
+      @apply p-3;
+    }
+    
+    .video-controls-mobile .video-play-button svg {
+      @apply w-5 h-5;
+    }
+    
+    /* Botão mute mobile */
+    .video-mute-mobile {
+      @apply top-3 right-3 p-1.5;
+    }
+    
+    /* Status indicator mobile */
+    .video-status-mobile {
+      @apply bottom-3 left-3 text-xs;
+    }
+    
+    .video-status-mobile span {
+      @apply text-xs;
+    }
+    
+    /* Content mobile */
+    .video-content-mobile {
+      @apply p-3;
+    }
+    
+    .video-content-mobile h3 {
+      @apply text-base font-bold mb-2;
+    }
+    
+    .video-content-mobile p {
+      @apply text-xs;
+    }
+    
+    /* Stars mobile */
+    .video-stars-mobile .video-star-rating {
+      @apply w-1.5 h-1.5;
+    }
+    
+    /* Background elements mobile - reduzidos */
+    .video-bg-mobile {
+      @apply -top-6 -left-6 w-20 h-20;
+    }
+    
+    .video-bg-mobile:last-child {
+      @apply -bottom-6 -right-6 w-24 h-24;
+    }
+  }
+  
+  /* Para telas muito pequenas (iPhone SE, etc) */
+  @media (max-width: 380px) {
+    .video-testimonials-mobile {
+      @apply py-10 px-2;
+    }
+    
+    .video-aspect-mobile-optimized {
+      max-height: 60vh;
+    }
+    
+    .video-card-mobile {
+      @apply max-w-xs;
+    }
+    
+    .video-header-mobile h2 {
+      @apply text-xl;
+    }
+    
+    .video-header-mobile p {
+      @apply text-sm;
+    }
+  }
+  
+  /* Landscape mobile específico */
+  @media (max-width: 640px) and (orientation: landscape) {
+    .video-aspect-mobile-optimized {
+      max-height: 80vh;
+    }
+    
+    .video-testimonials-mobile {
+      @apply py-8;
+    }
+  }
+  
+  /* Touch experience melhorado */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 /* Scrollbar personalizada */
