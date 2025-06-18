@@ -764,3 +764,49 @@
 .bg-gradient-dimarzio-secondary {
   background: linear-gradient(135deg, #2B2E83 0%, #1D1D1B 100%);
 }
+
+/* Mobile Menu Blur Enhancement */
+.mobile-menu-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu-slide {
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Footer Mobile Improvements */
+@media (max-width: 640px) {
+  .footer-mobile-center {
+    text-align: center;
+  }
+  
+  .footer-mobile-center .flex {
+    justify-content: center;
+  }
+  
+  .footer-mobile-center address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-mobile-center address > div {
+    justify-content: center;
+    text-align: center;
+  }
+}
