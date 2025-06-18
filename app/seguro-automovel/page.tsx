@@ -50,11 +50,11 @@ export default function SeguroAutomovelPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white relative overflow-hidden">
+      <section className="hero-section flex items-center bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 text-sm font-medium rounded-lg backdrop-blur-sm border border-white/10">
+            <div className="hero-badge inline-flex items-center px-4 py-2 bg-white/10 text-sm font-medium rounded-lg backdrop-blur-sm border border-white/10">
               <Car className="mr-2 h-4 w-4" />
               <span>Cotação com análise técnica gratuita</span>
             </div>

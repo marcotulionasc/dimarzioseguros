@@ -41,10 +41,7 @@ const backgroundElements = [
 
 export function Hero({ title, description, buttonText, buttonLink }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary-dark to-secondary overflow-hidden">
-      {/* Espaçamento para compensar o header fixo com margem extra */}
-      <div className="absolute top-0 left-0 right-0 h-24 sm:h-28 md:h-32 lg:h-36 pointer-events-none" />
-      
+    <section className="hero-section relative flex items-center justify-center bg-gradient-to-br from-primary via-primary-dark to-secondary overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {backgroundElements.map((element, i) => (
@@ -73,16 +70,16 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
         ))}
       </div>
 
-      {/* Container principal com padding responsivo e margem superior */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-12 sm:py-16 md:py-20 lg:py-24 pt-16 sm:pt-20 md:pt-24 lg:pt-28">
+      {/* Container principal com padding responsivo */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="text-center space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
           
-          {/* Badge de 20 anos com margem superior adicional */}
+          {/* Badge de 20 anos com espaçamento correto */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white font-montserrat font-medium text-sm sm:text-base mt-4 sm:mt-6 md:mt-8"
+            className="hero-badge inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white font-montserrat font-medium text-sm sm:text-base"
           >
             <Award className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
             <span className="whitespace-nowrap">🎉 Comemorando 20 anos de excelência</span>

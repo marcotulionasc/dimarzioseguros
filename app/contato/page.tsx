@@ -6,7 +6,7 @@ import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 
 export default function ContatoPage() {
   return (
-    <main className="container py-16 space-y-8">
+    <main className="container header-spacing py-8 space-y-8">
       <h1 className="text-3xl font-bold">Fale Conosco</h1>
       <form 
         className="space-y-4" 

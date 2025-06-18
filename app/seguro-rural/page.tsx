@@ -33,7 +33,7 @@ export default function SeguroRuralPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white relative overflow-hidden">
+      <section className="hero-section flex items-center bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">

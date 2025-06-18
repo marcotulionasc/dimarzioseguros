@@ -788,6 +788,80 @@
   }
 }
 
+/* ========================================
+   HEADER SPACING FIX - GLOBAL
+   Correção de espaçamento do header para todas as páginas
+   ======================================== */
+
+/* Espaçamento global para seções que vêm após o header fixo */
+.header-spacing {
+  /* Mobile */
+  padding-top: 6rem; /* 96px - altura do header + espaço adicional */
+  
+  /* Tablet */
+  @media (min-width: 640px) {
+    padding-top: 7rem; /* 112px */
+  }
+  
+  /* Desktop */
+  @media (min-width: 768px) {
+    padding-top: 8rem; /* 128px */
+  }
+  
+  /* Desktop grande */
+  @media (min-width: 1024px) {
+    padding-top: 9rem; /* 144px */
+  }
+}
+
+/* Para seções full-screen com header fixo */
+.min-h-screen-with-header {
+  min-height: calc(100vh - 5rem); /* Subtrai altura do header */
+  
+  @media (min-width: 640px) {
+    min-height: calc(100vh - 5rem);
+  }
+  
+  @media (min-width: 768px) {
+    min-height: calc(100vh - 5rem);
+  }
+}
+
+/* Classe específica para hero sections */
+.hero-section {
+  min-height: 100vh;
+  padding-top: 6rem;
+  
+  @media (min-width: 640px) {
+    padding-top: 7rem;
+  }
+  
+  @media (min-width: 768px) {
+    padding-top: 8rem;
+  }
+  
+  @media (min-width: 1024px) {
+    padding-top: 9rem;
+  }
+}
+
+/* Badge spacing específico */
+.hero-badge {
+  margin-top: 2rem;
+  
+  @media (min-width: 640px) {
+    margin-top: 2.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    margin-top: 3rem;
+  }
+  
+  @media (min-width: 1024px) {
+    margin-top: 3.5rem;
+  }
+}
+
 /* Footer Mobile Improvements */
 @media (max-width: 640px) {
   .footer-mobile-center {
