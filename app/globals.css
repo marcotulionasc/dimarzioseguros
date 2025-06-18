@@ -252,6 +252,103 @@
   .section-padding-sm {
     @apply py-6 sm:py-8 md:py-10 lg:py-12;
   }
+
+  /* Estilos específicos para VideoTestimonials */
+  .video-testimonials-container {
+    @apply relative overflow-hidden;
+  }
+  
+  .video-card {
+    @apply relative overflow-hidden bg-white rounded-xl shadow-xl hover:shadow-2xl 
+           transition-all duration-500 transform hover:scale-[1.02] border-0;
+  }
+  
+  .video-container {
+    @apply relative bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden cursor-pointer;
+  }
+  
+  /* Aspect ratio otimizado para vídeos mobile */
+  .video-aspect-mobile {
+    aspect-ratio: 9/16;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Desktop: altura máxima para vídeos mobile */
+  .video-desktop-container {
+    @apply sm:max-h-[400px] lg:max-h-[500px] xl:max-h-[550px] sm:mx-auto;
+  }
+  
+  /* Controles de vídeo customizados */
+  .video-controls-overlay {
+    @apply absolute inset-0 flex items-center justify-center transition-all duration-300;
+  }
+  
+  .video-play-button {
+    @apply bg-white/90 hover:bg-white text-primary rounded-full shadow-2xl 
+           backdrop-blur-sm transition-all duration-300 p-4 sm:p-6;
+  }
+  
+  .video-mute-button {
+    @apply absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 
+           text-white rounded-full p-2 backdrop-blur-sm transition-all duration-300;
+  }
+  
+  /* Gradiente overlay para melhor UX */
+  .video-gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none;
+  }
+  
+  /* Indicadores de status */
+  .video-status-indicator {
+    @apply absolute bottom-4 left-4 flex items-center gap-2 text-white/80 text-sm;
+  }
+  
+  /* Borda decorativa de destaque */
+  .video-accent-border {
+    @apply absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-primary via-blue-500 to-primary;
+  }
+  
+  /* Animações específicas para vídeos */
+  .video-star-rating {
+    @apply w-2 h-2 bg-yellow-400 rounded-full;
+  }
+  
+  /* Responsividade melhorada */
+  @media (max-width: 640px) {
+    .video-desktop-container {
+      max-height: none;
+    }
+    
+    .video-play-button {
+      @apply p-3;
+    }
+    
+    .video-play-button svg {
+      @apply w-5 h-5;
+    }
+  }
+  
+  /* Para telas muito pequenas */
+  @media (max-width: 480px) {
+    .video-aspect-mobile {
+      aspect-ratio: 9/16;
+      max-height: 70vh;
+    }
+  }
+  
+  /* Para telas grandes, limitamos a altura máxima */
+  @media (min-width: 1024px) {
+    .video-desktop-container {
+      max-height: 520px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .video-desktop-container {
+      max-height: 580px;
+    }
+  }
 }
 
 /* Scrollbar personalizada */
@@ -333,5 +430,5 @@
 }
 
 .bg-gradient-dimarzio-secondary {
-  background: linear-gradient(135deg, #2d2e83 0%, #1d1d1b 100%);
+  background: linear-gradient(135deg, #2B2E83 0%, #1D1D1B 100%);
 }

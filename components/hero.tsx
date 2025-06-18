@@ -29,6 +29,16 @@ const highlights = [
   }
 ]
 
+// Valores fixos para os elementos de fundo, evitando Math.random() para resolver hidratação
+const backgroundElements = [
+  { width: 250, height: 280, left: 10, top: 15, duration: 12 },
+  { width: 180, height: 200, left: 75, top: 60, duration: 15 },
+  { width: 320, height: 350, left: 20, top: 75, duration: 18 },
+  { width: 150, height: 180, left: 85, top: 25, duration: 14 },
+  { width: 220, height: 240, left: 50, top: 40, duration: 16 },
+  { width: 280, height: 300, left: 30, top: 85, duration: 13 }
+]
+
 export function Hero({ title, description, buttonText, buttonLink }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary-dark to-secondary overflow-hidden">
@@ -37,16 +47,16 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        {[...Array(6)].map((_, i) => (
+        {backgroundElements.map((element, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full opacity-10"
             style={{
               background: i % 2 === 0 ? '#ffffff' : 'rgba(255,255,255,0.1)',
-              width: `${Math.random() * 300 + 100}px`,
-              height: `${Math.random() * 300 + 100}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              width: `${element.width}px`,
+              height: `${element.height}px`,
+              left: `${element.left}%`,
+              top: `${element.top}%`,
             }}
             animate={{
               y: [0, -30, 0],
@@ -54,10 +64,10 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
               scale: [1, 1.1, 1],
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
+              duration: element.duration,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: Math.random() * 5,
+              delay: i * 0.8,
             }}
           />
         ))}

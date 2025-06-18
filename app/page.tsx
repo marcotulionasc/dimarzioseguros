@@ -36,17 +36,17 @@ export default function Home() {
       {
         id: "video1",
         title: "Marta Nascimento",
-        embedUrl: "https://drive.google.com/file/d/1jjZSSqXnNVlFtHs6iqYcMqX7Aeh-ltk9/preview"
+        embedUrl: "https://pub-41df0a2680d8451cb73e844f0d72cc9b.r2.dev/video03.mp4"
       },
       {
         id: "video2", 
         title: "Aaron Engel",
-        embedUrl: "https://drive.google.com/file/d/1qe3AWvlJ0m4cx5JwLG9Fu5ipNGPbnMtv/preview"
+        embedUrl: "https://pub-41df0a2680d8451cb73e844f0d72cc9b.r2.dev/video02.mp4"
       },
       {
         id: "video3",
         title: "Rafael Rosseto", 
-        embedUrl: "https://drive.google.com/file/d/1jK0ym9Mx9gnvQEnNhnU_KDxfrHnzZBFn/preview"
+        embedUrl: "https://pub-41df0a2680d8451cb73e844f0d72cc9b.r2.dev/video01.mp4"
       }
     ]
   };
