@@ -20,7 +20,8 @@ const highlights = [
   {
     icon: Award,
     text: "Há 20 anos protegendo pessoas e empresas com clareza",
-    premium: true
+    premium: true,
+    isHighlight: true
   },
   {
     icon: CheckCircle,
@@ -140,22 +141,30 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                   className={`flex flex-col items-center text-center space-y-3 sm:space-y-4 rounded-xl p-4 sm:p-6 md:p-8 transition-all duration-300 ${
                     item.premium 
-                      ? 'bg-gradient-to-br from-white/20 to-white/30 border-2 border-white/30 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 transform hover:scale-105' 
+                      ? item.isHighlight
+                        ? 'bg-gradient-to-br from-yellow-400/20 to-yellow-500/30 border-2 border-yellow-400/40 shadow-lg shadow-yellow-400/20 hover:shadow-xl hover:shadow-yellow-400/30 transform hover:scale-105'
+                        : 'bg-gradient-to-br from-white/20 to-white/30 border-2 border-white/30 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 transform hover:scale-105'
                       : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15'
                   }`}
                 >
                   <div className={`rounded-full p-3 sm:p-4 md:p-5 ${
                     item.premium 
-                      ? 'bg-gradient-to-br from-white to-white/80 shadow-lg' 
+                      ? item.isHighlight 
+                        ? 'bg-gradient-to-br from-yellow-400 to-yellow-500 shadow-lg shadow-yellow-400/30' 
+                        : 'bg-gradient-to-br from-white to-white/80 shadow-lg'
                       : 'bg-white/20'
                   }`}>
                     <item.icon className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${
-                      item.premium ? 'text-primary' : 'text-white'
+                      item.premium 
+                        ? item.isHighlight 
+                          ? 'text-primary' 
+                          : 'text-primary'
+                        : 'text-white'
                     }`} />
                   </div>
                   <p className={`font-montserrat leading-tight ${
                     item.premium 
-                      ? 'text-white font-semibold text-sm sm:text-base md:text-lg' 
+                      ? `${item.isHighlight ? 'text-yellow-400' : 'text-white'} font-semibold text-sm sm:text-base md:text-lg` 
                       : 'text-white font-medium text-xs sm:text-sm md:text-base'
                   }`}>
                     {item.text}

@@ -36,7 +36,7 @@ export function PaperQuestion() {
         </Button>
       </div>
       
-      <div className="pt-6">
+      <div className="pt-6 ">
         <p className="text-sm text-neutral-500 font-montserrat">
           Há 20 anos protegendo pessoas e empresas com clareza.
         </p>
