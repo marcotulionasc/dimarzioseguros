@@ -29,7 +29,7 @@ export default function ProdutoPage({ params }: Props) {
           ))}
         </ul>
       </section>
-      <Link href="/contato">
+      <Link href="/#contato">
         <Button className="primary-button mt-6">Agendar análise gratuita</Button>
       </Link>
     </main>

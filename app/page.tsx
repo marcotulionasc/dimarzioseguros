@@ -27,7 +27,7 @@ export default function Home() {
     title: "Já imaginou descobrir que seu seguro não garante que você irá receber sua indenização?",
     description: "A Dimarzio Seguros oferece uma consultoria gratuita para revisar ou montar o seu seguro do jeito certo. Com cobertura que realmente protege, sem pagar a mais, sem letras miúdas.",
     buttonText: "Quero minha análise gratuita",
-    buttonLink: "#contact"
+    buttonLink: "#contato"
   };
 
   const videoTestimonialContent = {

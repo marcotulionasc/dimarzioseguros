@@ -90,7 +90,7 @@ export function MobileMenu() {
                   </li>
                   <li>
                     <Link
-                      href="/contato"
+                      href="/#contato"
                       className="text-lg font-medium text-gray-700 hover:text-blue-700 transition-colors block"
                       onClick={() => setIsOpen(false)}
                     >

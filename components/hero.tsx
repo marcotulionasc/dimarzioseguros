@@ -120,6 +120,12 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
             <Button 
               size="lg"
               className="bg-white text-primary hover:bg-white/90 font-montserrat font-semibold px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 rounded-lg text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-w-[200px] sm:min-w-[250px] md:min-w-[300px]"
+              onClick={() => {
+                const element = document.querySelector(buttonLink);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               {buttonText}
             </Button>

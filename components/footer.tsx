@@ -22,7 +22,7 @@ const socialLinks = [
 const quickLinks = [
   { name: 'Home', href: '/' },
   { name: 'Produtos', href: '/#seguros' },
-  { name: 'Contato', href: '/contato' },
+  { name: 'Contato', href: '/#contato' },
   { name: 'Sobre Nós', href: '/#sobre' },
   { name: 'Blog', href: '/blog' }
 ]

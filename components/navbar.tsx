@@ -32,7 +32,7 @@ export function Navbar() {
               {[
                 { href: '/', label: 'Home' },
                 { href: '/#seguros', label: 'Produtos' },
-                { href: '/contato', label: 'Contato' },
+                { href: '/#contato', label: 'Contato' },
               ].map((link) => (
                 <Link
                   key={link.href}

@@ -24,7 +24,7 @@ export function MobileMenu() {
   const menuItems = [
     { href: '/', label: 'Home', icon: Home },
     { href: '/#seguros', label: 'Produtos', icon: Package },
-    { href: '/contato', label: 'Contato', icon: Mail },
+    { href: '/#contato', label: 'Contato', icon: Mail },
   ]
 
   return (
