@@ -146,7 +146,7 @@ export function HowItWorks() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="relative group"
             >
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20">
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20 h-96 flex flex-col">
                 {/* Step Number */}
                 <div className="absolute -top-4 -left-4 bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm shadow-lg">
                   {i + 1}
@@ -160,7 +160,7 @@ export function HowItWorks() {
                 </div>
                 
                 {/* Content */}
-                <div className="space-y-4">
+                <div className="space-y-4 flex-1 flex flex-col justify-center">
                   <h3 className="text-xl font-semibold text-gray-900 leading-tight">
                     {step.text}
                   </h3>

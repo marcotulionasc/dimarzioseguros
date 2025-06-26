@@ -124,21 +124,18 @@ export function ProductGrid() {
             >
               <Link
                 href={product.href}
-                className="group block bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/20 overflow-hidden"
+                className="group block bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/20 overflow-hidden h-40"
               >
-                <div className="p-4 lg:p-6">
+                <div className="p-4 lg:p-6 h-full flex flex-col justify-between">
                   {/* Ícone colorido para todos os produtos */}
-                  <div className={`w-12 h-12 mb-4 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
+                  <div className={`w-12 h-12 mx-auto rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
                     <product.icon className="w-5 h-5 text-white" />
                   </div>
                   
-                  <div className="space-y-2">
-                    <h3 className="font-semibold text-gray-900 text-sm lg:text-base group-hover:text-primary transition-colors duration-300 leading-tight">
+                  <div className="text-center">
+                    <h3 className="font-semibold text-gray-900 text-sm lg:text-base leading-tight group-hover:text-primary transition-colors duration-300">
                       {product.title}
                     </h3>
-                    {/* <p className="text-xs lg:text-sm text-gray-600 leading-relaxed">
-                      {product.description}
-                    </p> */}
                   </div>
                 </div>
               </Link>
@@ -154,20 +151,6 @@ export function ProductGrid() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-16"
         >
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl px-8 py-6 inline-block">
-            <p className="text-lg text-primary font-medium mb-4">
-              Não encontrou o que procura?
-            </p>
-            <p className="text-gray-600 mb-4">
-              Fale conosco e encontraremos a solução ideal para você
-            </p>
-            <Link
-              href="#contato"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
-            >
-              Falar com Especialista
-            </Link>
-          </div>
         </motion.div>
       </div>
     </section>
