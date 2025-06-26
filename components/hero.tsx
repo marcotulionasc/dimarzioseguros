@@ -133,14 +133,14 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                 {/* Main Image Container */}
                 <div className="relative bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl lg:rounded-3xl p-8 lg:p-12">
                   <div className="aspect-[4/3] relative bg-white rounded-xl shadow-xl overflow-hidden">
-                    {/* Placeholder for hero image */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                      <div className="text-center text-white">
-                        <Shield className="w-16 h-16 mx-auto mb-4 opacity-80" />
-                        <p className="text-lg font-medium">Proteção e Confiança</p>
-                        <p className="text-sm opacity-90">600x500px</p>
-                      </div>
-                    </div>
+                    <Image
+                      src="/images/hero-dimarzioseguros.jpg"
+                      alt="Dimarzio Seguros - Proteção e confiança há 20 anos"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                   </div>
                   
                   {/* Floating Cards */}

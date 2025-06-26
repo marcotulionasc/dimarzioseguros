@@ -2,6 +2,7 @@
 
 import { CheckCircle, FileSearch, BarChart3, Target, Gift } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const itens = [
   {
@@ -45,29 +46,61 @@ export function Consultoria() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {itens.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group flex items-start gap-6 p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
-            >
-              <div className="bg-blue-50 text-primary rounded-xl p-4 group-hover:scale-105 transition-transform">
-                <item.icon className="w-6 h-6" />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {/* Left Column - Items */}
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {itens.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6 }}
+                className="group flex items-start gap-6 p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+              >
+                <div className="bg-blue-50 text-primary rounded-xl p-3 group-hover:scale-105 transition-transform flex-shrink-0">
+                  <item.icon className="w-5 h-5" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Right Column - Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="sticky top-8">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/sobre-01.png"
+                  alt="Profissional analisando seguros"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.description}
-                </p>
+              
+              {/* Floating Stats */}
+              <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">100%</div>
+                  <div className="text-xs text-gray-600">Gratuito</div>
+                </div>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
         </div>
         
         <motion.div 

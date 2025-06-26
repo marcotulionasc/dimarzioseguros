@@ -5,7 +5,7 @@ import { AlertTriangle, FileX, Eye, HelpCircle } from 'lucide-react'
 
 export function WhyWrong() {
   return (
-    <section className="py-20 bg-gradient-to-br from-red-600 to-red-800 text-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -42,7 +42,7 @@ export function WhyWrong() {
             <strong>Resultado:</strong> Na hora H, você descobre que não tem a proteção que pensava ter.
           </p>
           
-          <Button className="bg-white text-red-600 hover:bg-gray-100 font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
+          <Button className="bg-white text-primary hover:bg-gray-100 font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
             Não Quero Correr Esse Risco
           </Button>
         </div>
