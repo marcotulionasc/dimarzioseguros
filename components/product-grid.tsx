@@ -127,33 +127,18 @@ export function ProductGrid() {
                 className="group block bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/20 overflow-hidden"
               >
                 <div className="p-4 lg:p-6">
-                  {/* Image for featured products */}
-                  {product.image && (
-                    <div className="relative aspect-square mb-4 rounded-xl overflow-hidden bg-gray-50">
-                      <Image
-                        src={product.image}
-                        alt={product.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                    </div>
-                  )}
-                  
-                  {/* Icon for products without images */}
-                  {!product.image && (
-                    <div className={`relative aspect-square mb-4 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
-                      <product.icon className="w-8 h-8 lg:w-12 lg:h-12 text-white" />
-                    </div>
-                  )}
+                  {/* Ícone colorido para todos os produtos */}
+                  <div className={`w-12 h-12 mb-4 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
+                    <product.icon className="w-5 h-5 text-white" />
+                  </div>
                   
                   <div className="space-y-2">
                     <h3 className="font-semibold text-gray-900 text-sm lg:text-base group-hover:text-primary transition-colors duration-300 leading-tight">
                       {product.title}
                     </h3>
-                    <p className="text-xs lg:text-sm text-gray-600 leading-relaxed">
+                    {/* <p className="text-xs lg:text-sm text-gray-600 leading-relaxed">
                       {product.description}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </Link>
