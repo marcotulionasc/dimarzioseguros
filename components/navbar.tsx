@@ -12,8 +12,8 @@ export function Navbar() {
   const pathname = usePathname()
   
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md border-b border-neutral-200 shadow-sm">
-      <div className="container mx-auto">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <div className="relative w-20 h-20 rounded-lg p-1">
@@ -28,7 +28,7 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            <div className="flex items-center gap-6 text-sm font-medium font-montserrat">
+            <div className="flex items-center gap-6 text-sm font-medium">
               {[
                 { href: '/', label: 'Home' },
                 { href: '/#seguros', label: 'Produtos' },
@@ -37,22 +37,15 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-institutional-black hover:text-primary transition-colors"
+                  className="text-gray-700 hover:text-primary transition-colors duration-200"
                 >
                   {link.label}
-                  {pathname === link.href && (
-                    <motion.div
-                      layoutId="nav-underline"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
                 </Link>
               ))}
             </div>
             
             <Button 
-              className="hidden lg:flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-montserrat font-medium"
+              className="hidden lg:flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-medium"
               variant="default"
             >
               <Phone className="w-4 h-4" />

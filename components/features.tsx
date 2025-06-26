@@ -1,7 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ShieldCheck, Star, ArrowRight, CheckCircle2, Clock, Users, Wallet, Phone, Headphones, Calculator, UserCheck, Clock2 } from 'lucide-react'
+import { Shield, Users, Clock, Award, CheckCircle, Star } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { ShieldCheck, ArrowRight, CheckCircle2, Wallet, Phone, Headphones, Calculator, UserCheck, Clock2 } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -117,56 +119,60 @@ export function Features({ title, features }: FeaturesProps) {
 
 export function HowItWorks() {
   return (
-    <section className="py-24 bg-gradient-to-br from-neutral-50 to-neutral-100">
-      <motion.div
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        className="container mx-auto px-4"
-      >
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <motion.h2 
-            variants={fadeInUp} 
-            className="text-4xl font-bold mb-4 font-montserrat text-institutional-black"
-          >
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
             Como funciona na prática
-          </motion.h2>
-          <motion.p 
-            variants={fadeInUp}
-            className="text-neutral-600 text-lg font-montserrat"
-          >
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
             4 passos simples para sua segurança
-          </motion.p>
-        </div>
+          </p>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, i) => (
             <motion.div
               key={i}
-              variants={{
-                initial: { opacity: 0, y: 20 },
-                animate: { opacity: 1, y: 0, transition: { delay: i * 0.2 } }
-              }}
-              className="group relative bg-white rounded-2xl p-6 shadow-dimarzio hover:shadow-dimarzio-lg transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="relative group"
             >
-              <div className="absolute -top-4 -left-4 bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm font-montserrat shadow-lg">
-                {i + 1}
-              </div>
-              
-              <div className="absolute -top-6 left-6 bg-primary/10 text-primary rounded-xl p-3 group-hover:scale-110 transition-transform">
-                <step.icon className="w-6 h-6" />
-              </div>
-              <div className="mt-6">
-                <h3 className="text-xl font-semibold mb-2 font-montserrat text-institutional-black">{step.text}</h3>
-                <p className="text-neutral-600 font-montserrat">{step.description}</p>
-              </div>
-              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ArrowRight className="w-5 h-5 text-primary" />
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20">
+                {/* Step Number */}
+                <div className="absolute -top-4 -left-4 bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm shadow-lg">
+                  {i + 1}
+                </div>
+                
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <step.icon className="w-6 h-6" />
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-gray-900 leading-tight">
+                    {step.text}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
@@ -190,20 +196,20 @@ export function Differentials() {
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <motion.span 
             variants={fadeInUp}
-            className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-white bg-primary hover:bg-primary-dark px-4 sm:px-6 py-2 sm:py-3 rounded-full font-montserrat mb-4 sm:mb-6 shadow-lg transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-primary px-6 py-3 rounded-full mb-6 shadow-sm"
           >
             <Star className="w-4 h-4 sm:w-5 sm:h-5" />
             Nossos diferenciais
           </motion.span>
           <motion.h2 
             variants={fadeInUp} 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 font-montserrat text-institutional-black leading-tight"
+            className="text-4xl lg:text-5xl font-light text-gray-900 mb-4"
           >
             O que faz a Dimarzio diferente
           </motion.h2>
           <motion.p 
             variants={fadeInUp}
-            className="text-neutral-600 text-lg sm:text-xl md:text-2xl font-montserrat leading-relaxed max-w-3xl mx-auto"
+            className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
           >
             Com 20 anos de mercado, a Dimarzio vai além do básico. Corretora tem em toda esquina. Atendimento técnico, quase nenhuma.
           </motion.p>
@@ -232,12 +238,12 @@ export function Differentials() {
                 {/* Conteúdo do card */}
                 <div className="flex-1 flex flex-col text-center">
                   {/* Title */}
-                  <h3 className="text-lg sm:text-xl font-bold text-institutional-black font-montserrat leading-tight mb-4 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 leading-tight mb-4 group-hover:text-primary transition-colors duration-300">
                     {item.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-neutral-600 font-montserrat text-sm sm:text-base leading-relaxed flex-1">
+                  <p className="text-gray-600 leading-relaxed flex-1">
                     {item.description}
                   </p>
                 </div>
@@ -258,7 +264,7 @@ export function Differentials() {
           className="mt-16 sm:mt-20 md:mt-24 max-w-4xl mx-auto text-center"
         >
           <div className="bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur-sm border border-primary/10 rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg">
-            <blockquote className="text-xl sm:text-2xl md:text-3xl font-bold text-institutional-black font-montserrat leading-tight mb-4">
+            <blockquote className="text-2xl lg:text-3xl font-light text-gray-900 leading-tight mb-4">
               Você fala com quem resolve!
             </blockquote>
             <div className="flex justify-center items-center gap-3">
@@ -272,3 +278,5 @@ export function Differentials() {
     </section>
   )
 }
+
+

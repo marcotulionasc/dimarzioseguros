@@ -41,23 +41,81 @@ export function ProductGrid() {
   const filtered = products.filter((p) => filter === 'Todos' || p.category === filter)
   const [parent] = useAutoAnimate()
   
+  // Map specific slugs to their correct paths
+  const getProductPath = (slug: string) => {
+    if (slug === 'consorcio') {
+      return '/consorcios'
+    }
+    const pathMap: Record<string, string> = {
+      'automovel': '/seguro-automovel',
+      'fianca-locaticia': '/seguro-fianca-locaticia',
+      'garantia-fiduciaria': '/seguro-garantia-fiduciaria',
+      'portateis': '/seguro-portateis',
+      'rc-profissional': '/seguro-rc-profissional',
+      'residencial': '/seguro-residencial',
+      'rural': '/seguro-rural',
+      'saude': '/seguro-saude',
+      'viagem': '/seguro-viagem',
+      'vida': '/seguro-vida',
+      'fiduciario': '/seguro-fiduciario',
+      'empresarial': '/seguro-empresarial'
+    }
+    return pathMap[slug] || `/produtos/${slug}`
+  }
+  
   return (
-    <motion.section
-      id="seguros"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 space-y-8 text-center"
-    >
-      <h2 className="text-3xl font-bold">Qual seguro você quer entender melhor?</h2>
-      <ProductFilterTabs filters={filters} active={filter} onChange={setFilter} />
-      <div ref={parent} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {filtered.map((p) => {
-          const Icon = icons[p.slug]
-          return <ProductCard key={p.slug} slug={p.slug} title={p.title} icon={Icon} />
-        })}
+    <section id="seguros" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
+            Qual seguro você quer entender melhor?
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+            Clique no ícone para saber mais sobre cada tipo de seguro
+          </p>
+          <ProductFilterTabs filters={filters} active={filter} onChange={setFilter} />
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          ref={parent}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8"
+        >
+          {filtered.map((p, index) => {
+            const Icon = icons[p.slug]
+            return (
+              <motion.a
+                key={p.slug}
+                href={getProductPath(p.slug)}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="group flex flex-col items-center p-6 rounded-2xl bg-white border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                {/* Icon */}
+                <div className="w-16 h-16 bg-primary/10 group-hover:bg-primary/20 rounded-2xl flex items-center justify-center mb-4 transition-colors duration-300 group-hover:scale-110">
+                  <Icon className="w-8 h-8 text-primary" />
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-center text-sm font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 leading-tight">
+                  {p.title}
+                </h3>
+              </motion.a>
+            )
+          })}
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   )
 }

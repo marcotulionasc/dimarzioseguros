@@ -2,12 +2,14 @@
 
 import dynamic from 'next/dynamic'
 import { Hero } from '@/components/hero'
-import { AlreadyInsured } from '@/components/already-insured'
+import { ClientLogos } from '@/components/client-logos'
 import { HowItWorks, Differentials } from '@/components/features'
+import { StatsSection } from '@/components/stats-section'
 import { WhyWrong } from '@/components/why-wrong'
 import { Consultoria } from '@/components/consultoria'
 import { ProductGrid } from '@/components/product-grid'
 import { WhyChoose } from '@/components/why-choose'
+import { FinalCTA } from '@/components/final-cta'
 import { PaperQuestion } from '@/components/paper-question'
 import { ContactSection } from '@/components/contact-section'
 
@@ -24,7 +26,7 @@ const Faq = dynamic(() => import('@/components/faq').then(mod => ({ default: mod
 
 export default function Home() {
   const heroContent = {
-    title: "Já imaginou descobrir que seu seguro não garante que você irá receber sua indenização?",
+    title: "Imagina descobrir que não receberá a indenização do seu seguro?",
     description: "A Dimarzio Seguros oferece uma consultoria gratuita para revisar ou montar o seu seguro do jeito certo. Com cobertura que realmente protege, sem pagar a mais, sem letras miúdas.",
     buttonText: "Quero minha análise gratuita",
     buttonLink: "#contato"
@@ -62,7 +64,7 @@ export default function Home() {
         title: "Você economiza onde dá sem abrir mão do essencial",
       },
       {
-        title: "Comparação em 17 seguradoras",
+        title: "Acesso às principais seguradoras do Brasil",
 
       },
       {
@@ -111,17 +113,17 @@ export default function Home() {
   };
 
   return (
-    <main className="space-y-16">
+    <main>
       <Hero {...heroContent} />
-      <AlreadyInsured />
+      <ClientLogos />
       <HowItWorks />
-      <Differentials />
+      <StatsSection />
       <VideoTestimonials {...videoTestimonialContent} />
       <WhyWrong />
       <Consultoria />
       <ProductGrid />
       <WhyChoose {...whyChooseContent} />
-      <PaperQuestion />
+      <FinalCTA />
       <Faq {...faqContent} />
       <ContactSection />
     </main>

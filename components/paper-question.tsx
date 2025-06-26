@@ -1,46 +1,40 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { MessageCircle, Calendar } from 'lucide-react'
+import { ArrowRight, Calendar } from 'lucide-react'
 
 export function PaperQuestion() {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 mx-auto max-w-screen-xl px-4 md:px-8 text-center space-y-8 rounded-lg"
-    >
-      <div className="space-y-4">
-        <h2 className="text-4xl font-bold font-montserrat text-institutional-black">
-          Seu seguro protege ou é só papel?
+    <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl lg:text-5xl font-light text-white mb-6">
+          Deixa eu te fazer uma pergunta
         </h2>
-        <p className="text-xl text-neutral-700 font-montserrat max-w-2xl mx-auto leading-relaxed">
-          Entre em contato agora e receba um contato com a agilidade e atenção que você merece!
+        <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-12">
+          Se hoje você precisar usar seu seguro, você saberia exatamente quais documentos reunir, 
+          qual o prazo da seguradora para te responder, e em quantos dias você vai receber o dinheiro?
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button className="bg-white text-primary hover:bg-gray-100 font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg">
+            <Calendar className="w-5 h-5" />
+            Quero Consultoria Gratuita
+            <ArrowRight className="w-5 h-5" />
+          </Button>
+          
+          <Button
+            variant="outline"
+            className="border-2 border-white text-white hover:bg-white hover:text-primary font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg bg-transparent"
+          >
+            <ArrowRight className="w-5 h-5" />
+            Ver Todos os Seguros
+          </Button>
+        </div>
+        
+        <p className="text-sm text-white/70 mt-8">
+          ✓ Consultoria gratuita e sem compromisso • ✓ Resposta em até 24 horas
         </p>
       </div>
-      
-      <div className="flex flex-col sm:flex-row justify-center gap-6 pt-4">
-        <Button className="bg-primary hover:bg-primary-dark text-white font-montserrat font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg">
-          <Calendar className="w-5 h-5" />
-          Agendar minha análise gratuita
-        </Button>
-        <Button 
-          variant="outline" 
-          className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-montserrat font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg"
-        >
-          <MessageCircle className="w-5 h-5" />
-          Falar no WhatsApp
-        </Button>
-      </div>
-      
-      <div className="pt-6 ">
-        <p className="text-sm text-neutral-500 font-montserrat">
-          Há 20 anos protegendo pessoas e empresas com clareza.
-        </p>
-      </div>
-    </motion.section>
+    </section>
   )
 }

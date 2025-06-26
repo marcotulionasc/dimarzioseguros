@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { FloatingWhatsAppButton } from '@/components/floating-whatsapp-button'
 
-const montserrat = Montserrat({ 
+const inter = Inter({ 
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-montserrat',
+  variable: '--font-inter',
   display: 'swap'
 })
 
@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${montserrat.variable}`}>
-      <body className={`${montserrat.className} antialiased flex flex-col min-h-screen w-full max-w-full overflow-x-hidden`}>
+    <html lang="pt-BR" className={`${inter.variable}`}>
+      <body className={`${inter.className} antialiased flex flex-col min-h-screen w-full max-w-full overflow-x-hidden`}>
         <Navbar />
         <main className="flex-1 w-full overflow-x-hidden">
           {children}

@@ -173,36 +173,28 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
 
 export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 overflow-hidden video-testimonials-mobile md:video-testimonials-tablet lg:video-testimonials-desktop-md xl:video-testimonials-desktop-lg 2xl:video-testimonials-ultra">
-      <motion.div
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true, margin: "-100px" }}
-        className="video-testimonials-container container"
-      >
-        {/* Header Section - Responsivo para todos os breakpoints */}
-        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 lg:mb-20 video-header-mobile md:video-header-tablet lg:video-header-desktop-md xl:video-header-desktop-lg 2xl:video-header-ultra">
-          <motion.div 
-            variants={fadeInUp}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-blue-600 mb-6 shadow-lg video-icon"
-          >
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-blue-600 mb-6 shadow-lg">
             <Play className="w-8 h-8 text-white ml-1" />
-          </motion.div>
+          </div>
           
-          <motion.h2 
-            variants={fadeInUp}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight"
-          >
+          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
             {title}
-          </motion.h2>
+          </h2>
           
-          <motion.p 
-            variants={fadeInUp}
-            className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto"
-          >
+          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
             Veja depoimentos reais de clientes que confiam em nosso trabalho há anos
-          </motion.p>
-        </div>
+          </p>
+        </motion.div>
 
         {/* Videos Grid */}
         <motion.div
@@ -230,7 +222,7 @@ export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
           className="text-center mt-12 sm:mt-16"
         >
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   )
 } 
