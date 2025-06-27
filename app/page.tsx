@@ -12,6 +12,7 @@ import { WhyChoose } from '@/components/why-choose'
 import { FinalCTA } from '@/components/final-cta'
 import { PaperQuestion } from '@/components/paper-question'
 import { ContactSection } from '@/components/contact-section'
+import { AnniversaryBanner } from '@/components/anniversary-banner'
 
 // Dynamic imports for performance
 const VideoTestimonials = dynamic(() => import('@/components/video-testimonials').then(mod => ({ default: mod.VideoTestimonials })), { 
@@ -118,6 +119,14 @@ export default function Home() {
       <ClientLogos />
       <HowItWorks />
       <StatsSection />
+      
+      {/* Banner Comemorativo 20 Anos */}
+      <section className="py-8 bg-gradient-to-br from-amber-50/30 via-white to-orange-50/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnniversaryBanner />
+        </div>
+      </section>
+      
       <VideoTestimonials {...videoTestimonialContent} />
       <WhyWrong />
       <Consultoria />

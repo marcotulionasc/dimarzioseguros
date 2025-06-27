@@ -49,12 +49,14 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
               animate="animate"
               className="space-y-8"
             >
-              {/* Badge */}
-              <motion.div variants={fadeInUp} className="inline-flex">
-                <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 text-sm font-medium text-primary">
-                  <Award className="w-4 h-4" />
-                  20 anos de excelência no mercado
-                </div>
+              {/* Badge Destacado */}
+              <motion.div 
+                variants={fadeInUp} 
+                className="inline-flex"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                
               </motion.div>
               
               {/* Title */}
@@ -102,22 +104,23 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                 </Button>
               </motion.div>
               
-              {/* Stats */}
+              {/* Stats Destacadas */}
               <motion.div 
                 variants={fadeInLeft}
-                className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-gray-200"
+                className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-gradient-to-r from-amber-200 to-orange-200"
               >
-                <div className="text-center sm:text-left">
-                  <div className="text-2xl lg:text-3xl font-bold text-primary">20+</div>
-                  <div className="text-sm text-gray-600">Anos de mercado</div>
+                <div className="relative text-center sm:text-left p-4 rounded-xl bg-gradient-to-br from-amber-50/50 to-orange-50/50 border border-amber-200/50 group hover:shadow-lg transition-all duration-300">
+                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">20</div>
+                  <div className="text-sm font-medium text-gray-700">Anos de Excelência</div>
+                  <div className="absolute top-2 right-2 w-2 h-2 bg-amber-400 rounded-full animate-pulse group-hover:animate-bounce"></div>
                 </div>
-                <div className="text-center sm:text-left">
-                  <div className="text-2xl lg:text-3xl font-bold text-primary">20K+</div>
-                  <div className="text-sm text-gray-600">Clientes atendidos</div>
+                <div className="text-center sm:text-left p-4 rounded-xl bg-gradient-to-br from-blue-50/50 to-primary/5 border border-blue-200/50 hover:shadow-lg transition-all duration-300">
+                  <div className="text-3xl lg:text-4xl font-bold text-primary">20K+</div>
+                  <div className="text-sm font-medium text-gray-700">Clientes Atendidos</div>
                 </div>
-                <div className="text-center sm:text-left col-span-2 sm:col-span-1">
-                  <div className="text-2xl lg:text-3xl font-bold text-primary">17</div>
-                  <div className="text-sm text-gray-600">Seguradoras parceiras</div>
+                <div className="text-center sm:text-left p-4 rounded-xl bg-gradient-to-br from-blue-50/50 to-primary/5 border border-blue-200/50 hover:shadow-lg transition-all duration-300">
+                  <div className="text-3xl lg:text-4xl font-bold text-primary">17</div>
+                  <div className="text-sm font-medium text-gray-700">Seguradoras Parceiras</div>
                 </div>
               </motion.div>
             </motion.div>

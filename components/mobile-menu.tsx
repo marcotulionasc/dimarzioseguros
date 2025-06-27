@@ -61,9 +61,14 @@ export function MobileMenu() {
                       className="object-contain"
                     />
                   </div>
-                  <span className="text-lg font-bold text-white">
-                    Dimarzio Seguros
-                  </span>
+                  <div>
+                    <span className="text-lg font-bold text-white block">
+                      Dimarzio Seguros
+                    </span>
+                    <span className="text-xs text-amber-200 font-medium">
+                      20 anos protegendo você
+                    </span>
+                  </div>
                 </div>
                 <Button
                   variant="ghost"
@@ -121,13 +126,17 @@ export function MobileMenu() {
               </nav>
 
               {/* Footer */}
-              <div className="p-6 border-t border-neutral-100 bg-neutral-50">
+              <div className="p-6 border-t border-neutral-100 bg-gradient-to-r from-amber-50/30 to-orange-50/30">
                 <div className="text-center">
-                  <p className="text-sm font-medium text-neutral-700 mb-1">
-                    Proteção que você pode confiar
-                  </p>
-                  <p className="text-xs text-neutral-500">
-                    Mais de 10 anos cuidando do seu patrimônio
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
+                    <p className="text-sm font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+                      20 ANOS DE EXCELÊNCIA
+                    </p>
+                    <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
+                  </div>
+                  <p className="text-xs text-neutral-600">
+                    Proteção e confiança desde 2004
                   </p>
                 </div>
               </div>
