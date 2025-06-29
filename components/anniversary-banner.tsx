@@ -23,26 +23,6 @@ export function AnniversaryBanner({ variant = 'default', className = '' }: Anniv
     )
   }
 
-  if (variant === 'floating') {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        whileHover={{ scale: 1.05 }}
-        className={`fixed bottom-20 right-4 z-40 bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-full p-3 shadow-2xl hover:shadow-3xl transition-all duration-300 cursor-pointer ${className}`}
-      >
-        <div className="flex items-center gap-2">
-          <div className="relative">
-            <Trophy className="w-5 h-5" />
-            <Sparkles className="w-2 h-2 absolute -top-1 -right-1 animate-pulse" />
-          </div>
-          <span className="text-sm font-bold">20</span>
-        </div>
-      </motion.div>
-    )
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
