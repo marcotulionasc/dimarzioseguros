@@ -32,7 +32,7 @@ export function StatsSection() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-primary-dark to-secondary relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-primary via-primary-dark to-secondary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl" />
@@ -45,17 +45,17 @@ export function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-light text-white mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-2 md:mb-4 leading-tight">
             Números que falam por si
           </h2>
-          <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto px-2">
             Há 20 anos protegendo pessoas e empresas com clareza
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -65,24 +65,24 @@ export function StatsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center group"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 h-72 flex flex-col justify-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 h-auto md:h-72 flex flex-col justify-center min-h-[180px] md:min-h-0">
                 {/* Icon */}
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6 group-hover:bg-white/30 transition-colors duration-300 mx-auto">
-                  <stat.icon className="w-8 h-8 text-white" />
+                <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-2xl mb-3 md:mb-6 group-hover:bg-white/30 transition-colors duration-300 mx-auto">
+                  <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 
                 {/* Number */}
-                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+                <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">
                   {stat.number}
                 </div>
                 
                 {/* Label */}
-                <div className="text-xl font-semibold text-white mb-2">
+                <div className="text-base md:text-xl font-semibold text-white mb-1 md:mb-2 leading-tight">
                   {stat.label}
                 </div>
                 
                 {/* Description */}
-                <div className="text-white/80 leading-relaxed">
+                <div className="text-sm md:text-base text-white/80 leading-relaxed">
                   {stat.description}
                 </div>
               </div>

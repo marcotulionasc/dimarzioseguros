@@ -74,23 +74,23 @@ interface FeaturesProps {
 
 export function Features({ title, features }: FeaturesProps) {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <motion.div
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         className="container mx-auto px-4"
       >
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-16">
           <motion.h2 
             variants={fadeInUp} 
-            className="text-4xl font-bold mb-4"
+            className="text-2xl md:text-4xl font-bold mb-2 md:mb-4"
           >
             {title}
           </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {features.map((feature, i) => (
             <motion.div
               key={i}
@@ -98,15 +98,15 @@ export function Features({ title, features }: FeaturesProps) {
                 initial: { opacity: 0, y: 20 },
                 animate: { opacity: 1, y: 0, transition: { delay: i * 0.1 } }
               }}
-              className="group bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100"
+              className="group bg-white rounded-lg p-4 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100"
             >
-              <div className="flex items-start gap-4">
-                <div className="bg-primary/10 text-primary rounded-lg p-3 group-hover:scale-110 transition-transform">
-                  <ShieldCheck className="w-6 h-6" />
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="bg-primary/10 text-primary rounded-lg p-2 md:p-3 group-hover:scale-110 transition-transform flex-shrink-0">
+                  <ShieldCheck className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-neutral-600">{feature.description}</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 leading-tight">{feature.title}</h3>
+                  <p className="text-sm md:text-base text-neutral-600 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             </motion.div>
@@ -119,24 +119,24 @@ export function Features({ title, features }: FeaturesProps) {
 
 export function HowItWorks() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-2 md:mb-4 leading-tight">
             Como funciona na prática
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4">
             4 passos simples para sua segurança
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -146,25 +146,25 @@ export function HowItWorks() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="relative group"
             >
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20 h-96 flex flex-col">
+              <div className="bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20 h-auto md:h-96 flex flex-col">
                 {/* Step Number */}
-                <div className="absolute -top-4 -left-4 bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm shadow-lg">
+                <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 bg-primary text-white rounded-full w-6 h-6 md:w-8 md:h-8 flex items-center justify-center font-bold text-xs md:text-sm shadow-lg">
                   {i + 1}
                 </div>
                 
                 {/* Icon */}
-                <div className="mb-6">
-                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <step.icon className="w-6 h-6" />
+                <div className="mb-4 md:mb-6">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <step.icon className="w-5 h-5 md:w-6 md:h-6" />
                   </div>
                 </div>
                 
                 {/* Content */}
-                <div className="space-y-4 flex-1 flex flex-col justify-center">
-                  <h3 className="text-xl font-semibold text-gray-900 leading-tight">
+                <div className="space-y-2 md:space-y-4 flex-1 flex flex-col">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">
                     {step.text}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-1">
                     {step.description}
                   </p>
                 </div>
@@ -179,7 +179,7 @@ export function HowItWorks() {
 
 export function Differentials() {
   return (
-    <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-24 xl:py-28 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
@@ -193,29 +193,29 @@ export function Differentials() {
         viewport={{ once: true }}
         className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
       >
-        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
+        <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12 lg:mb-16 xl:mb-20">
           <motion.span 
             variants={fadeInUp}
-            className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-primary px-6 py-3 rounded-full mb-6 shadow-sm"
+            className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-primary px-4 py-2 md:px-6 md:py-3 rounded-full mb-4 md:mb-6 shadow-sm text-sm md:text-base"
           >
-            <Star className="w-4 h-4 sm:w-5 sm:h-5" />
+            <Star className="w-4 h-4 md:w-5 md:h-5" />
             Nossos diferenciais
           </motion.span>
           <motion.h2 
             variants={fadeInUp} 
-            className="text-4xl lg:text-5xl font-light text-gray-900 mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-2 md:mb-4 leading-tight"
           >
             O que faz a Dimarzio diferente
           </motion.h2>
           <motion.p 
             variants={fadeInUp}
-            className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
+            className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
           >
             Com 20 anos de mercado, a Dimarzio vai além do básico. Corretora tem em toda esquina. Atendimento técnico, quase nenhuma.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto">
           {differentials.map((item, i) => (
             <motion.div
               key={i}
@@ -226,24 +226,24 @@ export function Differentials() {
               className="group relative"
             >
               {/* Card Background */}
-              <div className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral-100 hover:border-primary/20 min-h-[280px] sm:min-h-[320px] flex flex-col group-hover:-translate-y-2">
+              <div className="relative bg-white rounded-2xl p-4 md:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral-100 hover:border-primary/20 min-h-[200px] md:min-h-[280px] lg:min-h-[320px] flex flex-col group-hover:-translate-y-2">
                 
                 {/* Ícone principal */}
-                <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300 shadow-md">
-                    <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary group-hover:text-primary-dark transition-colors duration-300" />
+                <div className="flex justify-center mb-3 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300 shadow-md">
+                    <item.icon className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-primary group-hover:text-primary-dark transition-colors duration-300" />
                   </div>
                 </div>
                 
                 {/* Conteúdo do card */}
                 <div className="flex-1 flex flex-col text-center">
                   {/* Title */}
-                  <h3 className="text-xl font-semibold text-gray-900 leading-tight mb-4 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-base md:text-xl font-semibold text-gray-900 leading-tight mb-2 md:mb-4 group-hover:text-primary transition-colors duration-300">
                     {item.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed flex-1">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-1">
                     {item.description}
                   </p>
                 </div>
@@ -261,16 +261,16 @@ export function Differentials() {
         {/* Bottom Quote Section */}
         <motion.div 
           variants={fadeInUp}
-          className="mt-16 sm:mt-20 md:mt-24 max-w-4xl mx-auto text-center"
+          className="mt-8 md:mt-16 lg:mt-20 xl:mt-24 max-w-4xl mx-auto text-center"
         >
-          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur-sm border border-primary/10 rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg">
-            <blockquote className="text-2xl lg:text-3xl font-light text-gray-900 leading-tight mb-4">
+          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur-sm border border-primary/10 rounded-3xl p-4 md:p-6 lg:p-8 xl:p-12 shadow-lg">
+            <blockquote className="text-lg md:text-2xl lg:text-3xl font-light text-gray-900 leading-tight mb-2 md:mb-4">
               Você fala com quem resolve!
             </blockquote>
             <div className="flex justify-center items-center gap-3">
-              <div className="h-1 w-12 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-              <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-              <div className="h-1 w-12 bg-gradient-to-r from-secondary to-primary rounded-full"></div>
+              <div className="h-1 w-8 md:w-12 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+              <div className="w-2 h-2 md:w-3 md:h-3 bg-primary rounded-full animate-pulse"></div>
+              <div className="h-1 w-8 md:w-12 bg-gradient-to-r from-secondary to-primary rounded-full"></div>
             </div>
           </div>
         </motion.div>
