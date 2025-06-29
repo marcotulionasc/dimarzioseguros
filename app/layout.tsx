@@ -32,7 +32,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <FloatingWhatsAppButton />
-        <AnniversaryBanner variant="floating" />
+        {/* <AnniversaryBanner variant="floating" /> */}
       </body>
     </html>
   )

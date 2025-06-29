@@ -88,7 +88,7 @@ const getIcon = (iconName: string, index: number) => {
 
 export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
   return (
-    <section className="relative py-12 sm:py-16 md:py-24 bg-blue-600 w-full">
+    <section className="relative py-16 md:py-12 lg:py-16 xl:py-24 bg-blue-600 w-full">
       {/* Background simples e sólido */}
       <div className="absolute inset-0 bg-blue-700" />
       
@@ -100,17 +100,17 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
 
       <div className="relative w-full px-4 sm:px-6 md:px-8 z-10">
         <div className="max-w-6xl mx-auto w-full">
-          {/* Header section - Simples */}
-          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          {/* Header section */}
+          <div className="text-center mb-12 md:mb-8 lg:mb-12 xl:mb-16">
             <motion.div
               initial="initial"
               whileInView="animate"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
-              className="inline-flex items-center gap-2 bg-blue-800 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6 border border-blue-700"
+              className="inline-flex items-center gap-2 bg-blue-800/50 backdrop-blur-sm rounded-full px-4 md:px-4 lg:px-6 py-2 md:py-2 mb-6 md:mb-4 lg:mb-6 border border-blue-700/50"
             >
-              <Star className="w-4 h-4 text-white" />
-              <span className="text-xs sm:text-sm font-medium text-white">Por que nos escolher</span>
+              <Star className="w-4 h-4 md:w-4 md:h-4 text-white" />
+              <span className="text-sm md:text-sm font-medium text-white">Por que nos escolher</span>
             </motion.div>
             
             <motion.h2 
@@ -118,14 +118,14 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
               whileInView="animate"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white leading-tight"
+              className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-4 md:mb-4 text-white leading-tight px-2"
             >
               {title}
             </motion.h2>
           </div>
 
-          {/* Benefits grid - Design responsivo melhorado */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
+          {/* Benefits grid - Design limpo e espaçoso para mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 lg:gap-6 w-full max-w-2xl md:max-w-none mx-auto">
             {benefits.map((benefit, i) => {
               const IconComponent = getIcon(benefit.icon || '', i)
               
@@ -144,33 +144,34 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
                   viewport={{ once: true, margin: "-50px" }}
                   className="group relative w-full"
                 >
-                  {/* Card background - Sólido azul */}
-                  <div className="w-full bg-blue-800 rounded-xl sm:rounded-2xl border border-blue-700 hover:bg-blue-700 hover:border-blue-600 transition-all duration-300 shadow-lg p-4 sm:p-5 md:p-6 min-h-[200px] sm:min-h-[220px] flex flex-col justify-center" />
-                  
-                  {/* Card content */}
-                  <div className="absolute inset-0 p-4 sm:p-5 md:p-6 flex flex-col justify-center z-10">
-                    {/* Icon container - Azul sólido */}
-                    <div className="flex items-center justify-center mb-4 sm:mb-5">
-                      <div className="bg-blue-600 text-white rounded-lg p-3 sm:p-4 group-hover:bg-blue-500 transition-all duration-300 shadow-md">
-                        <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                  {/* Card com design atrativo */}
+                  <div className="w-full bg-white/15 backdrop-blur-lg rounded-2xl md:rounded-2xl border border-white/30 hover:bg-white/25 hover:border-white/40 transition-all duration-300 shadow-xl hover:shadow-2xl p-6 md:p-4 lg:p-5 xl:p-6 min-h-[140px] md:min-h-[160px] lg:min-h-[200px] xl:min-h-[220px] flex flex-col justify-center hover:scale-[1.02] md:hover:scale-105">
+                    
+                    {/* Layout sempre vertical, mais espaçoso no mobile */}
+                    <div className="flex flex-col items-center justify-center text-center h-full">
+                      {/* Icon container com mais destaque */}
+                      <div className="mb-4 md:mb-3 lg:mb-4 xl:mb-5">
+                        <div className="bg-white/25 text-white rounded-xl p-3 md:p-3 lg:p-4 group-hover:bg-white/35 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                          <IconComponent className="w-7 h-7 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="flex-1 flex flex-col justify-center">
+                        <h3 className="text-lg md:text-base lg:text-lg xl:text-xl font-bold text-white group-hover:text-blue-100 transition-colors duration-300 leading-tight">
+                          {benefit.title}
+                        </h3>
+                        {benefit.description && (
+                          <p className="text-sm md:text-sm lg:text-base text-blue-100/80 group-hover:text-blue-100 transition-colors duration-300 leading-relaxed mt-2 hidden md:block">
+                            {benefit.description}
+                          </p>
+                        )}
                       </div>
                     </div>
                     
-                    {/* Content */}
-                    <div className="flex-1 flex flex-col justify-center text-center">
-                      <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 text-white group-hover:text-blue-100 transition-colors duration-300 leading-tight px-2">
-                        {benefit.title}
-                      </h3>
-                      {benefit.description && (
-                        <p className="text-sm sm:text-base text-blue-200 group-hover:text-blue-100 transition-colors duration-300 leading-relaxed px-2">
-                          {benefit.description}
-                        </p>
-                      )}
-                    </div>
-                    
-                    {/* Bottom accent - Azul sólido */}
-                    <div className="mt-4 flex items-end">
-                      <div className="w-full h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                    {/* Bottom accent elegante */}
+                    <div className="mt-4 md:mt-4 flex items-end">
+                      <div className="w-full h-0.5 md:h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                     </div>
                   </div>
                 </motion.div>
@@ -178,20 +179,20 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
             })}
           </div>
           
-          {/* Bottom section - Simples */}
+          {/* Bottom section elegante */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { delay: 0.6, duration: 0.6 } }}
             viewport={{ once: true, margin: "-50px" }}
-            className="flex justify-center mt-8 sm:mt-12 md:mt-16"
+            className="flex justify-center mt-12 md:mt-8 lg:mt-12 xl:mt-16"
           >
-            <div className="flex items-center gap-2 bg-blue-800 rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 border border-blue-700">
+            <div className="flex items-center gap-3 bg-white/15 backdrop-blur-lg rounded-full px-6 md:px-6 lg:px-8 py-3 md:py-3 border border-white/30 shadow-lg">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-white fill-current" />
+                  <Star key={i} className="w-4 h-4 md:w-4 md:h-4 text-yellow-300 fill-current" />
                 ))}
               </div>
-              <span className="text-white font-medium ml-2 text-sm sm:text-base">Excelência comprovada</span>
+              <span className="text-white font-medium ml-1 text-sm md:text-sm lg:text-base">Excelência comprovada</span>
             </div>
           </motion.div>
         </div>

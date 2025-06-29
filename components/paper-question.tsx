@@ -19,14 +19,14 @@ export function PaperQuestion() {
           <Button className="bg-white text-primary hover:bg-gray-100 font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg">
             <Calendar className="w-5 h-5" />
             Quero Consultoria Gratuita
-            <ArrowRight className="w-5 h-5" />
+            
           </Button>
           
           <Button
             variant="outline"
             className="border-2 border-white text-white hover:bg-white hover:text-primary font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg bg-transparent"
           >
-            <ArrowRight className="w-5 h-5" />
+            
             Ver Todos os Seguros
           </Button>
         </div>

@@ -91,7 +91,7 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                   }}
                 >
                   {buttonText}
-                  <ArrowRight className="w-5 h-5" />
+                  
                 </Button>
                 
                 <Button 
