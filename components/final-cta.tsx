@@ -91,7 +91,7 @@ export function FinalCTA() {
               <Button 
                 variant="outline"
                 size="lg"
-                className="border-2 border-white/50 text-white hover:bg-white/15 hover:border-white/70 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-lg transition-all duration-300 backdrop-blur-sm"
+                className="border-2 border-white/50 text-black hover:bg-white/15 hover:border-white/70 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-lg transition-all duration-300"
               >
                 (19) 3294-0655
               </Button>
