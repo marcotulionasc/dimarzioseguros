@@ -110,12 +110,11 @@ export function ClientLogos() {
             className="order-1 lg:order-2"
           >
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-4 md:mb-6">
-              20 anos protegendo 
-              <span className="text-primary"> com clareza</span>
+              Você já tem um seguro, 
+              <span className="text-primary"> mas será que ele protege o que importa?</span>
             </h2>
             <p className="text-base md:text-xl text-gray-600 leading-relaxed mb-6 md:mb-8">
-              Somos uma empresa familiar que cresceu junto com nossos clientes. 
-              Nossa missão é simples: explicar cada detalhe para que você nunca se sinta perdido.
+            Com mais de 20 anos de experiência e mais de 10.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade — sem empurrar nada, sem cobrar pela consultoria.
             </p>
             
             {/* Trust Stats Grid */}

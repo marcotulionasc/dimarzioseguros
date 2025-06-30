@@ -13,7 +13,7 @@ export function WhyWrong() {
             Por que tanta gente contrata errado?
           </h2>
           <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto px-2">
-            90% das pessoas descobrem que contrataram o seguro errado na hora do sinistro
+            3 em cada 5 sinistros são negados por erro na contratação.
           </p>
         </div>
         
@@ -39,11 +39,11 @@ export function WhyWrong() {
         
         <div className="text-center px-4">
           <p className="text-base md:text-lg text-white/90 mb-4 md:mb-8 leading-relaxed">
-            <strong>Resultado:</strong> Na hora H, você descobre que não tem a proteção que pensava ter.
+            <strong>Você só descobre quando já é tarde.</strong>
           </p>
           
           <Button className="bg-white text-primary hover:bg-gray-100 font-medium px-6 py-2.5 md:px-8 md:py-3 rounded-lg transition-all duration-300 hover:scale-105 text-sm md:text-base w-full sm:w-auto">
-            Não Quero Correr Esse Risco
+            Agendar minha análise gratuita
           </Button>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { ClientLogos } from '@/components/client-logos'
 import { HowItWorks, Differentials } from '@/components/features'
 import { StatsSection } from '@/components/stats-section'
 import { WhyWrong } from '@/components/why-wrong'
+import { ConsultoriaBenefits } from '@/components/consultoria-benefits'
 import { Consultoria } from '@/components/consultoria'
 import { ProductGrid } from '@/components/product-grid'
 import { WhyChoose } from '@/components/why-choose'
@@ -118,6 +119,7 @@ export default function Home() {
       <Hero {...heroContent} />
       <ClientLogos />
       <HowItWorks />
+      <Differentials />
       <StatsSection />
       
       {/* Banner Comemorativo 20 Anos */}
@@ -129,6 +131,7 @@ export default function Home() {
       
       <VideoTestimonials {...videoTestimonialContent} />
       <WhyWrong />
+      <ConsultoriaBenefits />
       <Consultoria />
       <ProductGrid />
       <WhyChoose {...whyChooseContent} />
