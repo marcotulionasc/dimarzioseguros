@@ -60,22 +60,21 @@ export default function Home() {
     benefits: [
       {
         title: "Te explicamos o que a seguradora não te conta",
-
       },
       {
         title: "Você economiza onde dá sem abrir mão do essencial",
       },
       {
-        title: "Acesso às principais seguradoras do Brasil",
-
+        title: "Seu seguro passa a falar a sua língua",
+      },
+      {
+        title: "Comparação em 17 seguradoras",
       },
       {
         title: "Atendimento técnico de verdade",
-
       },
       {
         title: "Suporte completo, inclusive em sinistro",
-
       }
     ],
   };
