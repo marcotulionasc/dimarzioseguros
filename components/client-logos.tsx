@@ -81,10 +81,10 @@ export function ClientLogos() {
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/hero-dimarzio.png"
+                src="/images/new-image-02.jpg"
                 alt="Equipe Dimarzio Seguros"
                 fill
-                className="object-cover"
+                className=""
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </div>
@@ -152,7 +152,7 @@ export function ClientLogos() {
             Trabalhamos com as melhores seguradoras do mercado
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 items-center max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 items-center max-w-5xl mx-auto">
             {clientLogos.map((client, index) => (
               <motion.div
                 key={client.name}

@@ -140,7 +140,7 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                       src="/images/hero-dimarzioseguros.jpg"
                       alt="Dimarzio Seguros - Proteção e confiança há 20 anos"
                       fill
-                      className="object-cover"
+                      className=""
                       priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />

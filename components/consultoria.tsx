@@ -84,7 +84,7 @@ export function Consultoria() {
             <div className="sticky top-8">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/sobre-01.png"
+                  src="/images/new-image-01.jpg"
                   alt="Profissional analisando seguros"
                   fill
                   className="object-cover"
