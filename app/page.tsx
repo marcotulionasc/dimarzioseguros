@@ -56,7 +56,7 @@ export default function Home() {
   };
 
   const whyChooseContent = {
-    title: "Por que escolher a Dimarzio?",
+    title: "Por que escolher a Dimarzio Seguros?",
     benefits: [
       {
         title: "Te explicamos o que a seguradora não te conta",

@@ -65,7 +65,7 @@ export function AnniversaryBanner({ variant = 'default', className = '' }: Anniv
         <div className="hidden sm:flex items-center gap-2 text-amber-600">
           <Calendar className="w-5 h-5" />
           <div className="text-right">
-            <div className="text-sm font-bold">2004 - 2024</div>
+            <div className="text-sm font-bold">2005 - 2025</div>
             <div className="text-xs">Desde sempre com você</div>
           </div>
         </div>

@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 import { AlertTriangle, CheckCircle2, ArrowRight, Shield, Building2, Users, Zap, Eye } from 'lucide-react'
+import { useFeedbackModal } from '@/hooks/use-feedback-modal'
+import { FeedbackModal } from '@/components/ui/feedback-modal'
 
 const problemsWithInsurance = [
   'Contrata sem entender exatamente o que está coberto',
@@ -57,8 +59,11 @@ const advantages = [
 ]
 
 export default function SeguroEmpresarialPage() {
+  const { feedback, showSuccess, showError, closeFeedback } = useFeedbackModal()
+
   return (
-    <main>
+    <>
+      <main>
       {/* Hero Section */}
       <section className="hero-section flex items-center bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
@@ -251,11 +256,17 @@ export default function SeguroEmpresarialPage() {
                 try {
                   const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'empresarial');
                   await submitForm(mappedData);
-                  alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
+                  showSuccess(
+                    'Obrigado! Sua análise empresarial foi solicitada!',
+                    'Recebemos sua solicitação de seguro empresarial. Nossa equipe especializada entrará em contato em breve para uma proposta personalizada para seu negócio.'
+                  );
                   (e.target as HTMLFormElement).reset();
                 } catch (error) {
                   console.error('Error:', error);
-                  alert('Erro ao enviar formulário. Por favor, tente novamente.');
+                  showError(
+                    'Ops! Não conseguimos processar sua solicitação',
+                    'Ocorreu um erro ao enviar sua análise empresarial. Por favor, tente novamente ou entre em contato conosco pelo telefone (19) 3294-0655.'
+                  );
                 }
               }}
             >
@@ -311,5 +322,15 @@ export default function SeguroEmpresarialPage() {
         </div>
       </section>
     </main>
+
+    {/* Feedback Modal */}
+    <FeedbackModal
+      isOpen={feedback.isOpen}
+      onClose={closeFeedback}
+      type={feedback.type}
+      title={feedback.title}
+      message={feedback.message}
+    />
+  </>
   )
 }
