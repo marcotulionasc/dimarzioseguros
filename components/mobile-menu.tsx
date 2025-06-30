@@ -125,22 +125,6 @@ export function MobileMenu() {
                 </div>
               </nav>
 
-              {/* Footer */}
-              <div className="p-6 border-t border-neutral-100 bg-gradient-to-r from-amber-50/30 to-orange-50/30">
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
-                    <p className="text-sm font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-                      20 ANOS DE EXCELÊNCIA
-                    </p>
-                    <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
-                  </div>
-                  <p className="text-xs text-neutral-600">
-                    Proteção e confiança desde 2004
-                  </p>
-                </div>
-              </div>
-
             </div>
           </div>
         </>
