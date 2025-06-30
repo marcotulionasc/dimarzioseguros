@@ -97,7 +97,12 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                 <Button 
                   variant="outline"
                   size="lg"
-                  className="border-2 border-gray-300 text-gray-700 hover:border-white hover:text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 inline-flex items-center gap-2"
+                  className="border-2 border-gray-300 text-gray-700 bg-white hover:bg-primary hover:border-primary hover:text-white focus:bg-primary focus:border-primary focus:text-white active:bg-primary-dark active:border-primary-dark active:text-white outline-none focus:outline-none px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 inline-flex items-center gap-2 select-none"
+                  style={{
+                    WebkitTapHighlightColor: 'transparent',
+                    WebkitUserSelect: 'none',
+                    userSelect: 'none'
+                  }}
                 >
                   <Play className="w-5 h-5" />
                   Ver depoimentos
