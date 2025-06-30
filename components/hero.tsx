@@ -97,7 +97,7 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                 <Button 
                   variant="outline"
                   size="lg"
-                  className="border-2 border-gray-300 text-gray-700 hover:border-primary hover:text-primary px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 inline-flex items-center gap-2"
+                  className="border-2 border-gray-300 text-gray-700 hover:border-white hover:text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 inline-flex items-center gap-2"
                 >
                   <Play className="w-5 h-5" />
                   Ver depoimentos
