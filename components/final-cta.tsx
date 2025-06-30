@@ -2,16 +2,9 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Shield, CheckCircle } from 'lucide-react'
+import { ArrowRight, MessageCircle, Calendar, Shield } from 'lucide-react'
 
 export function FinalCTA() {
-  const benefits = [
-    'Consultoria 100% gratuita',
-    'Sem compromisso ou pressão',
-    'Análise completa do seu perfil',
-    'Comparação em 17 seguradoras'
-  ]
-
   return (
     <section className="py-12 md:py-20 bg-gradient-to-br from-primary via-primary-dark to-secondary relative overflow-hidden">
       {/* Background Pattern */}
@@ -21,122 +14,104 @@ export function FinalCTA() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/3 rounded-full blur-2xl" />
       </div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center space-y-6 md:space-y-8">
           
-          {/* Left Content */}
+          {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6 md:space-y-8"
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-medium text-white"
           >
-            <div className="space-y-4 md:space-y-6">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium text-white">
-                <Shield className="w-3 h-3 md:w-4 md:h-4" />
-                Proteção garantida
-              </div>
-              
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white leading-tight">
-                Está na hora de proteger o que mais importa
-              </h2>
-              
-              <p className="text-base md:text-xl text-white/90 leading-relaxed">
-                Não deixe para depois. Agende sua consultoria gratuita agora e descubra como ter a proteção ideal sem pagar a mais.
-              </p>
-            </div>
-            
-            {/* Benefits List */}
-            <div className="space-y-3 md:space-y-4">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 bg-white/20 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-white" />
-                  </div>
-                  <span className="text-white/90 font-medium text-sm md:text-base">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4"
-            >
-              <Button 
-                size="lg"
-                className="bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2 shadow-md border-2 border-white"
-                onClick={() => {
-                  const element = document.querySelector('#contato');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                Quero minha análise gratuita
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-              </Button>
-              
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-2 border-white/50 text-black hover:bg-white/15 hover:border-white/70 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-lg transition-all duration-300"
-              >
-                (19) 3294-0655
-              </Button>
-            </motion.div>
+            <Shield className="w-4 h-4 md:w-5 md:h-5" />
+            É hora de decidir
           </motion.div>
           
-          {/* Right Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          {/* Main Heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl mx-auto"
           >
-            <div className="relative">
-              {/* Main Container */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-white/20">
-                <div className="text-center space-y-4 md:space-y-6">
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-4 md:gap-6">
-                    <div className="text-center">
-                      <div className="text-2xl md:text-3xl font-bold text-white mb-1 md:mb-2">20+</div>
-                      <div className="text-white/80 text-xs md:text-sm">Anos de experiência</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl md:text-3xl font-bold text-white mb-1 md:mb-2">20K+</div>
-                      <div className="text-white/80 text-xs md:text-sm">Clientes protegidos</div>
-                    </div>
-                  </div>
-                  
-                  {/* Trust Indicator */}
-                  <div className="bg-white/20 rounded-2xl p-4 md:p-6">
-                    <div className="flex items-center justify-center gap-2 mb-2 md:mb-3">
-                      <Shield className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                      <span className="text-white font-semibold text-sm md:text-base">Dimarzio Seguros</span>
-                    </div>
-                    <div className="flex justify-center space-x-1 mb-1 md:mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-3 h-3 md:w-4 md:h-4 bg-yellow-400 rounded-full" />
-                      ))}
-                    </div>
-                    <p className="text-white/90 text-xs md:text-sm">Avaliação 5 estrelas</p>
-                  </div>
-                </div>
+            Seu seguro protege ou é só papel?
+          </motion.h2>
+          
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto"
+          >
+            Entre em contato agora e receba um atendimento com a agilidade e atenção que você merece!
+          </motion.p>
+          
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-4 md:pt-8 justify-center max-w-2xl mx-auto"
+          >
+            <Button 
+              size="lg"
+              className="bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 px-6 md:px-8 py-4 md:py-5 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-flex items-center gap-3 shadow-lg border-2 border-white min-h-[56px] md:min-h-[64px]"
+              onClick={() => {
+                const element = document.querySelector('#contato');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              <Calendar className="w-5 h-5 md:w-6 md:h-6" />
+              Agendar minha análise gratuita
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+            </Button>
+            
+            <Button 
+              variant="outline"
+              size="lg"
+              className="border-2 border-white/50 text-black hover:bg-white/10 hover:border-white/70 hover:text-white px-6 md:px-8 py-4 md:py-5 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 inline-flex items-center gap-3 min-h-[56px] md:min-h-[64px] backdrop-blur-sm"
+              onClick={() => {
+                window.open('https://wa.me/5519932940655?text=Olá! Gostaria de agendar uma análise gratuita do meu seguro.', '_blank');
+              }}
+            >
+              <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+              Falar no WhatsApp
+            </Button>
+          </motion.div>
+          
+          {/* Trust Indicators */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 pt-6 md:pt-8"
+          >
+            <div className="flex items-center gap-2 text-white/80">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="text-sm md:text-base font-medium">Resposta em minutos</span>
+            </div>
+            <div className="hidden sm:block w-px h-6 bg-white/30" />
+            <div className="flex items-center gap-2 text-white/80">
+              <Shield className="w-4 h-4 text-white" />
+              <span className="text-sm md:text-base font-medium">20+ anos de experiência</span>
+            </div>
+            <div className="hidden sm:block w-px h-6 bg-white/30" />
+            <div className="flex items-center gap-2 text-white/80">
+              <div className="flex space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-3 h-3 bg-yellow-400 rounded-full" />
+                ))}
               </div>
+              <span className="text-sm md:text-base font-medium">Avaliação 5 estrelas</span>
             </div>
           </motion.div>
         </div>
