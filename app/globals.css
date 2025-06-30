@@ -159,6 +159,34 @@
   button, .button {
     @apply rounded-lg;
   }
+
+  /* Mobile touch fixes */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Re-enable text selection for content elements */
+  p, span, div:not([role="button"]), h1, h2, h3, h4, h5, h6, 
+  input, textarea, [contenteditable] {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  /* Ensure buttons and interactive elements have proper touch handling */
+  button, [role="button"], a, input[type="button"], input[type="submit"] {
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }
 
 @layer components {
@@ -737,6 +765,89 @@
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 5px rgba(29, 113, 184, 0.5); }
   50% { box-shadow: 0 0 20px rgba(29, 113, 184, 0.8); }
+}
+
+@keyframes whatsapp-pulse {
+  0% { 
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% { 
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% { 
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+/* WhatsApp Floating Button - Always visible */
+.whatsapp-floating-button {
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+  transform: translateZ(0); /* Force hardware acceleration */
+  will-change: transform;
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* Ensure it's visible on all screen orientations */
+@media screen and (orientation: portrait) {
+  .whatsapp-floating-button {
+    bottom: 1rem !important;
+    right: 1rem !important;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .whatsapp-floating-button {
+    bottom: 1rem !important;
+    right: 1rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .whatsapp-floating-button {
+    bottom: 1.5rem !important;
+    right: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-floating-button {
+    bottom: 2rem !important;
+    right: 0.75rem !important;
+  }
+}
+
+/* Ensure it's always on top of everything */
+.whatsapp-floating-button * {
+  pointer-events: auto !important;
+}
+
+/* Fade in animation for WhatsApp button */
+@keyframes fade-in {
+  0% { 
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
 }
 
 .animate-float {
