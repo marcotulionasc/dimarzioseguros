@@ -124,26 +124,85 @@
     box-shadow: var(--shadow-dimarzio-lg);
   }
 
-  /* Typography Scale Responsiva Moderna */
+  /* Typography Scale Responsiva Padronizada - Mobile First */
   h1 {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-4 sm:mb-6;
+    @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-4 sm:mb-6;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-3 sm:mb-4;
+    @apply text-xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight mb-3 sm:mb-4;
   }
 
   h3 {
-    @apply text-xl sm:text-2xl lg:text-3xl font-semibold leading-snug mb-2 sm:mb-3;
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug mb-2 sm:mb-3;
   }
 
   h4 {
-    @apply text-lg sm:text-xl lg:text-2xl font-semibold leading-snug mb-2;
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-snug mb-2;
+  }
+
+  h5 {
+    @apply text-sm sm:text-base md:text-lg font-semibold leading-snug mb-2;
+  }
+
+  h6 {
+    @apply text-sm sm:text-base font-semibold leading-snug mb-1;
   }
 
   p {
-    @apply text-gray-700 leading-relaxed mb-3 sm:mb-4;
+    @apply text-sm sm:text-base text-gray-700 leading-relaxed mb-3 sm:mb-4;
   }
+
+  /* Typography utilities for consistent mobile text */
+  .text-mobile-xs { @apply text-xs sm:text-sm; }
+  .text-mobile-sm { @apply text-sm sm:text-base; }
+  .text-mobile-base { @apply text-base sm:text-lg; }
+  .text-mobile-lg { @apply text-lg sm:text-xl; }
+  .text-mobile-xl { @apply text-xl sm:text-2xl; }
+  .text-mobile-2xl { @apply text-xl sm:text-2xl md:text-3xl; }
+  .text-mobile-3xl { @apply text-2xl sm:text-3xl md:text-4xl; }
+  .text-mobile-4xl { @apply text-2xl sm:text-4xl md:text-5xl; }
+
+  /* Spacing utilities for mobile */
+  .spacing-mobile-xs { @apply px-3 py-2 sm:px-4 sm:py-3; }
+  .spacing-mobile-sm { @apply px-4 py-3 sm:px-6 sm:py-4; }
+  .spacing-mobile-base { @apply px-4 py-4 sm:px-6 sm:py-6; }
+  .spacing-mobile-lg { @apply px-4 py-6 sm:px-8 sm:py-8; }
+
+  /* Container utilities for mobile */
+  .container-mobile { @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto; }
+  .container-mobile-tight { @apply px-3 sm:px-4 lg:px-6 max-w-4xl mx-auto; }
+
+  /* Button utilities for mobile */
+  .btn-mobile-sm { @apply px-3 py-2 text-xs sm:px-4 sm:py-3 sm:text-sm; }
+  .btn-mobile-base { @apply px-4 py-3 text-sm sm:px-6 sm:py-4 sm:text-base; }
+  .btn-mobile-lg { @apply px-6 py-4 text-sm sm:px-8 sm:py-5 sm:text-base; }
+
+  /* Card utilities for mobile */
+  .card-mobile { @apply p-4 sm:p-6 rounded-lg shadow-lg; }
+  .card-mobile-sm { @apply p-3 sm:p-4 rounded-lg shadow-md; }
+
+  /* Global mobile text utilities - apply to any component */
+  .mobile-title { @apply text-xl sm:text-2xl md:text-3xl font-light leading-tight text-center mb-3; }
+  .mobile-subtitle { @apply text-sm sm:text-base leading-relaxed text-center text-gray-600 mb-4; }
+  .mobile-text { @apply text-sm sm:text-base leading-relaxed text-gray-700; }
+  .mobile-small-text { @apply text-xs sm:text-sm leading-relaxed text-gray-600; }
+  .mobile-button-text { @apply text-sm sm:text-base font-medium; }
+
+  /* ========================================
+     HOW TO USE MOBILE TEXT STANDARDIZATION:
+     
+     1. Use .mobile-title for main headings
+     2. Use .mobile-subtitle for descriptions
+     3. Use .mobile-text for regular paragraphs
+     4. Use .mobile-small-text for small details
+     5. Use .mobile-button-text for button labels
+     
+     Automatic responsive scaling:
+     - Mobile: smaller sizes
+     - Tablet (sm): medium sizes
+     - Desktop (md+): larger sizes
+     ======================================== */
 
   /* Light backgrounds get dark text */
   .bg-white, .bg-gray-50, .bg-gray-100, .bg-blue-50 {
@@ -355,6 +414,15 @@
     .video-play-button svg {
       @apply w-5 h-5;
     }
+
+    /* Typography mobile padronizada para vídeos */
+    .video-card h3 {
+      @apply text-base font-bold leading-tight mb-2;
+    }
+    
+    .video-card p {
+      @apply text-xs leading-relaxed;
+    }
   }
   
   /* Para telas muito pequenas */
@@ -391,7 +459,7 @@
     
     /* Header mobile otimizado */
     .video-header-mobile {
-      @apply mb-8 px-2;
+      @apply mb-6 px-4;
     }
     
     .video-header-mobile .video-icon {
@@ -399,11 +467,11 @@
     }
     
     .video-header-mobile h2 {
-      @apply text-2xl leading-tight mb-4 px-1;
+      @apply text-xl font-light leading-tight mb-3 text-center;
     }
     
     .video-header-mobile p {
-      @apply text-base leading-relaxed px-1;
+      @apply text-sm leading-relaxed text-center text-gray-600;
     }
     
     /* Grid mobile - uma coluna com espaçamento otimizado */
@@ -451,15 +519,15 @@
     
     /* Content mobile */
     .video-content-mobile {
-      @apply p-3;
+      @apply p-4;
     }
     
     .video-content-mobile h3 {
-      @apply text-base font-bold mb-2;
+      @apply text-base font-bold mb-2 text-center;
     }
     
     .video-content-mobile p {
-      @apply text-xs;
+      @apply text-xs text-center text-gray-600;
     }
     
     /* Stars mobile */
@@ -492,11 +560,11 @@
     }
     
     .video-header-mobile h2 {
-      @apply text-xl;
+      @apply text-lg font-light;
     }
     
     .video-header-mobile p {
-      @apply text-sm;
+      @apply text-xs;
     }
   }
   
@@ -725,22 +793,162 @@
   border-radius: 4px;
 }
 
-/* Media queries para melhor responsividade */
+/* ========================================
+   MOBILE TEXT STANDARDIZATION
+   Padronização completa de textos para mobile
+   ======================================== */
+
+/* Media queries para melhor responsividade - Mobile Text Standardization */
 @media (max-width: 640px) {
   .container {
     @apply px-4;
   }
 
+  /* Padronização completa de textos mobile */
   h1 {
-    @apply text-2xl leading-tight mb-4;
+    @apply text-2xl font-light leading-tight mb-4 text-center;
   }
 
   h2 {
-    @apply text-xl leading-tight mb-3;
+    @apply text-xl font-light leading-tight mb-3 text-center;
   }
 
   h3 {
-    @apply text-lg leading-snug mb-2;
+    @apply text-lg font-semibold leading-snug mb-2;
+  }
+
+  h4 {
+    @apply text-base font-semibold leading-snug mb-2;
+  }
+
+  h5 {
+    @apply text-sm font-semibold leading-snug mb-1;
+  }
+
+  h6 {
+    @apply text-sm font-medium leading-snug mb-1;
+  }
+
+  p {
+    @apply text-sm leading-relaxed mb-3 text-gray-700;
+  }
+
+  /* Padronização de botões mobile */
+  .primary-button {
+    @apply px-4 py-3 text-sm font-medium rounded-lg;
+  }
+
+  .secondary-button {
+    @apply px-4 py-3 text-sm font-medium rounded-lg border-2;
+  }
+
+  /* Padronização de cards mobile */
+  .card {
+    @apply p-4 rounded-lg mb-4;
+  }
+
+  .card h3 {
+    @apply text-base font-bold mb-2;
+  }
+
+  .card h4 {
+    @apply text-sm font-semibold mb-2;
+  }
+
+  .card p {
+    @apply text-sm leading-relaxed;
+  }
+
+  /* Seções padronizadas mobile */
+  .section-title {
+    @apply text-xl font-light leading-tight mb-3 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-sm leading-relaxed mb-4 text-center text-gray-600;
+  }
+
+  /* Form elements padronizados mobile */
+  .form-input {
+    @apply px-3 py-3 text-sm rounded-lg;
+  }
+
+  .form-label {
+    @apply text-sm font-medium mb-2;
+  }
+
+  /* Badges e elementos pequenos mobile */
+  .badge {
+    @apply px-2 py-1 text-xs font-medium rounded;
+  }
+
+  /* Stats e números mobile */
+  .stat-number {
+    @apply text-2xl font-bold;
+  }
+
+  .stat-label {
+    @apply text-xs font-medium text-gray-600;
+  }
+}
+
+/* Padronização para telas muito pequenas (iPhone SE, etc.) */
+@media (max-width: 380px) {
+  /* Ajustes para telas muito pequenas */
+  h1 {
+    @apply text-xl font-light leading-tight mb-3;
+  }
+
+  h2 {
+    @apply text-lg font-light leading-tight mb-3;
+  }
+
+  h3 {
+    @apply text-base font-semibold leading-snug mb-2;
+  }
+
+  p {
+    @apply text-xs leading-relaxed mb-3;
+  }
+
+  .container {
+    @apply px-3;
+  }
+
+  .card {
+    @apply p-3 mb-3;
+  }
+
+  .primary-button, .secondary-button {
+    @apply px-3 py-2 text-xs;
+  }
+
+  .stat-number {
+    @apply text-xl;
+  }
+
+  .stat-label {
+    @apply text-xs;
+  }
+}
+
+/* Padronização para mobile landscape */
+@media (max-width: 640px) and (orientation: landscape) {
+  /* Ajustes específicos para landscape mobile */
+  h1 {
+    @apply text-xl leading-tight mb-2;
+  }
+
+  h2 {
+    @apply text-lg leading-tight mb-2;
+  }
+
+  .container {
+    @apply px-4;
+  }
+
+  .section-padding {
+    @apply py-4;
   }
 }
 

@@ -137,16 +137,16 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
           {!isPlaying && (
             <div className="video-status-indicator video-status-mobile">
               <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" />
-              <span className="text-xs font-medium hidden sm:inline">Clique para reproduzir</span>
-              <span className="text-xs font-medium sm:hidden">Toque para reproduzir</span>
+              <span className="mobile-small-text !text-white hidden sm:inline">Clique para reproduzir</span>
+              <span className="mobile-small-text !text-white sm:hidden">Toque para reproduzir</span>
             </div>
           )}
         </div>
 
         {/* Card Content - Responsivo para todos os breakpoints */}  
-        <div className="p-4 sm:p-6 bg-white video-content-mobile md:video-content-tablet lg:video-content-desktop-md xl:video-content-desktop-lg 2xl:video-content-ultra">
+        <div className="card-mobile bg-white video-content-mobile md:video-content-tablet lg:video-content-desktop-md xl:video-content-desktop-lg 2xl:video-content-ultra">
           <div className="text-center space-y-2">
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+            <h3 className="mobile-title !mb-2 !text-base sm:!text-lg font-bold text-gray-900">
               {video.title}
             </h3>
             <div className="flex items-center justify-center gap-1 video-stars-mobile">
@@ -160,7 +160,7 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
                 />
               ))}
             </div>
-            <p className="text-sm text-gray-600 font-medium">Cliente satisfeito</p>
+            <p className="mobile-small-text font-medium">Cliente satisfeito</p>
           </div>
         </div>
 
@@ -173,25 +173,25 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
 
 export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-padding bg-gray-50">
+      <div className="container-mobile">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-blue-600 mb-6 shadow-lg">
-            <Play className="w-8 h-8 text-white ml-1" />
+          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-blue-600 mb-4 sm:mb-6 shadow-lg">
+            <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
+          <h2 className="mobile-title !text-xl sm:!text-3xl lg:!text-5xl font-light text-gray-900">
             {title}
           </h2>
           
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="mobile-subtitle !text-sm sm:!text-base lg:!text-xl max-w-3xl mx-auto">
             Veja depoimentos reais de clientes que confiam em nosso trabalho há anos
           </p>
         </motion.div>
