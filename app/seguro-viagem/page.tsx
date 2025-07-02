@@ -239,15 +239,15 @@ export default function SeguroViagemPage() {
                 console.log('✅ Lead salvo com sucesso na base');
                 
                 // 2. SEGUNDO: Só após salvar com sucesso, mostrar mensagem e preparar redirecionamento
-                alert('✅ Lead salvo com sucesso! Em 3 segundos você será redirecionado para o WhatsApp.');
+                alert('✅ Lead salvo com sucesso! Em 1,5 segundos você será redirecionado para o WhatsApp.');
                 (e.target as HTMLFormElement).reset();
                 
-                // 3. TERCEIRO: Redirecionar para WhatsApp apenas após confirmação que salvou na base
+                // 3. TERCEIRO: Redirecionar FORÇADO para WhatsApp imediatamente após salvar
                 setTimeout(() => {
                   const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'viagem');
-                  window.open(whatsappURL, '_blank');
-                  console.log('✅ Redirecionando para WhatsApp após salvar lead');
-                }, 3000);
+                  window.location.href = whatsappURL; // Redirecionamento forçado na mesma aba
+                  console.log('🚀 REDIRECIONAMENTO FORÇADO para WhatsApp após salvar lead');
+                }, 1500);
               } catch (error) {
                 console.error('❌ Erro ao salvar lead:', error);
                 alert('❌ Erro ao salvar lead. Por favor, tente novamente.');

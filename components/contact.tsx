@@ -40,16 +40,16 @@ export function Contact({ title, subtitle, description }: ContactProps) {
                 // 2. SEGUNDO: Só após salvar com sucesso, mostrar mensagem e preparar redirecionamento
                 showSuccess(
                   'Obrigado! Sua solicitação foi enviada!',
-                  'Lead salvo com sucesso! Em 3 segundos você será redirecionado para o WhatsApp.'
+                                     'Lead salvo com sucesso! Em 1,5 segundos você será redirecionado para o WhatsApp.'
                 );
                 (e.target as HTMLFormElement).reset();
                 
-                // 3. TERCEIRO: Redirecionar para WhatsApp apenas após confirmação que salvou na base
-                setTimeout(() => {
-                  const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'portateis');
-                  window.open(whatsappURL, '_blank');
-                  console.log('✅ Redirecionando para WhatsApp após salvar lead');
-                }, 3000);
+                                 // 3. TERCEIRO: Redirecionar FORÇADO para WhatsApp imediatamente após salvar
+                 setTimeout(() => {
+                   const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'portateis');
+                   window.location.href = whatsappURL; // Redirecionamento forçado na mesma aba
+                   console.log('🚀 REDIRECIONAMENTO FORÇADO para WhatsApp após salvar lead');
+                 }, 1500);
               } catch (error) {
                 console.error('Error:', error);
                 showError(

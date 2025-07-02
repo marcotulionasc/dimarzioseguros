@@ -342,15 +342,15 @@ export default function SeguroGarantiaFiduciaria() {
                 console.log('✅ Lead salvo com sucesso na base');
                 
                 // 2. SEGUNDO: Só após salvar com sucesso, mostrar mensagem e preparar redirecionamento
-                alert('✅ Lead salvo com sucesso! Em 3 segundos você será redirecionado para o WhatsApp.');
+                alert('✅ Lead salvo com sucesso! Em 1,5 segundos você será redirecionado para o WhatsApp.');
                 (e.target as HTMLFormElement).reset();
                 
-                // 3. TERCEIRO: Redirecionar para WhatsApp apenas após confirmação que salvou na base
+                // 3. TERCEIRO: Redirecionar FORÇADO para WhatsApp imediatamente após salvar
                 setTimeout(() => {
                   const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'fiduciario');
-                  window.open(whatsappURL, '_blank');
-                  console.log('✅ Redirecionando para WhatsApp após salvar lead');
-                }, 3000);
+                  window.location.href = whatsappURL; // Redirecionamento forçado na mesma aba
+                  console.log('🚀 REDIRECIONAMENTO FORÇADO para WhatsApp após salvar lead');
+                }, 1500);
               } catch (error) {
                 console.error('❌ Erro ao salvar lead:', error);
                 alert('❌ Erro ao salvar lead. Por favor, tente novamente.');
@@ -402,7 +402,7 @@ export default function SeguroGarantiaFiduciaria() {
                 <Scale className="ml-2 h-5 w-5" />
               </Button>
               <p className="text-xs text-white/60 mt-2 text-center">
-                * Após salvar o lead em nossa base, você será redirecionado para o WhatsApp em 3 segundos para dar continuidade ao atendimento personalizado.
+                * Após salvar o lead em nossa base, você será redirecionado para o WhatsApp em 1,5 segundos para dar continuidade ao atendimento personalizado.
               </p>
             </form>
             <p className="text-sm text-white/70 mt-4">
