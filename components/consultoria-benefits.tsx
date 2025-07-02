@@ -68,7 +68,7 @@ export function ConsultoriaBenefits() {
                   </div>
                   <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
                 </div>
-                
+
                 {/* Content */}
                 <div>
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 leading-tight mb-2">
@@ -78,7 +78,7 @@ export function ConsultoriaBenefits() {
                     {benefit.description}
                   </p>
                 </div>
-                
+
                 {/* Decorative gradient border */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
               </div>
@@ -87,7 +87,7 @@ export function ConsultoriaBenefits() {
         </div>
 
         {/* Bottom Quote */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -105,4 +105,4 @@ export function ConsultoriaBenefits() {
       </div>
     </section>
   )
-} 
+}

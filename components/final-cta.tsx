@@ -63,18 +63,6 @@ export function FinalCTA() {
               Agendar minha análise gratuita
               <ArrowRight className="w-4 h-4" />
             </Button>
-            
-            <Button 
-              
-              size="lg"
-              className="bg-white border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white px-8 py-4 text-lg rounded-lg transition-colors duration-200 inline-flex items-center gap-3"
-              onClick={() => {
-                window.open('https://wa.me/5519932940655?text=Olá! Gostaria de agendar uma análise gratuita do meu seguro.', '_blank');
-              }}
-            >
-              <MessageCircle className="w-5 h-5" />
-              Falar no WhatsApp
-            </Button>
           </motion.div>
           
           {/* Trust Indicators */}

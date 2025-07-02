@@ -66,9 +66,6 @@ export default function Home() {
         title: "Seu seguro passa a falar a sua língua",
       },
       {
-        title: "Comparação em 17 seguradoras",
-      },
-      {
         title: "Atendimento técnico de verdade",
       },
       {
