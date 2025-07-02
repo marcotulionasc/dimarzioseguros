@@ -103,12 +103,12 @@ export function ProductGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left md:text-center">
             Nossos Produtos
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto text-left">
+          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl md:mx-auto text-left md:text-center">
             Soluções completas de proteção para todas as suas necessidades
           </p>
         </motion.div>

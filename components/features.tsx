@@ -131,7 +131,8 @@ export function HowItWorks() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        {/* Steps Grid - Improved for desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -141,42 +142,51 @@ export function HowItWorks() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="group"
             >
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20 min-h-[140px] relative">
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20 min-h-[140px] lg:h-[280px] relative flex flex-col">
                 {/* Step Number */}
-                <div className="absolute -top-2 -left-2 bg-primary text-white rounded-full w-6 h-6 md:w-8 md:h-8 flex items-center justify-center font-bold text-xs md:text-sm shadow-lg">
+                <div className="absolute -top-2 -left-2 bg-primary text-white rounded-full w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex items-center justify-center font-bold text-xs md:text-sm lg:text-base shadow-lg">
                   {i + 1}
                 </div>
                 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 lg:gap-6 flex-1">
                   {/* Icon Column */}
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 md:w-14 md:h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                      <step.icon className="w-6 h-6 md:w-7 md:h-7" />
+                    <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                      <step.icon className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                     </div>
                   </div>
                   
                   {/* Text Column */}
-                  <div className="flex-1 text-left">
-                    <h3 className="text-lg md:text-xl text-gray-900 leading-tight mb-2">
+                  <div className="flex-1 text-left flex flex-col">
+                    <h3 className="text-lg md:text-xl lg:text-2xl text-gray-900 leading-tight mb-2 lg:mb-3">
                       {step.text}
                     </h3>
-                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                    <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed flex-1">
                       {step.description}
                     </p>
                   </div>
                 </div>
               </div>
-
-             
             </motion.div>
-            
           ))}
-           <div className="flex items-center justify-center mt-4">
-                <p className="text-lg md:text-base text-gray-600 leading-relaxed text-center">
-                <span className="font-bold">Você decide se quer contratar ou não</span> <br></br>sem pressão e sem truque.
-                </p>
-              </div>
         </div>
+
+        {/* Final Message - Better positioned for desktop */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center"
+        >
+          <div className="max-w-2xl mx-auto bg-gradient-to-r from-gray-50 to-blue-50/50 rounded-2xl p-6 md:p-8 lg:p-10 border border-gray-100">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
+              <span className="font-bold text-gray-900">Você decide se quer contratar ou não</span>
+              <br className="hidden md:block" />
+              <span className="block md:inline"> sem pressão e sem truque.</span>
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
@@ -210,76 +220,153 @@ export function Differentials() {
           </p>
         </motion.div>
 
-        {/* Main Content Grid */}
+        {/* Main Content Grid - Improved for desktop responsiveness */}
         <div className="max-w-7xl mx-auto">
-          {/* First Row - 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
-            {differentials.slice(0, 3).map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group relative"
-              >
-                <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 min-h-[140px] group-hover:-translate-y-1">
-                  <div className="flex items-start gap-4">
-                    {/* Icon Column */}
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
-                        <item.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+          {/* Desktop: Single row with all 5 items | Mobile/Tablet: Keep original layout */}
+          <div className="lg:hidden">
+            {/* Original layout for mobile and tablet */}
+            {/* First Row - 3 cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
+              {differentials.slice(0, 3).map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  className="group relative"
+                >
+                  <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 min-h-[140px] group-hover:-translate-y-1 flex flex-col">
+                    <div className="flex items-start gap-4 flex-1">
+                      {/* Icon Column */}
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+                          <item.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                        </div>
+                      </div>
+                      
+                      {/* Text Column */}
+                      <div className="flex-1 text-left">
+                        <h3 className="text-lg md:text-xl text-gray-900 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                          {item.title}
+                        </h3>
                       </div>
                     </div>
                     
-                    {/* Text Column */}
-                    <div className="flex-1 text-left">
-                      <h3 className="text-lg md:text-xl text-gray-900 leading-tight group-hover:text-blue-600 transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                    </div>
+                    {/* Decorative gradient border */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
                   </div>
-                  
-                  {/* Decorative gradient border */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Second Row - 2 cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              {differentials.slice(3, 5).map((item, i) => (
+                <motion.div
+                  key={i + 3}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: (i + 3) * 0.1 }}
+                  className="group relative"
+                >
+                  <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 min-h-[140px] group-hover:-translate-y-1 flex flex-col">
+                    <div className="flex items-start gap-4 flex-1">
+                      {/* Icon Column */}
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+                          <item.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                        </div>
+                      </div>
+                      
+                      {/* Text Column */}
+                      <div className="flex-1 text-left">
+                        <h3 className="text-lg md:text-xl text-gray-900 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                          {item.title}
+                        </h3>
+                      </div>
+                    </div>
+                    
+                    {/* Decorative gradient border */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
-          {/* Second Row - 2 cards centered */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            {differentials.slice(3, 5).map((item, i) => (
-              <motion.div
-                key={i + 3}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: (i + 3) * 0.1 }}
-                className="group relative"
-              >
-                <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 min-h-[140px] group-hover:-translate-y-1">
-                  <div className="flex items-start gap-4">
-                    {/* Icon Column */}
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
-                        <item.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+          {/* Desktop layout - All 5 items in a larger responsive grid */}
+          <div className="hidden lg:block">
+            {/* First row - 3 cards */}
+            <div className="grid lg:grid-cols-3 gap-8 mb-8">
+              {differentials.slice(0, 3).map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  className="group relative"
+                >
+                  <div className="relative bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 h-[280px] group-hover:-translate-y-1 flex flex-col">
+                    <div className="flex flex-col items-center text-center gap-6 flex-1">
+                      {/* Icon */}
+                      <div className="flex-shrink-0">
+                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+                          <item.icon className="w-10 h-10 text-white" />
+                        </div>
+                      </div>
+                      
+                      {/* Text */}
+                      <div className="flex-1 flex items-center">
+                        <h3 className="text-xl lg:text-2xl text-gray-900 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                          {item.title}
+                        </h3>
                       </div>
                     </div>
                     
-                    {/* Text Column */}
-                    <div className="flex-1 text-left">
-                      <h3 className="text-lg md:text-xl text-gray-900 leading-tight group-hover:text-blue-600 transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                    </div>
+                    {/* Decorative gradient border */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
                   </div>
-                  
-                  {/* Decorative gradient border */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Second row - 2 cards centered */}
+            <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {differentials.slice(3, 5).map((item, i) => (
+                <motion.div
+                  key={i + 3}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: (i + 3) * 0.1 }}
+                  className="group relative"
+                >
+                  <div className="relative bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 h-[280px] group-hover:-translate-y-1 flex flex-col">
+                    <div className="flex flex-col items-center text-center gap-6 flex-1">
+                      {/* Icon */}
+                      <div className="flex-shrink-0">
+                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+                          <item.icon className="w-10 h-10 text-white" />
+                        </div>
+                      </div>
+                      
+                      {/* Text */}
+                      <div className="flex-1 flex items-center">
+                        <h3 className="text-xl lg:text-2xl text-gray-900 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                          {item.title}
+                        </h3>
+                      </div>
+                    </div>
+                    
+                    {/* Decorative gradient border */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
 
