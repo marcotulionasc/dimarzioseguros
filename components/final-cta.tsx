@@ -75,14 +75,14 @@ export function FinalCTA() {
             </Button>
             
             <Button 
-              variant="outline"
+              
               size="lg"
-              className="border-2 border-white/50 text-black hover:bg-white/10 hover:border-white/70 hover:text-white px-6 md:px-8 py-4 md:py-5 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 inline-flex items-center gap-3 min-h-[56px] md:min-h-[64px] backdrop-blur-sm"
+              className="bg-white border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white px-8 py-4 text-lg rounded-lg transition-colors duration-200 inline-flex items-center gap-3"
               onClick={() => {
                 window.open('https://wa.me/5519932940655?text=Olá! Gostaria de agendar uma análise gratuita do meu seguro.', '_blank');
               }}
             >
-              <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+              <MessageCircle className="w-5 h-5" />
               Falar no WhatsApp
             </Button>
           </motion.div>

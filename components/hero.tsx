@@ -32,7 +32,7 @@ const fadeInRight = {
 
 export function Hero({ title, description, buttonText, buttonLink }: HeroProps) {
   return (
-    <section className="relative bg-white overflow-hidden pt-8">
+    <section className="relative bg-white overflow-hidden pt-16 md:pt-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-blue-50/30">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
@@ -40,8 +40,8 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-16 lg:py-20">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="py-12 md:py-16 lg:py-20">
+                      <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             
             {/* Left Content */}
             <motion.div 
@@ -62,7 +62,7 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
               {/* Title */}
               <motion.h1 
                 variants={fadeInLeft}
-                className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4"
+                className="text-3xl md:text-4xl lg:text-5xl leading-tight mb-4 md:mb-6"
               >
                 {title}
               </motion.h1>
@@ -70,7 +70,7 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
               {/* Description */}
               <motion.p 
                 variants={fadeInLeft}
-                className="text-lg lg:text-xl leading-relaxed text-gray-600 max-w-2xl"
+                className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-600 max-w-2xl"
               >
                 {description}
               </motion.p>
@@ -118,10 +118,10 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
                   <div className="text-3xl lg:text-4xl font-bold text-primary">20K+</div>
                   <div className="text-sm font-medium text-gray-700">Clientes Atendidos</div>
                 </div>
-                <div className="text-center sm:text-left p-4 rounded-xl bg-gradient-to-br from-blue-50/50 to-primary/5 border border-blue-200/50 hover:shadow-lg transition-all duration-300">
+                {/* <div className="text-center sm:text-left p-4 rounded-xl bg-gradient-to-br from-blue-50/50 to-primary/5 border border-blue-200/50 hover:shadow-lg transition-all duration-300">
                   <div className="text-3xl lg:text-4xl font-bold text-primary">17</div>
                   <div className="text-sm font-medium text-gray-700">Seguradoras Parceiras</div>
-                </div>
+                </div> */}
               </motion.div>
             </motion.div>
             

@@ -114,7 +114,7 @@ export function ClientLogos() {
               <span className="text-primary"> mas será que ele protege o que importa?</span>
             </h2>
             <p className="text-base md:text-xl text-gray-600 leading-relaxed mb-6 md:mb-8">
-            Com mais de 20 anos de experiência e mais de 10.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade — sem empurrar nada, sem cobrar pela consultoria.
+            Com mais de 20 anos de experiência e mais de 20.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade — sem empurrar nada, sem cobrar pela consultoria.
             </p>
             
             {/* Trust Stats Grid */}
