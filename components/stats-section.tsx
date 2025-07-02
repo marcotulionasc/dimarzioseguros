@@ -18,12 +18,6 @@ export function StatsSection() {
       description: 'Experiência e confiabilidade'
     },
     {
-      icon: Shield,
-      number: '17',
-      label: 'Seguradoras Parceiras',
-      description: 'Ampla cobertura nacional'
-    },
-    {
       icon: TrendingUp,
       number: '98%',
       label: 'Satisfação dos Clientes',
