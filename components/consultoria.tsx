@@ -8,22 +8,22 @@ const itens = [
   {
     icon: FileSearch,
     title: 'Diagnóstico do seu seguro atual',
-    description: 'Análise completa das suas coberturas e possíveis brechas'
+    description: ''
   },
   {
     icon: BarChart3,
-    title: 'Cotação em múltiplas seguradoras',
-    description: 'Comparamos preços e coberturas para você escolher o melhor'
+    title: 'Comparativo real com as maiores seguradoras do mercado',
+    description: ''
   },
   {
     icon: Target,
     title: 'Recomendações ajustadas pra sua realidade',
-    description: 'Soluções personalizadas para seu perfil e necessidades'
+    description: ''
   },
   {
     icon: Gift,
-    title: 'Sem pagar nada. Sem assinar nada.',
-    description: 'Consultoria 100% gratuita e sem compromisso'
+    title: 'Sem pagar nada e sem assinar nada',
+    description: ''
   }
 ]
 
@@ -41,9 +41,6 @@ export function Consultoria() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 ">
             O que você leva da <span className="text-blue-600">consultoria gratuita</span>
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            Tudo que você precisa saber para tomar a melhor decisão
-          </p>
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -61,13 +58,10 @@ export function Consultoria() {
                 <div className="bg-blue-50 text-primary rounded-xl p-3 group-hover:scale-105 transition-transform flex-shrink-0">
                   <item.icon className="w-5 h-5" />
                 </div>
-                <div className="space-y-2">
+                <div>
                   <h3 className="text-lg font-semibold text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm ">
-                    {item.description}
-                  </p>
                 </div>
               </motion.div>
             ))}
@@ -110,6 +104,9 @@ export function Consultoria() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-center"
         >
+          <p className="text-xl md:text-2xl text-gray-700 font-medium max-w-4xl mx-auto">
+            Já ajudamos mais de <span className="text-blue-600 font-bold">20.000 pessoas</span> a corrigirem erros no seguro sem gastar R$1 a mais.
+          </p>
         </motion.div>
       </div>
     </section>
