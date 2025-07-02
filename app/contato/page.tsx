@@ -22,19 +22,24 @@ export default function ContatoPage() {
             const data = Object.fromEntries(formData.entries());
             
             try {
+              // 1. PRIMEIRO: Salvar lead na base através da API
               const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'contato');
               await submitForm(mappedData);
+              console.log('✅ Lead salvo com sucesso na base');
+              
+              // 2. SEGUNDO: Só após salvar com sucesso, mostrar mensagem e preparar redirecionamento
               showSuccess(
                 'Obrigado pelo seu contato!',
-                'Recebemos sua mensagem e agora você será redirecionado para o WhatsApp para dar continuidade ao atendimento.'
+                'Lead salvo com sucesso! Em 1,5 segundos você será redirecionado para o WhatsApp.'
               );
               (e.target as HTMLFormElement).reset();
               
-              // Redirecionar para WhatsApp após 2 segundos
+              // 3. TERCEIRO: Redirecionar FORÇADO para WhatsApp imediatamente após salvar
               setTimeout(() => {
                 const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'contato');
-                window.open(whatsappURL, '_blank');
-              }, 2000);
+                window.location.href = whatsappURL; // Redirecionamento forçado na mesma aba
+                console.log('🚀 REDIRECIONAMENTO FORÇADO para WhatsApp após salvar lead');
+              }, 1500);
             } catch (error) {
               console.error('Error:', error);
               showError(
@@ -62,7 +67,7 @@ export default function ContatoPage() {
           </div>
           <Button type="submit" className="primary-button">Enviar</Button>
           <p className="text-xs text-gray-500 mt-2">
-            * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+            * Após salvar o lead em nossa base, você será redirecionado para o WhatsApp em 3 segundos para dar continuidade ao atendimento personalizado.
           </p>
         </form>
         <div className="space-y-1 text-sm">

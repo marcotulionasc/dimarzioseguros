@@ -336,19 +336,24 @@ export default function SeguroGarantiaFiduciaria() {
                 const data = Object.fromEntries(formData.entries());
                 
                               try {
+                // 1. PRIMEIRO: Salvar lead na base através da API
                 const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'fiduciario');
                 await submitForm(mappedData);
-                alert('Formulário enviado com sucesso! Agora você será redirecionado para o WhatsApp.');
+                console.log('✅ Lead salvo com sucesso na base');
+                
+                // 2. SEGUNDO: Só após salvar com sucesso, mostrar mensagem e preparar redirecionamento
+                alert('✅ Lead salvo com sucesso! Em 3 segundos você será redirecionado para o WhatsApp.');
                 (e.target as HTMLFormElement).reset();
                 
-                // Redirecionar para WhatsApp após 2 segundos
+                // 3. TERCEIRO: Redirecionar para WhatsApp apenas após confirmação que salvou na base
                 setTimeout(() => {
                   const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'fiduciario');
                   window.open(whatsappURL, '_blank');
-                }, 2000);
+                  console.log('✅ Redirecionando para WhatsApp após salvar lead');
+                }, 3000);
               } catch (error) {
-                console.error('Error:', error);
-                alert('Erro ao enviar formulário. Por favor, tente novamente.');
+                console.error('❌ Erro ao salvar lead:', error);
+                alert('❌ Erro ao salvar lead. Por favor, tente novamente.');
               }
               }}
             >
@@ -397,7 +402,7 @@ export default function SeguroGarantiaFiduciaria() {
                 <Scale className="ml-2 h-5 w-5" />
               </Button>
               <p className="text-xs text-white/60 mt-2 text-center">
-                * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+                * Após salvar o lead em nossa base, você será redirecionado para o WhatsApp em 3 segundos para dar continuidade ao atendimento personalizado.
               </p>
             </form>
             <p className="text-sm text-white/70 mt-4">
