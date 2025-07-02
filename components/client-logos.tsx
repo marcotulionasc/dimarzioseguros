@@ -107,7 +107,7 @@ export function ClientLogos() {
             </p>
             
             {/* Trust Stats Grid */}
-            <div className="grid grid-cols-2 gap-3 md:gap-6">
+            {/* <div className="grid grid-cols-2 gap-3 md:gap-6">
               {trustStats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -125,7 +125,7 @@ export function ClientLogos() {
                   <div className="text-xs text-gray-600">{stat.description}</div>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
         </div>
 

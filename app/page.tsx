@@ -26,7 +26,7 @@ const Faq = dynamic(() => import('@/components/faq').then(mod => ({ default: mod
 
 export default function Home() {
   const heroContent = {
-    title: "Imagina descobrir que não receberá a indenização do seu seguro?",
+    title: "Já imaginou descobrir que seu seguro não garante que você receberá sua indenização?",
     description: "A Dimarzio Seguros oferece uma consultoria gratuita para revisar ou montar o seu seguro do jeito certo. Com cobertura que realmente protege, sem pagar a mais, sem letras miúdas.",
     buttonText: "Quero minha análise gratuita",
     buttonLink: "#contato"
@@ -117,7 +117,7 @@ export default function Home() {
       <ClientLogos />
       <HowItWorks />
       <Differentials />
-      <StatsSection />
+      {/* <StatsSection /> */}
       
       {/* Banner Comemorativo 20 Anos */}
       <section className="py-8 bg-gradient-to-br from-amber-50/30 via-white to-orange-50/30">

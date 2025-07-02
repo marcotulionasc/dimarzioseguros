@@ -26,11 +26,6 @@ const steps = [
     icon: Wallet, 
     text: 'Comparação nas principais seguradoras do mercado',
     description: 'A gente faz a cotação e te mostra a melhor condição real.'
-  },
-  { 
-    icon: Phone, 
-    text: 'Você decide se quer contratar ou não',
-    description: 'Sem pressão. Sem truque. Só clareza.'
   }
 ]
 
@@ -38,27 +33,27 @@ const differentials = [
   {
     title: 'Atendimento completo, inclusive em casos de sinistro',
     icon: Headphones,
-    description: 'Suporte técnico especializado quando você mais precisa'
+    description: ''
   },
   {
     title: 'Departamento próprio que acompanha parcelas em atraso',
     icon: Clock,
-    description: 'Controle dedicado para manter seu seguro sempre em dia'
+    description: ''
   },
   {
     title: 'Sistema de multicálculo automático com as principais seguradoras do mercado',
     icon: Calculator,
-    description: 'Comparação automática para encontrar a melhor opção'
+    description: ''
   },
   {
     title: 'Consultoria com foco principal em sinistro, cobertura ideal e custo ajustado',
     icon: UserCheck,
-    description: 'Orientação técnica para a proteção que você realmente precisa'
+    description: ''
   },
   {
     title: 'Atendimento em sinistro 24 horas',
     icon: Clock2,
-    description: 'Você fala com quem resolve. Mesmo aos finais de semana.'
+    description: ''
   }
 ]
 
@@ -126,17 +121,17 @@ export function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-8 md:mb-16"
+          className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6">
             Como funciona na prática
           </h2>
-          <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl px-4 text-left">
-            4 passos simples para sua segurança
+          <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4">
+            3 passos simples para sua segurança
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -144,33 +139,43 @@ export function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative group"
+              className="group"
             >
-              <div className="bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20 h-auto md:h-96 flex flex-col">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20 min-h-[140px] relative">
                 {/* Step Number */}
-                <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 bg-primary text-white rounded-full w-6 h-6 md:w-8 md:h-8 flex items-center justify-center font-bold text-xs md:text-sm shadow-lg">
+                <div className="absolute -top-2 -left-2 bg-primary text-white rounded-full w-6 h-6 md:w-8 md:h-8 flex items-center justify-center font-bold text-xs md:text-sm shadow-lg">
                   {i + 1}
                 </div>
                 
-                {/* Icon */}
-                <div className="mb-4 md:mb-6">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <step.icon className="w-5 h-5 md:w-6 md:h-6" />
+                <div className="flex items-start gap-4">
+                  {/* Icon Column */}
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                      <step.icon className="w-6 h-6 md:w-7 md:h-7" />
+                    </div>
+                  </div>
+                  
+                  {/* Text Column */}
+                  <div className="flex-1 text-left">
+                    <h3 className="text-lg md:text-xl text-gray-900 leading-tight mb-2">
+                      {step.text}
+                    </h3>
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-                
-                {/* Content */}
-                <div className="space-y-2 md:space-y-4 flex-1 flex flex-col">
-                  <h3 className="text-lg md:text-xl text-gray-900 leading-tight">
-                    {step.text}
-                  </h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-1">
-                    {step.description}
-                  </p>
-                </div>
               </div>
+
+             
             </motion.div>
+            
           ))}
+           <div className="flex items-center justify-center mt-4">
+                <p className="text-lg md:text-base text-gray-600 leading-relaxed text-center">
+                <span className="font-bold">Você decide se quer contratar ou não</span> <br></br>sem pressão e sem truque.
+                </p>
+              </div>
         </div>
       </div>
     </section>
@@ -194,12 +199,15 @@ export function Differentials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-12 md:mb-20"
+          className="text-center mb-12 md:mb-20"
         >
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
-            O que faz a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Dimarzio Seguros</span> diferente
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6">
+            O que faz a <span className="text-blue-600">Dimarzio Seguros</span> ser diferente
           </h2>
+          <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4 mb-8">
+            Com 20 anos de mercado, a Dimarzio Seguros vai além do básico:
+          </p>
         </motion.div>
 
         {/* Main Content Grid */}
@@ -226,12 +234,9 @@ export function Differentials() {
                     
                     {/* Text Column */}
                     <div className="flex-1 text-left">
-                      <h3 className="text-lg md:text-xl text-gray-900 leading-tight mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-lg md:text-xl text-gray-900 leading-tight group-hover:text-blue-600 transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                        {item.description}
-                      </p>
                     </div>
                   </div>
                   
@@ -264,12 +269,9 @@ export function Differentials() {
                     
                     {/* Text Column */}
                     <div className="flex-1 text-left">
-                      <h3 className="text-lg md:text-xl text-gray-900 leading-tight mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-lg md:text-xl text-gray-900 leading-tight group-hover:text-blue-600 transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                        {item.description}
-                      </p>
                     </div>
                   </div>
                   
