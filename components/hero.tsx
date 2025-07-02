@@ -107,7 +107,7 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
               {/* Stats Destacadas */}
               <motion.div 
                 variants={fadeInLeft}
-                className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-gradient-to-r from-amber-200 to-orange-200"
+                className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8"
               >
                 <div className="relative text-center sm:text-left p-4 rounded-xl bg-gradient-to-br from-amber-50/50 to-orange-50/50 border border-amber-200/50 group hover:shadow-lg transition-all duration-300">
                   <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">20</div>
