@@ -8,22 +8,22 @@ const itens = [
   {
     icon: FileSearch,
     title: 'Diagnóstico do seu seguro atual',
-    description: ''
+    description: 'Identificamos lacunas na sua cobertura e possíveis excessos que você está pagando'
   },
   {
     icon: BarChart3,
     title: 'Comparativo real com as maiores seguradoras do mercado',
-    description: ''
+    description: 'Cotação simultânea com as principais seguradoras para encontrar o melhor custo-benefício'
   },
   {
     icon: Target,
     title: 'Recomendações ajustadas pra sua realidade',
-    description: ''
+    description: 'Sugestões personalizadas baseadas no seu perfil, orçamento e necessidades específicas'
   },
   {
     icon: Gift,
     title: 'Sem pagar nada e sem assinar nada',
-    description: ''
+    description: 'Consultoria 100% gratuita, sem taxas ocultas e sem obrigação de contratação'
   }
 ]
 
@@ -62,6 +62,9 @@ export function Consultoria() {
                   <h3 className="text-lg font-semibold text-gray-900">
                     {item.title}
                   </h3>
+                  <p className="text-gray-600 mt-1">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
