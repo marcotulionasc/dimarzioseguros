@@ -126,12 +126,12 @@ export function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8 md:mb-16"
+          className="mb-8 md:mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
             Como funciona na prática
           </h2>
-          <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4 text-left">
+          <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl px-4 text-left">
             4 passos simples para sua segurança
           </p>
         </motion.div>
@@ -194,7 +194,7 @@ export function Differentials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 md:mb-20"
+          className="mb-12 md:mb-20"
         >
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
@@ -205,7 +205,7 @@ export function Differentials() {
         {/* Main Content Grid */}
         <div className="max-w-7xl mx-auto">
           {/* First Row - 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
             {differentials.slice(0, 3).map((item, i) => (
               <motion.div
                 key={i}
@@ -215,33 +215,35 @@ export function Differentials() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="group relative"
               >
-                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200 min-h-[320px] flex flex-col group-hover:-translate-y-2">
-                  {/* Icon */}
-                  <div className="flex justify-center mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <item.icon className="w-10 h-10 text-white" />
+                <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 min-h-[140px] group-hover:-translate-y-1">
+                  <div className="flex items-start gap-4">
+                    {/* Icon Column */}
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <item.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                      </div>
+                    </div>
+                    
+                    {/* Text Column */}
+                    <div className="flex-1 text-left">
+                      <h3 className="text-lg md:text-xl text-gray-900 leading-tight mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                   
-                  {/* Content */}
-                  <div className="flex-1 text-center">
-                    <h3 className="text-xl text-gray-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                  
                   {/* Decorative gradient border */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
                 </div>
               </motion.div>
             ))}
           </div>
 
           {/* Second Row - 2 cards centered */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {differentials.slice(3, 5).map((item, i) => (
               <motion.div
                 key={i + 3}
@@ -251,26 +253,28 @@ export function Differentials() {
                 transition={{ duration: 0.6, delay: (i + 3) * 0.1 }}
                 className="group relative"
               >
-                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200 min-h-[320px] flex flex-col group-hover:-translate-y-2">
-                  {/* Icon */}
-                  <div className="flex justify-center mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <item.icon className="w-10 h-10 text-white" />
+                <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 min-h-[140px] group-hover:-translate-y-1">
+                  <div className="flex items-start gap-4">
+                    {/* Icon Column */}
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <item.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                      </div>
+                    </div>
+                    
+                    {/* Text Column */}
+                    <div className="flex-1 text-left">
+                      <h3 className="text-lg md:text-xl text-gray-900 leading-tight mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                   
-                  {/* Content */}
-                  <div className="flex-1 text-center">
-                    <h3 className="text-xl text-gray-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                  
                   {/* Decorative gradient border */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
                 </div>
               </motion.div>
             ))}
@@ -294,10 +298,10 @@ export function Differentials() {
             </div>
             
             <div className="relative z-10 mt-4">
-              <blockquote className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white">
+              <blockquote className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-white">
                 "Você fala com quem resolve."
               </blockquote>
-              <p className="text-xl text-blue-100 font-medium text-left">
+              <p className="text-xl text-blue-100 font-medium">
                 Mesmo aos finais de semana.
               </p>
             </div>
