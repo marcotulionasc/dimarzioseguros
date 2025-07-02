@@ -19,7 +19,7 @@ export function FloatingWhatsAppButton() {
   return (
     <div className="whatsapp-floating-button animate-fade-in">
       <a
-        href="https://wa.me/551932940655?text=Olá! Gostaria de saber mais sobre os seguros da Dimarzio."
+        href="https://wa.me/5519932940655?text=Olá! Gostaria de saber mais sobre os seguros da Dimarzio."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"

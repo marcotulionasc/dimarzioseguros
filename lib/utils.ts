@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 // WhatsApp helper function
 export function generateWhatsAppURL(data: Record<string, string>, formType: string): string {
-  const baseURL = 'https://wa.me/551932940655'
+  const baseURL = 'https://wa.me/5519932940655'
   const nome = data.nome || 'Cliente'
   
   let message = `Olá! Sou ${nome} e acabei de preencher o formulário no site da Dimarzio Seguros.`

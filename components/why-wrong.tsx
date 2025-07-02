@@ -42,7 +42,15 @@ export function WhyWrong() {
             <strong>Você só descobre quando já é tarde.</strong>
           </p>
           
-          <Button className="bg-white text-primary hover:bg-gray-100 font-medium px-6 py-2.5 md:px-8 md:py-3 rounded-lg transition-all duration-300 hover:scale-105 text-sm md:text-base w-full sm:w-auto">
+          <Button 
+            className="bg-white text-primary hover:bg-gray-100 font-medium px-6 py-2.5 md:px-8 md:py-3 rounded-lg transition-all duration-300 hover:scale-105 text-sm md:text-base w-full sm:w-auto"
+            onClick={() => {
+              const element = document.querySelector('#contato');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             Agendar minha análise gratuita
           </Button>
         </div>
