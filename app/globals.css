@@ -1126,17 +1126,17 @@
   
   /* Tablet */
   @media (min-width: 640px) {
-    padding-top: 7rem; /* 112px */
+    padding-top: 6rem; /* 96px */
   }
   
   /* Desktop */
   @media (min-width: 768px) {
-    padding-top: 8rem; /* 128px */
+    padding-top: 6rem; /* 96px */
   }
   
   /* Desktop grande */
   @media (min-width: 1024px) {
-    padding-top: 9rem; /* 144px */
+    padding-top: 6rem; /* 96px */
   }
 }
 
@@ -1159,32 +1159,32 @@
   padding-top: 6rem;
   
   @media (min-width: 640px) {
-    padding-top: 7rem;
+    padding-top: 6rem;
   }
   
   @media (min-width: 768px) {
-    padding-top: 8rem;
+    padding-top: 6rem;
   }
   
   @media (min-width: 1024px) {
-    padding-top: 9rem;
+    padding-top: 6rem;
   }
 }
 
 /* Badge spacing específico */
 .hero-badge {
-  margin-top: 2rem;
+  margin-top: 1rem;
   
   @media (min-width: 640px) {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
   
   @media (min-width: 768px) {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
   
   @media (min-width: 1024px) {
-    margin-top: 3.5rem;
+    margin-top: 1rem;
   }
 }
 
