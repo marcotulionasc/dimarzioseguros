@@ -53,7 +53,7 @@ export default function SeguroVidaPage() {
                 <span>Análise técnica e gratuita</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
                 Seguro de vida é pra agora, não só pro depois.
               </h1>
               
@@ -89,7 +89,7 @@ export default function SeguroVidaPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Erros que muita gente só descobre na hora errada</h2>
+              <h2 className="text-3xl mb-8 text-center">Erros que muita gente só descobre na hora errada</h2>
               <div className="space-y-4">
                 {mistakes.map((item, i) => (
                   <motion.div
@@ -117,7 +117,7 @@ export default function SeguroVidaPage() {
         <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
+              <h2 className="text-3xl mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {differentials.map((item, i) => (
                   <motion.div
@@ -146,7 +146,7 @@ export default function SeguroVidaPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+              <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
               <div className="space-y-6">
                 {steps.map((step, i) => (
                   <motion.div
@@ -177,7 +177,7 @@ export default function SeguroVidaPage() {
         <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
+              <h2 className="text-3xl mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {advantages.map((item, i) => (
                   <motion.div
@@ -200,7 +200,7 @@ export default function SeguroVidaPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl font-bold">Você já cuida da sua família todos os dias. Agora pode garantir que eles não fiquem desprotegidos se algo acontecer.</h2>
+              <h2 className="text-3xl">Você já cuida da sua família todos os dias. Agora pode garantir que eles não fiquem desprotegidos se algo acontecer.</h2>
               <p className="text-xl">
                 Peça sua <strong>análise gratuita</strong>.<br />
                 É simples, direto e feito com responsabilidade.

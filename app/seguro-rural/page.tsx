@@ -37,7 +37,7 @@ export default function SeguroRuralPage() {
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               A lavoura cresce com trabalho, mas pode se perder por um detalhe fora do seu controle.
             </h1>
             
@@ -72,7 +72,7 @@ export default function SeguroRuralPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">O que o Seguro Rural pode proteger</h2>
+            <h2 className="text-3xl mb-8 text-center">O que o Seguro Rural pode proteger</h2>
             <div className="grid gap-4">
               {coverages.map((item, i) => (
                 <motion.div
@@ -95,7 +95,7 @@ export default function SeguroRuralPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
+            <h2 className="text-3xl mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
             <div className="grid gap-4">
               {differentials.map((item, i) => (
                 <motion.div
@@ -121,7 +121,7 @@ export default function SeguroRuralPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div
@@ -152,7 +152,7 @@ export default function SeguroRuralPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Antes da próxima colheita, veja se sua produção está realmente protegida.</h2>
+            <h2 className="text-3xl">Antes da próxima colheita, veja se sua produção está realmente protegida.</h2>
             <p className="text-xl">
               Peça sua <strong>cotação gratuita agora</strong>.<br />
               É simples, direto e pode evitar prejuízos que não dependem só de você.

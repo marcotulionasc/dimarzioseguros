@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 export default function ProdutosPage() {
   return (
     <main className="container py-16 space-y-8">
-      <h1 className="text-3xl font-bold text-center">Nossos Produtos</h1>
+      <h1 className="text-3xl text-center">Nossos Produtos</h1>
       <div className="grid md:grid-cols-2 gap-6">
         {products.map((p) => (
           <div key={p.slug} className="p-4 border rounded-md space-y-2">

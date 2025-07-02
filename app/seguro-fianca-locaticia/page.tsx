@@ -42,7 +42,7 @@ export default function SeguroFiancaLocaticiaPage() {
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               Alugar sem fiador, sem cheque caução e sem dor de cabeça. Sim, é possível.
             </h1>
             
@@ -77,7 +77,7 @@ export default function SeguroFiancaLocaticiaPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Pra quem é o Seguro Fiança</h2>
+            <h2 className="text-3xl mb-8 text-center">Pra quem é o Seguro Fiança</h2>
             <div className="grid gap-4">
               {targetAudience.map((item, i) => (
                 <motion.div
@@ -100,7 +100,7 @@ export default function SeguroFiancaLocaticiaPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">O que o seguro cobre</h2>
+            <h2 className="text-3xl mb-8 text-center">O que o seguro cobre</h2>
             <div className="grid gap-4">
               {coverages.map((item, i) => (
                 <motion.div
@@ -123,7 +123,7 @@ export default function SeguroFiancaLocaticiaPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
+            <h2 className="text-3xl mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {differentials.map((item, i) => (
                 <motion.div
@@ -149,7 +149,7 @@ export default function SeguroFiancaLocaticiaPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div
@@ -180,7 +180,7 @@ export default function SeguroFiancaLocaticiaPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Antes de travar um contrato por burocracia, veja se o seguro fiança resolve.</h2>
+            <h2 className="text-3xl">Antes de travar um contrato por burocracia, veja se o seguro fiança resolve.</h2>
             <p className="text-xl">
               Peça sua <strong>cotação gratuita agora</strong>.<br />
               É simples, direto e pode destravar sua locação.

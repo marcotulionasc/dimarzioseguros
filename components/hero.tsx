@@ -62,7 +62,7 @@ export function Hero({ title, description, buttonText, buttonLink }: HeroProps) 
               {/* Title */}
               <motion.h1 
                 variants={fadeInLeft}
-                className="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight text-gray-900"
+                className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4"
               >
                 {title}
               </motion.h1>

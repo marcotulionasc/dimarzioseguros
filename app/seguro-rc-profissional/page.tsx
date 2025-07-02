@@ -44,7 +44,7 @@ export default function SeguroRCProfissionalPage() {
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               Erro profissional pode acontecer, o que não pode é deixar isso virar prejuízo.
             </h1>
             
@@ -80,7 +80,7 @@ export default function SeguroRCProfissionalPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">O que é o Seguro RC Profissional</h2>
+            <h2 className="text-3xl mb-8 text-center">O que é o Seguro RC Profissional</h2>
             <div className="bg-[#0E71B8]/5 rounded-xl p-8 space-y-6">
               <p className="text-xl leading-relaxed">
                 É um seguro que cobre <strong>prejuízos causados a terceiros por atos, erros ou omissões ligados à sua atividade profissional</strong>.<br />
@@ -98,7 +98,7 @@ export default function SeguroRCProfissionalPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Coberturas que você pode contratar</h2>
+            <h2 className="text-3xl mb-8 text-center">Coberturas que você pode contratar</h2>
             <div className="grid gap-4">
               {coverages.map((item, i) => (
                 <motion.div
@@ -121,7 +121,7 @@ export default function SeguroRCProfissionalPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Quem deve contratar esse seguro</h2>
+            <h2 className="text-3xl mb-8 text-center">Quem deve contratar esse seguro</h2>
             <div className="grid gap-4">
               {whoNeeds.map((item, i) => (
                 <motion.div
@@ -149,7 +149,7 @@ export default function SeguroRCProfissionalPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
+            <h2 className="text-3xl mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {differentials.map((item, i) => (
                 <motion.div
@@ -175,7 +175,7 @@ export default function SeguroRCProfissionalPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div
@@ -206,7 +206,7 @@ export default function SeguroRCProfissionalPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Antes de um erro virar prejuízo, veja se seu seguro cobre você de verdade.</h2>
+            <h2 className="text-3xl">Antes de um erro virar prejuízo, veja se seu seguro cobre você de verdade.</h2>
             <p className="text-xl">
               Peça agora sua <strong>cotação gratuita</strong>, é simples, direto e pode proteger sua carreira de um problema maior.
             </p>

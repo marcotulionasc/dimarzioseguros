@@ -35,7 +35,7 @@ export function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl mx-auto"
+            className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4 text-white"
           >
             Seu seguro protege ou é só papel?
           </motion.h2>

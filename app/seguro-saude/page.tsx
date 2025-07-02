@@ -39,7 +39,7 @@ export default function SeguroSaudePage() {
               <span>Análise técnica e gratuita</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               O plano de saúde parece bom, até o dia em que você precisa usar e descobre que ele não cobre o essencial.
             </h1>
             
@@ -73,7 +73,7 @@ export default function SeguroSaudePage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Por que tanta gente se decepciona com o plano de saúde</h2>
+            <h2 className="text-3xl mb-8 text-center">Por que tanta gente se decepciona com o plano de saúde</h2>
             <div className="space-y-4">
               {frustrations.map((item, i) => (
                 <motion.div
@@ -100,7 +100,7 @@ export default function SeguroSaudePage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
+            <h2 className="text-3xl mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {differentials.map((item, i) => (
                 <motion.div
@@ -129,7 +129,7 @@ export default function SeguroSaudePage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div
@@ -160,7 +160,7 @@ export default function SeguroSaudePage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Antes de contratar, veja se o plano realmente protege o que você precisa.</h2>
+            <h2 className="text-3xl">Antes de contratar, veja se o plano realmente protege o que você precisa.</h2>
             <p className="text-xl">
               Peça sua <strong>análise gratuita</strong> com quem entende do assunto.<br />
               É simples, direto e pode evitar dor de cabeça na hora que você mais precisa.

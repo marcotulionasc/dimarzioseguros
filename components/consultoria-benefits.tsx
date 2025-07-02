@@ -106,7 +106,7 @@ export function ConsultoriaBenefits() {
                 <CheckCircle2 className="w-8 h-8 text-white" />
               </div>
               <blockquote className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
-                "Já ajudamos mais de 10.000 pessoas a corrigirem erros no seguro sem gastar R$1 a mais."
+                "Já ajudamos mais de 20.000 pessoas a corrigirem erros no seguro sem gastar R$1 a mais."
               </blockquote>
               
               {/* Decorative elements */}

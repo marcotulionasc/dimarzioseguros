@@ -46,7 +46,7 @@ export default function SeguroResidencialPage() {
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
         <div className="container mx-auto px-4 relative py-20">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               Você trabalha a vida inteira pra ter sua casa, por que deixá-la desprotegida?
             </h1>
             
@@ -82,7 +82,7 @@ export default function SeguroResidencialPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">O que o seguro residencial pode cobrir</h2>
+            <h2 className="text-3xl mb-8 text-center">O que o seguro residencial pode cobrir</h2>
             <div className="grid gap-4">
               {coverages.map((item, i) => (
                 <motion.div
@@ -105,7 +105,7 @@ export default function SeguroResidencialPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">E você ainda pode ter serviços que resolvem no dia a dia</h2>
+            <h2 className="text-3xl mb-8 text-center">E você ainda pode ter serviços que resolvem no dia a dia</h2>
             <div className="grid gap-4">
               {services.map((item, i) => (
                 <motion.div
@@ -128,7 +128,7 @@ export default function SeguroResidencialPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
+            <h2 className="text-3xl mb-8 text-center">Por que contratar com a Dimarzio Seguros</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {differentials.map((item, i) => (
                 <motion.div
@@ -154,7 +154,7 @@ export default function SeguroResidencialPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div
@@ -185,7 +185,7 @@ export default function SeguroResidencialPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Antes de confiar que está tudo certo, veja se seu seguro realmente protege sua casa.</h2>
+            <h2 className="text-3xl">Antes de confiar que está tudo certo, veja se seu seguro realmente protege sua casa.</h2>
             <p className="text-xl">
               Peça sua <strong>cotação gratuita com orientação técnica</strong>.<br />
               É simples, direto e pode fazer diferença quando você mais precisa.

@@ -109,7 +109,7 @@ export function ClientLogos() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="order-1 lg:order-2"
           >
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-4 md:mb-6">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
               Você já tem um seguro, 
               <span className="text-primary"> mas será que ele protege o que importa?</span>
             </h2>

@@ -38,7 +38,7 @@ export function Consultoria() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
             O que você leva da consultoria gratuita
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">

@@ -64,7 +64,7 @@ export default function SeguroAutomovelPage() {
                 <span>Cotação com análise técnica gratuita</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
                 Seguro de carro e moto não é tudo igual, e só na hora do sinistro você descobre isso.
               </h1>
               
@@ -102,7 +102,7 @@ export default function SeguroAutomovelPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Diferencial da Dimarzio Seguros</h2>
+              <h2 className="text-3xl mb-8 text-center">Diferencial da Dimarzio Seguros</h2>
               <div className="bg-[#0E71B8]/5 rounded-xl p-8 space-y-6">
                 <p className="text-xl leading-relaxed">
                   Pensando no conforto dos nossos clientes, disponibilizamos <strong>carro reserva da nossa própria frota</strong> (quando o seguro contratado permite).
@@ -125,7 +125,7 @@ export default function SeguroAutomovelPage() {
         <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Coberturas que você pode contratar</h2>
+              <h2 className="text-3xl mb-8 text-center">Coberturas que você pode contratar</h2>
               <div className="space-y-4">
                 {coverages.map((item, i) => (
                   <motion.div
@@ -151,7 +151,7 @@ export default function SeguroAutomovelPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Por que tanta gente se decepciona com o seguro depois que precisa usar</h2>
+              <h2 className="text-3xl mb-8 text-center">Por que tanta gente se decepciona com o seguro depois que precisa usar</h2>
               <div className="space-y-4">
                 {disappointments.map((item, i) => (
                   <motion.div
@@ -180,7 +180,7 @@ export default function SeguroAutomovelPage() {
         <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
+              <h2 className="text-3xl mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {differentials.map((item, i) => (
                   <motion.div
@@ -209,7 +209,7 @@ export default function SeguroAutomovelPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+              <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
               <div className="space-y-6">
                 {steps.map((step, i) => (
                   <motion.div
@@ -249,7 +249,7 @@ export default function SeguroAutomovelPage() {
         <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Vantagens de contratar com a Dimarzio Seguros</h2>
+              <h2 className="text-3xl mb-8 text-center">Vantagens de contratar com a Dimarzio Seguros</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {advantages.map((item, i) => (
                   <motion.div
@@ -272,7 +272,7 @@ export default function SeguroAutomovelPage() {
         <section className="py-24 bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl font-bold">Antes de contratar, veja o que está, e o que não está, no seu seguro.</h2>
+              <h2 className="text-3xl">Antes de contratar, veja o que está, e o que não está, no seu seguro.</h2>
               <p className="text-xl text-white/90">
                 Peça sua <strong className="text-white">cotação com análise técnica gratuita</strong>.<br />
                 É simples, direto e pode evitar dor de cabeça.

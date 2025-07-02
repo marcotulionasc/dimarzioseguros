@@ -67,7 +67,7 @@ export default function SeguroGarantiaFiduciaria() {
               <span>Cotação gratuita</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               Em disputas judiciais, tempo é dinheiro, e o seguro certo pode ser o que garante sua liberdade de ação.
             </h1>
             
@@ -99,7 +99,7 @@ export default function SeguroGarantiaFiduciaria() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Pra que serve o Seguro Garantia Fiduciária</h2>
+            <h2 className="text-3xl mb-8 text-center">Pra que serve o Seguro Garantia Fiduciária</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, i) => (
                 <motion.div
@@ -123,7 +123,7 @@ export default function SeguroGarantiaFiduciaria() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Quem pode contratar</h2>
+            <h2 className="text-3xl mb-8 text-center">Quem pode contratar</h2>
             <div className="space-y-4">
               {whoCanContract.map((item, i) => (
                 <motion.div
@@ -150,7 +150,7 @@ export default function SeguroGarantiaFiduciaria() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div
@@ -181,7 +181,7 @@ export default function SeguroGarantiaFiduciaria() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Vantagens do Seguro Garantia Fiduciária com a Dimarzio Seguros</h2>
+            <h2 className="text-3xl mb-8 text-center">Vantagens do Seguro Garantia Fiduciária com a Dimarzio Seguros</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {advantages.map((item, i) => (
                 <motion.div
@@ -203,7 +203,7 @@ export default function SeguroGarantiaFiduciaria() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">Depoimentos de quem usou na hora certa</h2>
+            <h2 className="text-3xl mb-12 text-center">Depoimentos de quem usou na hora certa</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -273,7 +273,7 @@ export default function SeguroGarantiaFiduciaria() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">Perguntas Frequentes</h2>
+            <h2 className="text-3xl mb-12 text-center">Perguntas Frequentes</h2>
             <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -322,7 +322,7 @@ export default function SeguroGarantiaFiduciaria() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Antes de travar dinheiro em processo, veja se o seguro não resolve.</h2>
+            <h2 className="text-3xl">Antes de travar dinheiro em processo, veja se o seguro não resolve.</h2>
             <p className="text-xl text-white/90">
               Peça sua <strong className="text-white">cotação gratuita agora</strong>.<br />
               É simples, direto e pode ser o que falta pra sua empresa respirar melhor.

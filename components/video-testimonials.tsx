@@ -187,7 +187,7 @@ export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
             <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
           </div>
           
-          <h2 className="mobile-title !text-xl sm:!text-3xl lg:!text-5xl font-light text-gray-900">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
             {title}
           </h2>
           

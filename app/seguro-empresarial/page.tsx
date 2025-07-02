@@ -74,7 +74,7 @@ export default function SeguroEmpresarialPage() {
               <span>Análise técnica e gratuita</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               Seu negócio parece protegido. Mas será que está mesmo?
             </h1>
             
@@ -106,7 +106,7 @@ export default function SeguroEmpresarialPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Por que tantas empresas contratam o seguro errado</h2>
+            <h2 className="text-3xl mb-8 text-center">Por que tantas empresas contratam o seguro errado</h2>
             <div className="space-y-4">
               {problemsWithInsurance.map((item, i) => (
                 <motion.div
@@ -133,7 +133,7 @@ export default function SeguroEmpresarialPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">O que o seguro pode cobrir</h2>
+            <h2 className="text-3xl mb-8 text-center">O que o seguro pode cobrir</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {coverages.map((coverage, i) => (
                 <motion.div
@@ -157,7 +157,7 @@ export default function SeguroEmpresarialPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
+            <h2 className="text-3xl mb-8 text-center">Como a Dimarzio Seguros faz diferente</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {differentials.map((item, i) => (
                 <motion.div
@@ -187,7 +187,7 @@ export default function SeguroEmpresarialPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div
@@ -218,7 +218,7 @@ export default function SeguroEmpresarialPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Vantagens do seguro empresarial com a Dimarzio Seguros</h2>
+            <h2 className="text-3xl mb-8 text-center">Vantagens do seguro empresarial com a Dimarzio Seguros</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {advantages.map((item, i) => (
                 <motion.div
@@ -241,7 +241,7 @@ export default function SeguroEmpresarialPage() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8] to-[#2B2E83] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Antes de renovar ou contratar, veja se seu seguro realmente protege o que importa.</h2>
+            <h2 className="text-3xl">Antes de renovar ou contratar, veja se seu seguro realmente protege o que importa.</h2>
             <p className="text-xl text-white/90">
               Peça sua <strong className="text-white">análise gratuita</strong> com quem entende do assunto.<br />
               É simples, direto e pode evitar prejuízo sério.

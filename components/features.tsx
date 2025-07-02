@@ -84,7 +84,7 @@ export function Features({ title, features }: FeaturesProps) {
         <div className="max-w-3xl mx-auto text-center mb-8 md:mb-16">
           <motion.h2 
             variants={fadeInUp} 
-            className="text-2xl md:text-4xl font-bold mb-2 md:mb-4"
+            className="text-2xl md:text-4xl mb-2 md:mb-4"
           >
             {title}
           </motion.h2>
@@ -105,7 +105,7 @@ export function Features({ title, features }: FeaturesProps) {
                   <ShieldCheck className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 leading-tight">{feature.title}</h3>
+                  <h3 className="text-lg md:text-xl mb-1 md:mb-2 leading-tight">{feature.title}</h3>
                   <p className="text-sm md:text-base text-neutral-600 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
@@ -128,7 +128,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-2 md:mb-4 leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
             Como funciona na prática
           </h2>
           <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4">
@@ -161,7 +161,7 @@ export function HowItWorks() {
                 
                 {/* Content */}
                 <div className="space-y-2 md:space-y-4 flex-1 flex flex-col">
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">
+                  <h3 className="text-lg md:text-xl text-gray-900 leading-tight">
                     {step.text}
                   </h3>
                   <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-1">
@@ -200,7 +200,7 @@ export function Differentials() {
             <Star className="w-5 h-5" />
             <span className="font-medium">20 anos de experiência</span>
           </div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
             O que faz a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Dimarzio Seguros</span> diferente
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
@@ -232,7 +232,7 @@ export function Differentials() {
                   
                   {/* Content */}
                   <div className="flex-1 text-center">
-                    <h3 className="text-xl font-bold text-gray-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                    <h3 className="text-xl text-gray-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors duration-300">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -268,7 +268,7 @@ export function Differentials() {
                   
                   {/* Content */}
                   <div className="flex-1 text-center">
-                    <h3 className="text-xl font-bold text-gray-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                    <h3 className="text-xl text-gray-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors duration-300">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -304,7 +304,7 @@ export function Differentials() {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Headphones className="w-8 h-8 text-white" />
               </div>
-              <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-4">
+              <blockquote className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4 text-white">
                 "Você fala com quem resolve."
               </blockquote>
               <p className="text-xl text-blue-100 font-medium">

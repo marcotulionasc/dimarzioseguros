@@ -104,7 +104,7 @@ export default function SeguroPortateis() {
               <span>Proteção completa para seus dispositivos</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90">
               Proteja seus equipamentos portáteis contra imprevistos do dia a dia
             </h1>
             
@@ -136,7 +136,7 @@ export default function SeguroPortateis() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">O que o seguro cobre</h2>
+            <h2 className="text-3xl mb-8 text-center">O que o seguro cobre</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {features.map((item, i) => (
                 <motion.div
@@ -159,7 +159,7 @@ export default function SeguroPortateis() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Quem precisa deste seguro</h2>
+            <h2 className="text-3xl mb-8 text-center">Quem precisa deste seguro</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((item, i) => (
                 <motion.div
@@ -185,7 +185,7 @@ export default function SeguroPortateis() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Como funciona</h2>
+            <h2 className="text-3xl mb-8 text-center">Como funciona</h2>
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div
@@ -216,7 +216,7 @@ export default function SeguroPortateis() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">O que dizem nossos clientes</h2>
+            <h2 className="text-3xl mb-8 text-center">O que dizem nossos clientes</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {testimonials.map((item, i) => (
                 <motion.div
@@ -244,7 +244,7 @@ export default function SeguroPortateis() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Perguntas Frequentes</h2>
+            <h2 className="text-3xl mb-8 text-center">Perguntas Frequentes</h2>
             <div className="space-y-6">
               {faqs.map((faq, i) => (
                 <motion.div
@@ -267,7 +267,7 @@ export default function SeguroPortateis() {
       <section className="py-24 bg-gradient-to-br from-[#0E71B8]/5 to-[#2B2E83]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Proteja seus equipamentos antes que seja tarde</h2>
+            <h2 className="text-3xl">Proteja seus equipamentos antes que seja tarde</h2>
             <p className="text-xl">
               Peça sua <strong>cotação gratuita</strong> agora.<br />
               É rápido, simples e pode evitar dor de cabeça com seus dispositivos mais importantes.

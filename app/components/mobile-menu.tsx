@@ -39,7 +39,7 @@ export function MobileMenu() {
                       className="object-contain"
                     />
                   </div>
-                  <span className="text-lg font-bold gradient-text">Dimarzio Seguros</span>
+                  <span className="text-lg gradient-text">Dimarzio Seguros</span>
                 </Link>
                 <Button
                   variant="ghost"
