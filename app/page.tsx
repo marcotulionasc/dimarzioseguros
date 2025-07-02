@@ -130,7 +130,6 @@ export default function Home() {
       
       <VideoTestimonials {...videoTestimonialContent} />
       <WhyWrong />
-      <ConsultoriaBenefits />
       <Consultoria />
       <ProductGrid />
       <WhyChoose {...whyChooseContent} />

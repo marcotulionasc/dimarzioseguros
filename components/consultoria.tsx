@@ -110,11 +110,6 @@ export function Consultoria() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-center"
         >
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl px-8 py-6 inline-block">
-            <p className="text-lg text-primary font-medium">
-              "Já ajudamos mais de 20.000 pessoas a corrigirem erros no seguro sem gastar R$1 a mais."
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>

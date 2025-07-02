@@ -100,22 +100,6 @@ export function ConsultoriaBenefits() {
               <div className="absolute top-4 right-4 w-24 h-24 border border-green-500 rounded-full"></div>
               <div className="absolute bottom-4 left-4 w-32 h-32 border border-green-500 rounded-full"></div>
             </div>
-            
-            <div className="relative z-10">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle2 className="w-8 h-8 text-white" />
-              </div>
-              <blockquote className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
-                "Já ajudamos mais de 20.000 pessoas a corrigirem erros no seguro sem gastar R$1 a mais."
-              </blockquote>
-              
-              {/* Decorative elements */}
-              <div className="flex justify-center items-center gap-3 mt-8">
-                <div className="h-1 w-12 bg-green-500/30 rounded-full"></div>
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <div className="h-1 w-12 bg-green-500/30 rounded-full"></div>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
