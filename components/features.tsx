@@ -203,10 +203,6 @@ export function Differentials() {
           <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
             O que faz a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Dimarzio Seguros</span> diferente
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-            Com 20 anos de mercado, a Dimarzio vai além do básico.<br />
-            <span className="font-semibold text-gray-800">Corretora tem em toda esquina. Atendimento técnico, quase nenhuma.</span>
-          </p>
         </motion.div>
 
         {/* Main Content Grid */}
