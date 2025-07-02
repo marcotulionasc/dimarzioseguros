@@ -61,6 +61,12 @@ export default function SeguroSaudePage() {
                 size="lg" 
                 variant="outline" 
                 className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                onClick={() => {
+                  const element = document.querySelector('form');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -148,7 +154,16 @@ export default function SeguroSaudePage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
+              <Button 
+                size="lg" 
+                className="bg-[#0E71B8] hover:bg-[#2B2E83] text-white"
+                onClick={() => {
+                  const element = document.querySelector('form');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Quero minha análise gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

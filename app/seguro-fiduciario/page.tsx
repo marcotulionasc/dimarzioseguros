@@ -87,6 +87,12 @@ export default function SeguroGarantiaFiduciaria() {
                 size="lg" 
                 variant="outline" 
                 className="group bg-white hover:bg-white/90 text-[#0E71B8] hover:text-[#2B2E83] border-0 font-medium text-lg px-8 py-6"
+                onClick={() => {
+                  const element = document.querySelector('form');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Quero minha cotação gratuita
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

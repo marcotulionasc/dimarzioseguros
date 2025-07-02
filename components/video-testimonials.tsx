@@ -173,7 +173,7 @@ function VideoCard({ video, index }: { video: VideoTestimonial; index: number })
 
 export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
   return (
-    <section className="section-padding bg-gray-50">
+    <section data-section="video-testimonials" className="section-padding bg-gray-50">
       <div className="container-mobile">
         {/* Header Section */}
         <motion.div
