@@ -61,7 +61,7 @@ export function FinalCTA() {
           >
             <Button 
               size="lg"
-              className="bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 px-6 md:px-8 py-4 md:py-5 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-flex items-center gap-3 shadow-lg border-2 border-white min-h-[56px] md:min-h-[64px]"
+              className="bg-white border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white px-8 py-4 text-lg rounded-lg transition-colors duration-200 inline-flex items-center gap-3"
               onClick={() => {
                 const element = document.querySelector('#contato');
                 if (element) {
@@ -69,9 +69,9 @@ export function FinalCTA() {
                 }
               }}
             >
-              <Calendar className="w-5 h-5 md:w-6 md:h-6" />
+              <Calendar className="w-5 h-5" />
               Agendar minha análise gratuita
-              <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+              <ArrowRight className="w-4 h-4" />
             </Button>
             
             <Button 
