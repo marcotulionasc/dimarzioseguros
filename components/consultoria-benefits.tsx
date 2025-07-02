@@ -44,7 +44,7 @@ export function ConsultoriaBenefits() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
             O que você leva da <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">consultoria gratuita</span>
           </h2>
         </motion.div>
