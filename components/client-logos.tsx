@@ -88,17 +88,6 @@ export function ClientLogos() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </div>
-            
-            {/* Floating Trust Badge */}
-            <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 bg-white rounded-2xl shadow-xl p-4 md:p-6 border border-gray-100 max-w-[200px] md:max-w-xs">
-              <div className="text-center">
-                <div className="w-8 h-8 md:w-12 md:h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
-                  <Shield className="w-4 h-4 md:w-6 md:h-6 text-green-600" />
-                </div>
-                <p className="text-xs md:text-sm font-semibold text-gray-900">Empresa Certificada</p>
-                <p className="text-xs text-gray-600">CNPJ: 10.894.914/0001-05</p>
-              </div>
-            </div>
           </motion.div>
           
           {/* Right - Content */}
@@ -114,7 +103,7 @@ export function ClientLogos() {
               <span className="text-primary"> mas será que ele protege o que importa?</span>
             </h2>
             <p className="text-base md:text-xl text-gray-600 leading-relaxed mb-6 md:mb-8 text-left">
-            Com mais de 20 anos de experiência e mais de 20.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade — sem empurrar nada, sem cobrar pela consultoria.
+            Com mais de 20 anos de experiência e mais de 20.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade, sem empurrar nada, sem cobrar pela consultoria.
             </p>
             
             {/* Trust Stats Grid */}

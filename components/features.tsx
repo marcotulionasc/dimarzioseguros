@@ -131,7 +131,7 @@ export function HowItWorks() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
             Como funciona na prática
           </h2>
-          <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4">
+          <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4 text-left">
             4 passos simples para sua segurança
           </p>
         </motion.div>
@@ -196,10 +196,7 @@ export function Differentials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-20"
         >
-          <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-200 text-blue-700 px-6 py-3 rounded-full mb-6 shadow-sm">
-            <Star className="w-5 h-5" />
-            <span className="font-medium">20 anos de experiência</span>
-          </div>
+          
           <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
             O que faz a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Dimarzio Seguros</span> diferente
           </h2>
@@ -296,23 +293,13 @@ export function Differentials() {
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 border border-white rounded-full"></div>
             </div>
             
-            <div className="relative z-10">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Headphones className="w-8 h-8 text-white" />
-              </div>
+            <div className="relative z-10 mt-4">
               <blockquote className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white">
                 "Você fala com quem resolve."
               </blockquote>
-              <p className="text-xl text-blue-100 font-medium">
+              <p className="text-xl text-blue-100 font-medium text-left">
                 Mesmo aos finais de semana.
               </p>
-              
-              {/* Decorative elements */}
-              <div className="flex justify-center items-center gap-3 mt-8">
-                <div className="h-1 w-12 bg-white/30 rounded-full"></div>
-                <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
-                <div className="h-1 w-12 bg-white/30 rounded-full"></div>
-              </div>
             </div>
           </div>
         </motion.div>
