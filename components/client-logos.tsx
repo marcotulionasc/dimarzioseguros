@@ -109,11 +109,11 @@ export function ClientLogos() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="order-1 lg:order-2"
           >
-            <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
               Você já tem um seguro, 
               <span className="text-primary"> mas será que ele protege o que importa?</span>
             </h2>
-            <p className="text-base md:text-xl text-gray-600 leading-relaxed mb-6 md:mb-8">
+            <p className="text-base md:text-xl text-gray-600 leading-relaxed mb-6 md:mb-8 text-left">
             Com mais de 20 anos de experiência e mais de 20.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade — sem empurrar nada, sem cobrar pela consultoria.
             </p>
             

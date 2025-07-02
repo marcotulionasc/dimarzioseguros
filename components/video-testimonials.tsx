@@ -187,11 +187,11 @@ export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
             <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
           </div>
           
-          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
             {title}
           </h2>
           
-          <p className="mobile-subtitle !text-sm sm:!text-base lg:!text-xl max-w-3xl mx-auto">
+          <p className="mobile-subtitle !text-sm sm:!text-base lg:!text-xl max-w-3xl mx-auto text-left">
             Veja depoimentos reais de clientes que confiam em nosso trabalho há anos
           </p>
         </motion.div>

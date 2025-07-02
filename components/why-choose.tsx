@@ -118,7 +118,7 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
               whileInView="animate"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
-              className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4 text-white"
+              className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white"
             >
               {title}
             </motion.h2>

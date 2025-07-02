@@ -41,10 +41,10 @@ export function StatsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4 text-white">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white">
             Números que falam por si
           </h2>
-          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto px-2">
+          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto px-2 text-left">
             Há 20 anos protegendo pessoas e empresas com clareza
           </p>
         </motion.div>

@@ -128,7 +128,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
             Como funciona na prática
           </h2>
           <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4">
@@ -200,7 +200,7 @@ export function Differentials() {
             <Star className="w-5 h-5" />
             <span className="font-medium">20 anos de experiência</span>
           </div>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
             O que faz a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Dimarzio Seguros</span> diferente
           </h2>
         </motion.div>
@@ -300,7 +300,7 @@ export function Differentials() {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Headphones className="w-8 h-8 text-white" />
               </div>
-              <blockquote className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4 text-white">
+              <blockquote className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white">
                 "Você fala com quem resolve."
               </blockquote>
               <p className="text-xl text-blue-100 font-medium">

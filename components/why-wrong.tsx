@@ -9,10 +9,10 @@ export function WhyWrong() {
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4 text-white">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white">
             Por que tanta gente contrata errado?
           </h2>
-          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto px-2">
+          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto px-2 text-left">
             3 em cada 5 sinistros são negados por erro na contratação.
           </p>
         </div>

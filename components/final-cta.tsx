@@ -35,7 +35,7 @@ export function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4 text-white"
+            className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white"
           >
             Seu seguro protege ou é só papel?
           </motion.h2>
@@ -46,7 +46,7 @@ export function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto"
+            className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto text-left"
           >
             Entre em contato agora e receba um atendimento com a agilidade e atenção que você merece!
           </motion.p>
