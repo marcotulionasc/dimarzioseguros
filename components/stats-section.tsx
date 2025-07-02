@@ -39,12 +39,12 @@ export function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8 md:mb-16"
+          className="mb-8 md:mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white">
             Números que falam por si
           </h2>
-          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto px-2 text-left">
+          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-3xl px-2 text-left">
             Há 20 anos protegendo pessoas e empresas com clareza
           </p>
         </motion.div>
@@ -57,27 +57,34 @@ export function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center group"
+              className="group"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 h-auto md:h-72 flex flex-col justify-center min-h-[180px] md:min-h-0">
-                {/* Icon */}
-                <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-2xl mb-3 md:mb-6 group-hover:bg-white/30 transition-colors duration-300 mx-auto">
-                  <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                </div>
-                
-                {/* Number */}
-                <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">
-                  {stat.number}
-                </div>
-                
-                {/* Label */}
-                <div className="text-base md:text-xl font-semibold text-white mb-1 md:mb-2 leading-tight">
-                  {stat.label}
-                </div>
-                
-                {/* Description */}
-                <div className="text-sm md:text-base text-white/80 leading-relaxed">
-                  {stat.description}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 min-h-[120px] md:min-h-[140px]">
+                <div className="flex items-start gap-4">
+                  {/* Icon Column */}
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-white/20 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+                      <stat.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                    </div>
+                  </div>
+                  
+                  {/* Text Column */}
+                  <div className="flex-1 text-left">
+                    {/* Number */}
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1">
+                      {stat.number}
+                    </div>
+                    
+                    {/* Label */}
+                    <div className="text-sm md:text-base font-semibold text-white mb-1 leading-tight">
+                      {stat.label}
+                    </div>
+                    
+                    {/* Description */}
+                    <div className="text-xs md:text-sm text-white/80 leading-relaxed">
+                      {stat.description}
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

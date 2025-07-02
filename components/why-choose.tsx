@@ -102,23 +102,13 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
         <div className="max-w-6xl mx-auto w-full">
           {/* Header section */}
           <div className="text-center mb-12 md:mb-8 lg:mb-12 xl:mb-16">
-            <motion.div
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              className="inline-flex items-center gap-2 bg-blue-800/50 backdrop-blur-sm rounded-full px-4 md:px-4 lg:px-6 py-2 md:py-2 mb-6 md:mb-4 lg:mb-6 border border-blue-700/50"
-            >
-              <Star className="w-4 h-4 md:w-4 md:h-4 text-white" />
-              <span className="text-sm md:text-sm font-medium text-white">Por que nos escolher</span>
-            </motion.div>
             
             <motion.h2 
               initial="initial"
               whileInView="animate"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left text-white"
+              className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-white"
             >
               {title}
             </motion.h2>
@@ -178,23 +168,6 @@ export function WhyChoose({ title, benefits, highlight }: WhyChooseProps) {
               )
             })}
           </div>
-          
-          {/* Bottom section elegante */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { delay: 0.6, duration: 0.6 } }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="flex justify-center mt-12 md:mt-8 lg:mt-12 xl:mt-16"
-          >
-            <div className="flex items-center gap-3 bg-white/15 backdrop-blur-lg rounded-full px-6 md:px-6 lg:px-8 py-3 md:py-3 border border-white/30 shadow-lg">
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 md:w-4 md:h-4 text-yellow-300 fill-current" />
-                ))}
-              </div>
-              <span className="text-white font-medium ml-1 text-sm md:text-sm lg:text-base">Excelência comprovada</span>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
