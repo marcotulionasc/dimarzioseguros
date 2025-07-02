@@ -107,11 +107,13 @@ export function MobileMenu() {
                 {/* CTA Button */}
                 <div className="mt-8 space-y-4">
                   <Button 
+                    asChild
                     className="w-full bg-gradient-to-r from-[#0E71B8] to-[#2B2E83] hover:from-[#2B2E83] hover:to-[#0E71B8] text-white font-medium py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
-                    onClick={() => setIsOpen(false)}
                   >
-                    <Phone className="w-4 h-4 mr-2" />
-                    (19) 3294-0655
+                    <a href="tel:+551932940655" onClick={() => setIsOpen(false)}>
+                      <Phone className="w-4 h-4 mr-2" />
+                      (19) 3294-0655
+                    </a>
                   </Button>
                   
                   <div className="text-center">

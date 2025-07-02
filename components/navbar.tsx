@@ -63,11 +63,14 @@ export function Navbar() {
             </div>
             
             <Button 
+              asChild
               className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
               variant="default"
             >
-              <Phone className="w-4 h-4" />
-              (19) 3294-0655
+              <a href="tel:+551932940655">
+                <Phone className="w-4 h-4" />
+                (19) 3294-0655
+              </a>
             </Button>
           </nav>
 
