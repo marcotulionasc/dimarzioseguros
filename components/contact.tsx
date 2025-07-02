@@ -3,6 +3,7 @@
 import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 import { useFeedbackModal } from '@/hooks/use-feedback-modal'
 import { FeedbackModal } from '@/components/ui/feedback-modal'
+import { generateWhatsAppURL } from '@/lib/utils'
 
 interface ContactProps {
   title: string;
@@ -35,9 +36,15 @@ export function Contact({ title, subtitle, description }: ContactProps) {
                 await submitForm(mappedData);
                 showSuccess(
                   'Obrigado! Sua solicitação foi enviada!',
-                  'Recebemos sua solicitação de cotação para equipamentos portáteis. Nossa equipe entrará em contato em breve com uma proposta personalizada!'
+                  'Recebemos sua solicitação e agora você será redirecionado para o WhatsApp para dar continuidade ao atendimento.'
                 );
                 (e.target as HTMLFormElement).reset();
+                
+                // Redirecionar para WhatsApp após 2 segundos
+                setTimeout(() => {
+                  const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'portateis');
+                  window.open(whatsappURL, '_blank');
+                }, 2000);
               } catch (error) {
                 console.error('Error:', error);
                 showError(
@@ -111,6 +118,9 @@ export function Contact({ title, subtitle, description }: ContactProps) {
             >
               Enviar
             </button>
+            <p className="text-xs text-gray-500 mt-2 text-center">
+              * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+            </p>
           </form>
         </div>
       </section>

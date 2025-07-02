@@ -6,6 +6,7 @@ import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 import { AlertTriangle, CheckCircle2, ArrowRight, Shield, Building2, Users, Zap, Eye } from 'lucide-react'
 import { useFeedbackModal } from '@/hooks/use-feedback-modal'
 import { FeedbackModal } from '@/components/ui/feedback-modal'
+import { generateWhatsAppURL } from '@/lib/utils'
 
 const problemsWithInsurance = [
   'Contrata sem entender exatamente o que está coberto',
@@ -258,9 +259,15 @@ export default function SeguroEmpresarialPage() {
                   await submitForm(mappedData);
                   showSuccess(
                     'Obrigado! Sua análise empresarial foi solicitada!',
-                    'Recebemos sua solicitação de seguro empresarial. Nossa equipe especializada entrará em contato em breve para uma proposta personalizada para seu negócio.'
+                    'Recebemos sua solicitação e agora você será redirecionado para o WhatsApp para dar continuidade ao atendimento.'
                   );
                   (e.target as HTMLFormElement).reset();
+                  
+                  // Redirecionar para WhatsApp após 2 segundos
+                  setTimeout(() => {
+                    const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'empresarial');
+                    window.open(whatsappURL, '_blank');
+                  }, 2000);
                 } catch (error) {
                   console.error('Error:', error);
                   showError(
@@ -314,6 +321,9 @@ export default function SeguroEmpresarialPage() {
                 Solicitar análise gratuita
                 <Eye className="ml-2 h-5 w-5" />
               </Button>
+              <p className="text-xs text-white/60 mt-2 text-center">
+                * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+              </p>
             </form>
             <p className="text-sm text-white/70 mt-4">
               Seus dados estão protegidos. Não fazemos spam.

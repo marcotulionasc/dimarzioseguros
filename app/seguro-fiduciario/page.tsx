@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { mapFormFieldsToApi, submitForm } from '@/lib/api'
+import { generateWhatsAppURL } from '@/lib/utils'
 import { AlertTriangle, CheckCircle2, ArrowRight, Shield, Scale, Building, Users, FileText } from 'lucide-react'
 
 const features = [
@@ -334,15 +335,21 @@ export default function SeguroGarantiaFiduciaria() {
                 const formData = new FormData(e.currentTarget);
                 const data = Object.fromEntries(formData.entries());
                 
-                try {
-                  const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'fiduciario');
-                  await submitForm(mappedData);
-                  alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
-                  (e.target as HTMLFormElement).reset();
-                } catch (error) {
-                  console.error('Error:', error);
-                  alert('Erro ao enviar formulário. Por favor, tente novamente.');
-                }
+                              try {
+                const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'fiduciario');
+                await submitForm(mappedData);
+                alert('Formulário enviado com sucesso! Agora você será redirecionado para o WhatsApp.');
+                (e.target as HTMLFormElement).reset();
+                
+                // Redirecionar para WhatsApp após 2 segundos
+                setTimeout(() => {
+                  const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'fiduciario');
+                  window.open(whatsappURL, '_blank');
+                }, 2000);
+              } catch (error) {
+                console.error('Error:', error);
+                alert('Erro ao enviar formulário. Por favor, tente novamente.');
+              }
               }}
             >
               <input
@@ -389,6 +396,9 @@ export default function SeguroGarantiaFiduciaria() {
                 Solicitar cotação gratuita
                 <Scale className="ml-2 h-5 w-5" />
               </Button>
+              <p className="text-xs text-white/60 mt-2 text-center">
+                * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+              </p>
             </form>
             <p className="text-sm text-white/70 mt-4">
               Seus dados estão protegidos. Não fazemos spam.

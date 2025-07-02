@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { mapFormFieldsToApi, submitForm } from '@/lib/api'
+import { generateWhatsAppURL } from '@/lib/utils'
 
 export default function SeguroPortateis() {
   const features = [
@@ -279,15 +280,21 @@ export default function SeguroPortateis() {
                 const formData = new FormData(e.currentTarget);
                 const data = Object.fromEntries(formData.entries());
                 
-                try {
-                  const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'portateis');
-                  await submitForm(mappedData);
-                  alert('Formulário enviado com sucesso! Em breve entraremos em contato.');
-                  (e.target as HTMLFormElement).reset();
-                } catch (error) {
-                  console.error('Error:', error);
-                  alert('Erro ao enviar formulário. Por favor, tente novamente.');
-                }
+                              try {
+                const mappedData = mapFormFieldsToApi(data as Record<string, string>, 'portateis');
+                await submitForm(mappedData);
+                alert('Formulário enviado com sucesso! Agora você será redirecionado para o WhatsApp.');
+                (e.target as HTMLFormElement).reset();
+                
+                // Redirecionar para WhatsApp após 2 segundos
+                setTimeout(() => {
+                  const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'portateis');
+                  window.open(whatsappURL, '_blank');
+                }, 2000);
+              } catch (error) {
+                console.error('Error:', error);
+                alert('Erro ao enviar formulário. Por favor, tente novamente.');
+              }
               }}
             >
               <input
@@ -314,6 +321,9 @@ export default function SeguroPortateis() {
               <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                 Enviar
               </Button>
+              <p className="text-xs text-gray-500 mt-2 text-center">
+                * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+              </p>
             </form>
           </div>
         </div>

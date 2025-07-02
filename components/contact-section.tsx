@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 import { useFeedbackModal } from '@/hooks/use-feedback-modal'
 import { FeedbackModal } from '@/components/ui/feedback-modal'
+import { generateWhatsAppURL } from '@/lib/utils'
 
 interface ContactInfo {
   icon: LucideIcon
@@ -84,9 +85,15 @@ export function ContactSection() {
                     await submitForm(mappedData);
                     showSuccess(
                       'Obrigado pela mensagem!',
-                      'Recebemos seu contato e nossa equipe entrará em contato com você em breve. Agradecemos pela confiança!'
+                      'Recebemos seu contato e agora você será redirecionado para o WhatsApp para dar continuidade ao atendimento.'
                     );
                     (e.target as HTMLFormElement).reset();
+                    
+                    // Redirecionar para WhatsApp após 2 segundos
+                    setTimeout(() => {
+                      const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'contato');
+                      window.open(whatsappURL, '_blank');
+                    }, 2000);
                   } catch (error) {
                     console.error('Error:', error);
                     showError(
@@ -173,6 +180,9 @@ export function ContactSection() {
                 <Button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-medium py-3 rounded-lg transition-all duration-300 hover:scale-105">
                   Enviar Mensagem
                 </Button>
+                <p className="text-xs text-gray-500 mt-2 text-center">
+                  * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+                </p>
               </form>
             </motion.div>
 

@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { submitForm, mapFormFieldsToApi } from '@/lib/api'
 import { useFeedbackModal } from '@/hooks/use-feedback-modal'
 import { FeedbackModal } from '@/components/ui/feedback-modal'
+import { generateWhatsAppURL } from '@/lib/utils'
 
 const coverages = [
   'Danos materiais e corporais a terceiros',
@@ -289,9 +290,15 @@ export default function SeguroAutomovelPage() {
                     await submitForm(mappedData);
                     showSuccess(
                       'Obrigado! Sua cotação foi solicitada!',
-                      'Nossa equipe especializada analisará seu perfil e entrará em contato com uma proposta personalizada em breve. Agradecemos pela confiança na Dimarzio Seguros!'
+                      'Recebemos sua solicitação e agora você será redirecionado para o WhatsApp para dar continuidade ao atendimento.'
                     );
                     (e.target as HTMLFormElement).reset();
+                    
+                    // Redirecionar para WhatsApp após 2 segundos
+                    setTimeout(() => {
+                      const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'auto');
+                      window.open(whatsappURL, '_blank');
+                    }, 2000);
                   } catch (error) {
                     console.error('Error:', error);
                     showError(
@@ -357,6 +364,9 @@ export default function SeguroAutomovelPage() {
               </form>
               <p className="text-sm text-white/70 mt-4">
                 Seus dados estão protegidos. Não fazemos spam.
+              </p>
+              <p className="text-xs text-white/60 mt-2">
+                * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
               </p>
             </div>
           </div>

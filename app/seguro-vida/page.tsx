@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { submitForm, mapFormFieldsToApi } from '@/lib/api'
 import { useFeedbackModal } from '@/hooks/use-feedback-modal'
 import { FeedbackModal } from '@/components/ui/feedback-modal'
+import { generateWhatsAppURL } from '@/lib/utils'
 
 const mistakes = [
   'A cobertura não inclui doença grave ou invalidez',
@@ -217,9 +218,15 @@ export default function SeguroVidaPage() {
                     await submitForm(mappedData);
                     showSuccess(
                       'Obrigado! Sua análise foi solicitada!',
-                      'Recebemos sua solicitação para análise de seguro de vida. Nossa equipe especializada entrará em contato em breve para uma consulta personalizada e sem compromisso.'
+                      'Recebemos sua solicitação e agora você será redirecionado para o WhatsApp para dar continuidade ao atendimento.'
                     );
                     (e.target as HTMLFormElement).reset();
+                    
+                    // Redirecionar para WhatsApp após 2 segundos
+                    setTimeout(() => {
+                      const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'vida');
+                      window.open(whatsappURL, '_blank');
+                    }, 2000);
                   } catch (error) {
                     console.error('Error:', error);
                     showError(
@@ -273,6 +280,9 @@ export default function SeguroVidaPage() {
                 <Button type="submit" size="lg" className="w-full bg-[#0E71B8] hover:bg-[#2B2E83] text-white">
                   Enviar
                 </Button>
+                <p className="text-xs text-gray-500 mt-2 text-center">
+                  * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+                </p>
               </form>
             </div>
           </div>

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { mapFormFieldsToApi, submitForm } from '@/lib/api'
 import { useFeedbackModal } from '@/hooks/use-feedback-modal'
 import { FeedbackModal } from '@/components/ui/feedback-modal'
+import { generateWhatsAppURL } from '@/lib/utils'
 
 export default function ContatoPage() {
   const { feedback, showSuccess, showError, closeFeedback } = useFeedbackModal()
@@ -25,9 +26,15 @@ export default function ContatoPage() {
               await submitForm(mappedData);
               showSuccess(
                 'Obrigado pelo seu contato!',
-                'Recebemos sua mensagem e nossa equipe entrará em contato com você em breve. Agradecemos pela confiança na Dimarzio Seguros!'
+                'Recebemos sua mensagem e agora você será redirecionado para o WhatsApp para dar continuidade ao atendimento.'
               );
               (e.target as HTMLFormElement).reset();
+              
+              // Redirecionar para WhatsApp após 2 segundos
+              setTimeout(() => {
+                const whatsappURL = generateWhatsAppURL(data as Record<string, string>, 'contato');
+                window.open(whatsappURL, '_blank');
+              }, 2000);
             } catch (error) {
               console.error('Error:', error);
               showError(
@@ -54,6 +61,9 @@ export default function ContatoPage() {
             <textarea name="mensagem" rows={4} placeholder="Mensagem" className="w-full border rounded-md p-2" />
           </div>
           <Button type="submit" className="primary-button">Enviar</Button>
+          <p className="text-xs text-gray-500 mt-2">
+            * Após o envio, você será redirecionado para o WhatsApp para dar continuidade ao atendimento personalizado.
+          </p>
         </form>
         <div className="space-y-1 text-sm">
           <div>Rua Cumaru, 219 - sala 16, Edifício Laser, Alphaville, Campinas - SP, 13098-324</div>
