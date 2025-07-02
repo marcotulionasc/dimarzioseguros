@@ -18,7 +18,15 @@ export function AlreadyInsured() {
               Mesmo assim, vale a pena fazer nossa consultoria gratuita. 
               Em 15 minutos, você descobre se está realmente protegido ou pagando por um seguro que não funciona.
             </p>
-            <Button className="bg-primary hover:bg-primary-dark text-white font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+            <Button 
+              className="bg-primary hover:bg-primary-dark text-white font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+              onClick={() => {
+                const element = document.querySelector('#contato');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <CheckCircle className="w-5 h-5" />
               Verificar Minha Proteção
             </Button>

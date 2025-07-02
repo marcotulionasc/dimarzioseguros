@@ -16,7 +16,15 @@ export function PaperQuestion() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button className="bg-white text-primary hover:bg-gray-100 font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg">
+          <Button 
+            className="bg-white text-primary hover:bg-gray-100 font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg"
+            onClick={() => {
+              const element = document.querySelector('#contato');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <Calendar className="w-5 h-5" />
             Quero Consultoria Gratuita
             
@@ -25,6 +33,12 @@ export function PaperQuestion() {
           <Button
             variant="outline"
             className="border-2 border-white text-white hover:bg-white hover:text-primary font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-3 text-lg bg-transparent"
+            onClick={() => {
+              const element = document.querySelector('#seguros');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             
             Ver Todos os Seguros
