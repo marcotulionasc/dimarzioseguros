@@ -181,17 +181,17 @@ export function VideoTestimonials({ title, videos }: VideoTestimonialsProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12 sm:mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-blue-600 mb-4 sm:mb-6 shadow-lg">
+          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-blue-600 mb-4 sm:mb-6 shadow-lg">
             <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6">
             {title}
           </h2>
           
-          <p className="mobile-subtitle !text-sm sm:!text-base lg:!text-xl max-w-3xl text-left">
+          <p className="mobile-subtitle !text-sm sm:!text-base lg:!text-xl max-w-3xl mx-auto">
             Veja depoimentos reais de clientes que confiam em nosso trabalho há anos
           </p>
         </motion.div>

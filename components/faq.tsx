@@ -65,7 +65,7 @@ export function Faq({ title, questions }: FaqProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 text-left">{title}</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6">{title}</h2>
         </motion.div>
 
         <motion.div 
